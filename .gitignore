@@ -6,6 +6,8 @@
 /public/bundles/
 /var/
 /vendor/
+/bin/
 ###< symfony/framework-bundle ###
 
 .idea
+/.phpunit.cache/
