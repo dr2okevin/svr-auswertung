@@ -15,40 +15,62 @@ Enum "competition_type_enum" {
   "runden"
 }
 
+Enum "scoring_mode_enum" {
+  "full_ring"
+  "tenths"
+}
+
+Enum "users_role_enum" {
+  "admin"
+  "operator"
+  "viewer"
+}
+
 Table "persons" {
-  "uid" int(11) [pk, not null]
+  "uid" int(11) [pk, not null, increment]
   "first_name" varchar(255) [default: NULL]
   "last_name" varchar(255) [default: NULL]
-  "profi" tinyint(1) [not null]
+  "birthdate" date [default: NULL]
+  "profi" tinyint(1) [not null, default: 0]
 }
 
-Table "person_team_mm" {
-  "person" int(11) [not null]
-  "team" int(11) [not null]
+Table "users" {
+  "id" int(11) [pk, not null, increment]
+  "username" varchar(100) [not null]
+  "display_name" varchar(255) [default: NULL]
+  "role" users_role_enum [not null, default: "operator"]
 }
 
-Table "shots" {
-  "uid" int(11) [pk, not null]
-  "value" float [not null]
-  "x" float [not null]
-  "y" float [not null]
-  "time" datetime [not null, default: `current_timestamp()`]
+Table "import_files" {
+  "id" int(11) [pk, not null, increment]
+  "filename" varchar(255) [not null]
+  "uploaded_at" datetime [not null, default: `current_timestamp()`]
+  "user_id" int(11) [default: NULL]
+  "md5" varchar(64) [default: NULL]
 }
 
 Table "teams" {
-  "uid" int(11) [pk, not null]
+  "uid" int(11) [pk, not null, increment]
   "name" varchar(255) [not null]
   "type" teams_type_enum [not null]
-  "single_shooter" int [default: null]
-  "competition" int [not null]
+  "single_shooter" int(11) [default: null]
+  "competition" int(11) [not null]
 }
 
 Table "competitions" {
-  "uid" int(11) [pk, not null]
-  "name" varchar [not null]
+  "uid" int(11) [pk, not null, increment]
+  "name" varchar(255) [not null]
   "type" competition_type_enum
   "start" datetime [not null]
   "end" datetime [not null]
+}
+
+Table "disciplines" {
+  "uid" int(11) [pk, not null, increment]
+  "name" varchar(255) [not null]
+  "shots_per_series" int(11) [not null, default: 10]
+  "scoring_mode" scoring_mode_enum [not null, default: "tenths"]
+  "max_score_per_shot" decimal(4,1) [not null, default: 10.9]
 }
 
 Table "competitions_disciplines_mm" {
@@ -56,64 +78,57 @@ Table "competitions_disciplines_mm" {
   "discipline" int(11) [not null]
 }
 
-Table "competitions_rounds_mm" {
-  "competition" int(11) [not null]
-  "round" int(11) [not null]
-}
-
-Table "disciplines" {
-  "uid" int(11) [pk, not null]
-  "name" varchar [not null]
-}
-
-Table "series" {
-  "uid" int(11) [pk, not null]
-  "person" int [not null]
-  "dicipline" int [not null]
-  "round" int [not null]
-  "team" int
-
-}
-
-Table "series_shots_mm" {
-  "series" int [not null]
-  "shot" int [not null]
-}
-
 Table "rounds" {
-  "uid" int [not null]
-  "name" varchar
+  "uid" int(11) [pk, not null, increment]
+  "competition" int(11) [not null]
+  "name" varchar(255) [default: NULL]
   "start" datetime [not null]
   "end" datetime [not null]
 }
 
+Table "person_team_mm" {
+  "person" int(11) [not null]
+  "team" int(11) [not null]
+  "position" int(4) [default: NULL]
+}
 
+Table "series" {
+  "uid" int(11) [pk, not null, increment]
+  "person" int(11) [not null]
+  "discipline" int(11) [not null]
+  "round" int(11) [not null]
+  "team" int(11) [default: NULL]
+  "shots_count" int(11) [not null, default: 0]
+  "import_file" int(11) [default: NULL]
+}
 
+Table "shots" {
+  "uid" int(11) [pk, not null, increment]
+  "series" int(11) [not null]
+  "shot_index" int(4) [not null]
+  "value" decimal(4,1) [not null]
+  "x" decimal(8,4) [default: NULL]
+  "y" decimal(8,4) [default: NULL]
+  "recorded_at" datetime [not null, default: `current_timestamp()`]
+}
 
 Ref: "person_team_mm"."person" > "persons"."uid"
-
 Ref: "person_team_mm"."team" > "teams"."uid"
 
 Ref: "teams"."competition" > "competitions"."uid"
+Ref: "teams"."single_shooter" > "persons"."uid"
 
 Ref: "competitions_disciplines_mm"."discipline" > "disciplines"."uid"
-
 Ref: "competitions_disciplines_mm"."competition" > "competitions"."uid"
 
 Ref: "series"."person" > "persons"."uid"
-
-Ref: "series"."dicipline" > "disciplines"."uid"
-
-Ref: "teams"."single_shooter" > "persons"."uid"
-
-Ref: "series_shots_mm"."shot" > "shots"."uid"
-
-Ref: "series_shots_mm"."series" > "series"."uid"
-
+Ref: "series"."discipline" > "disciplines"."uid"
 Ref: "series"."round" > "rounds"."uid"
-
-Ref: "competitions_rounds_mm"."competition" > "competitions"."uid"
-
-Ref: "competitions_rounds_mm"."round" > "rounds"."uid"
-
 Ref: "series"."team" > "teams"."uid"
+Ref: "series"."import_file" > "import_files"."id"
+
+Ref: "shots"."series" > "series"."uid"
+
+Ref: "import_files"."user_id" > "users"."id"
+
+Ref: "rounds"."competition" > "competitions"."uid"
