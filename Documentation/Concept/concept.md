@@ -64,3 +64,8 @@ Für die erste Phase gibt es nur Admin user welche alle Daten eingeben und spät
 
 ## Framework
 Als Framework kommt Symfony 7.3 zum einsatz. Abhängigkeiten werden via Composer verwaltet. Templates sind in twig.
+
+## Datenerfassung
+Die Datenerfassung erfolgt über ein Web Formular.
+Zuerst wird ein Wettkampf angelegt, daraufhin die Schützen und gegebenenfalls Teams.
+Während des wettkampfs werden nach und nach für alle Schützen und Disziplinen die Ergebnisse erfasst. Dabei soll der Anwender wahlweise die Schüsse manuell eintippen, oder eine xls von der DISAG software importieren.

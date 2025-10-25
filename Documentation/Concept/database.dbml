@@ -22,7 +22,6 @@ Enum "scoring_mode_enum" {
 
 Enum "users_role_enum" {
   "admin"
-  "operator"
   "viewer"
 }
 
@@ -38,22 +37,13 @@ Table "users" {
   "id" int(11) [pk, not null, increment]
   "username" varchar(100) [not null]
   "display_name" varchar(255) [default: NULL]
-  "role" users_role_enum [not null, default: "operator"]
-}
-
-Table "import_files" {
-  "id" int(11) [pk, not null, increment]
-  "filename" varchar(255) [not null]
-  "uploaded_at" datetime [not null, default: `current_timestamp()`]
-  "user_id" int(11) [default: NULL]
-  "md5" varchar(64) [default: NULL]
+  "role" users_role_enum [not null, default: "viewer"]
 }
 
 Table "teams" {
   "uid" int(11) [pk, not null, increment]
   "name" varchar(255) [not null]
   "type" teams_type_enum [not null]
-  "single_shooter" int(11) [default: null]
   "competition" int(11) [not null]
 }
 
@@ -116,7 +106,6 @@ Ref: "person_team_mm"."person" > "persons"."uid"
 Ref: "person_team_mm"."team" > "teams"."uid"
 
 Ref: "teams"."competition" > "competitions"."uid"
-Ref: "teams"."single_shooter" > "persons"."uid"
 
 Ref: "competitions_disciplines_mm"."discipline" > "disciplines"."uid"
 Ref: "competitions_disciplines_mm"."competition" > "competitions"."uid"
@@ -128,7 +117,5 @@ Ref: "series"."team" > "teams"."uid"
 Ref: "series"."import_file" > "import_files"."id"
 
 Ref: "shots"."series" > "series"."uid"
-
-Ref: "import_files"."user_id" > "users"."id"
 
 Ref: "rounds"."competition" > "competitions"."uid"
