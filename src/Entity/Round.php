@@ -2,14 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\TeamRepository;
+use App\Repository\RoundRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use \App\Enum\TeamType;
 
-#[ORM\Entity(repositoryClass: TeamRepository::class)]
-class Team
+#[ORM\Entity(repositoryClass: RoundRepository::class)]
+class Round
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -19,13 +18,20 @@ class Team
     #[ORM\Column(length: 255)]
     private ?string $Name = null;
 
-    #[ORM\Column(enumType: TeamType::class)]
-    private ?TeamType $Type = null;
+    #[ORM\Column]
+    private ?\DateTime $StartDate = null;
+
+    #[ORM\Column]
+    private ?\DateTime $EndDate = null;
+
+    #[ORM\ManyToOne(inversedBy: 'rounds')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Competition $Competition = null;
 
     /**
      * @var Collection<int, Series>
      */
-    #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Team', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Round', orphanRemoval: true)]
     private Collection $series;
 
     public function __construct()
@@ -50,14 +56,38 @@ class Team
         return $this;
     }
 
-    public function getType(): ?TeamType
+    public function getStartDate(): ?\DateTime
     {
-        return $this->Type;
+        return $this->StartDate;
     }
 
-    public function setType(TeamType $Type): static
+    public function setStartDate(\DateTime $StartDate): static
     {
-        $this->Type = $Type;
+        $this->StartDate = $StartDate;
+
+        return $this;
+    }
+
+    public function getEndDate(): ?\DateTime
+    {
+        return $this->EndDate;
+    }
+
+    public function setEndDate(\DateTime $EndDate): static
+    {
+        $this->EndDate = $EndDate;
+
+        return $this;
+    }
+
+    public function getCompetition(): ?Competition
+    {
+        return $this->Competition;
+    }
+
+    public function setCompetition(?Competition $Competition): static
+    {
+        $this->Competition = $Competition;
 
         return $this;
     }
@@ -74,7 +104,7 @@ class Team
     {
         if (!$this->series->contains($series)) {
             $this->series->add($series);
-            $series->setTeam($this);
+            $series->setRound($this);
         }
 
         return $this;
@@ -84,8 +114,8 @@ class Team
     {
         if ($this->series->removeElement($series)) {
             // set the owning side to null (unless already changed)
-            if ($series->getTeam() === $this) {
-                $series->setTeam(null);
+            if ($series->getRound() === $this) {
+                $series->setRound(null);
             }
         }
 

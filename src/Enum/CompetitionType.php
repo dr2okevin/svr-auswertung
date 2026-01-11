@@ -8,4 +8,14 @@ enum CompetitionType: string
     CASE FIRE = 'fire';
     CASE CUP = 'cup';
     CASE ROUNDS = 'rounds';
+
+    public function getLabel(): string
+    {
+        return match ($this) {
+            self::COMPANY => 'Betriebeschießen',
+            self::FIRE => 'Feuerwehrschießen',
+            self::CUP => 'Pokalschießen',
+            self::ROUNDS => 'Rundenwettkampf',
+        };
+    }
 }

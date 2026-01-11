@@ -2,14 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\TeamRepository;
+use App\Enum\ScoringMode;
+use App\Repository\DisciplineRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use \App\Enum\TeamType;
 
-#[ORM\Entity(repositoryClass: TeamRepository::class)]
-class Team
+#[ORM\Entity(repositoryClass: DisciplineRepository::class)]
+class Discipline
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -19,13 +19,19 @@ class Team
     #[ORM\Column(length: 255)]
     private ?string $Name = null;
 
-    #[ORM\Column(enumType: TeamType::class)]
-    private ?TeamType $Type = null;
+    #[ORM\Column]
+    private ?int $ShotsPerSeries = null;
+
+    #[ORM\Column(enumType: ScoringMode::class)]
+    private ?ScoringMode $ScoringMode = null;
+
+    #[ORM\Column]
+    private ?float $MaxScoresPerShot = null;
 
     /**
      * @var Collection<int, Series>
      */
-    #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Team', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Discipline', orphanRemoval: true)]
     private Collection $series;
 
     public function __construct()
@@ -50,14 +56,38 @@ class Team
         return $this;
     }
 
-    public function getType(): ?TeamType
+    public function getShotsPerSeries(): ?int
     {
-        return $this->Type;
+        return $this->ShotsPerSeries;
     }
 
-    public function setType(TeamType $Type): static
+    public function setShotsPerSeries(int $ShotsPerSeries): static
     {
-        $this->Type = $Type;
+        $this->ShotsPerSeries = $ShotsPerSeries;
+
+        return $this;
+    }
+
+    public function getScoringMode(): ?ScoringMode
+    {
+        return $this->ScoringMode;
+    }
+
+    public function setScoringMode(ScoringMode $ScoringMode): static
+    {
+        $this->ScoringMode = $ScoringMode;
+
+        return $this;
+    }
+
+    public function getMaxScoresPerShot(): ?float
+    {
+        return $this->MaxScoresPerShot;
+    }
+
+    public function setMaxScoresPerShot(float $MaxScoresPerShot): static
+    {
+        $this->MaxScoresPerShot = $MaxScoresPerShot;
 
         return $this;
     }
@@ -74,7 +104,7 @@ class Team
     {
         if (!$this->series->contains($series)) {
             $this->series->add($series);
-            $series->setTeam($this);
+            $series->setDiscipline($this);
         }
 
         return $this;
@@ -84,8 +114,8 @@ class Team
     {
         if ($this->series->removeElement($series)) {
             // set the owning side to null (unless already changed)
-            if ($series->getTeam() === $this) {
-                $series->setTeam(null);
+            if ($series->getDiscipline() === $this) {
+                $series->setDiscipline(null);
             }
         }
 
