@@ -6,7 +6,8 @@
 /public/bundles/
 /var/
 /vendor/
-/bin/
+/bin/*
+!/bin/console
 ###< symfony/framework-bundle ###
 
 .idea
