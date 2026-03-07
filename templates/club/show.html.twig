@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Club anzeigen{% endblock %}
+
+{% block body %}
+    <h1>Club anzeigen</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>ID</th>
+            <td>{{ club.id }}</td>
+        </tr>
+        <tr>
+            <th>Eintrag</th>
+            <td>{{ club }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a href="{{ path('clubs_list') }}">Zurück zur Liste</a>
+        <a href="{{ path('clubs_edit', {id: club.id}) }}">Bearbeiten</a>
+    </p>
+
+    {% include 'club/_delete_form.html.twig' with {
+        club: club
+    } %}
+{% endblock %}

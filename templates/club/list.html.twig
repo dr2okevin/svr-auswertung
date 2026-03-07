@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clubs{% endblock %}
+
+{% block body %}
+    <h1>Clubs</h1>
+
+    <p>
+        <a href="{{ path('clubs_new') }}">Neuen Club anlegen</a>
+    </p>
+
+    {% if clubs is empty %}
+        <p>Keine Clubs vorhanden.</p>
+    {% else %}
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Eintrag</th>
+                <th>Aktionen</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for club in clubs %}
+                <tr>
+                    <td>{{ club.id }}</td>
+                    <td>{{ club.title }}</td>
+                    <td>
+                        <a href="{{ path('clubs_edit', {id: club.id}) }}">Bearbeiten</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

@@ -2,24 +2,44 @@
 
 namespace App\Entity;
 
+use App\Repository\ClubRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\Entity(repositoryClass: ClubRepository::class)]
 #[ORM\Table(name: "clubs")]
 class Club
 {
     #[ORM\Id]
-    #[ORM\Column(type: "string", length: 14, unique: true)]
-    protected string $uid;
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
 
     #[ORM\Column(type: "string", length: 255)]
     protected string $title;
 
-    #[ORM\Column(type: Types::TEXT)]
+    #[ORM\Column(length: 255)]
     private ?string $address = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $type = null;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function setTitle(string $title): static
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
 
     public function getAddress(): ?string
     {
@@ -44,4 +64,13 @@ class Club
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getUid(): string
+    {
+        return $this->uid;
+    }
+
 }

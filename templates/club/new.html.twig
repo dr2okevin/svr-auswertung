@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Club bearbeiten{% endblock %}
+{% block title %}Club anlegen{% endblock %}
 
 {% block body %}
-    <h1>Club bearbeiten</h1>
+    <h1>Club anlegen</h1>
 
     {% include 'club/_form.html.twig' with {
         form: form,
@@ -13,8 +13,4 @@
     <p>
         <a href="{{ path('clubs_list') }}">Zurück zur Liste</a>
     </p>
-
-    {% include 'club/_delete_form.html.twig' with {
-        club: club
-    } %}
 {% endblock %}
