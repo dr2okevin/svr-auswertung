@@ -1,5 +1,6 @@
 {
     "type": "project",
+    "name": "dr2okevin/svr-auswertung",
     "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -12,6 +13,7 @@
         "doctrine/doctrine-migrations-bundle": "^4.0",
         "doctrine/orm": "^3.6",
         "symfony/apache-pack": "*",
+        "symfony/asset": "7.4.*",
         "symfony/console": "7.4.*",
         "symfony/dotenv": "7.4.*",
         "symfony/flex": "^2",
@@ -19,6 +21,7 @@
         "symfony/runtime": "7.4.*",
         "symfony/security-bundle": "7.4.*",
         "symfony/twig-bundle": "7.4.*",
+        "symfony/validator": "7.4.*",
         "symfony/yaml": "7.4.*"
     },
     "config": {
@@ -76,6 +79,12 @@
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^12.4",
         "rector/rector": "^2.2",
-        "symfony/maker-bundle": "^1.65"
+        "symfony/maker-bundle": "^1.65",
+        "symfony/browser-kit": "7.4.*",
+        "symfony/css-selector": "7.4.*",
+        "symfony/debug-bundle": "7.4.*",
+        "symfony/phpunit-bridge": "^7.4",
+        "symfony/stopwatch": "7.4.*",
+        "symfony/web-profiler-bundle": "7.4.*"
     }
 }
