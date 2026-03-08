@@ -15,8 +15,28 @@
         <div class="app-brand">
             <div class="app-brand__logo">SVR</div>
             <div class="app-brand__text">
+                {% set competitionContext = competition_context() %}
                 <strong>SVR Auswertung</strong>
-                <span>Wettkämpfe & Ergebnisse</span>
+
+                <form class="app-brand__competition-form" method="get" action="{{ path('competition_context_switch') }}">
+                    <label class="app-brand__competition-label" for="active-competition">Wettkampf</label>
+                    <select
+                        class="app-brand__competition-select"
+                        id="active-competition"
+                        name="competition_id"
+                        onchange="this.form.submit()"
+                    >
+                        <option value="">Wettkampf wählen</option>
+                        {% for competition in competitionContext.competitions %}
+                            <option
+                                value="{{ competition.id }}"
+                                {% if competition.id == competitionContext.selectedCompetitionId %}selected{% endif %}
+                            >
+                                {{ competition.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
             </div>
         </div>
 
