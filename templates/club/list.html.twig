@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Clubs{% endblock %}
+{% block title %}Vereine{% endblock %}
 
 {% block body %}
-    <h1>Clubs</h1>
+    <h1>Vereine</h1>
 
     <p>
-        <a href="{{ path('clubs_new') }}">Neuen Club anlegen</a>
+        <a href="{{ path('clubs_new') }}">Neuen Verein anlegen</a>
     </p>
 
     {% if clubs is empty %}
-        <p>Keine Clubs vorhanden.</p>
+        <p>Keine Vereine vorhanden.</p>
     {% else %}
         <table>
             <thead>

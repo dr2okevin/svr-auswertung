@@ -65,12 +65,4 @@ class Club
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function getUid(): string
-    {
-        return $this->uid;
-    }
-
 }

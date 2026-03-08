@@ -1,16 +1,131 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}SVR Auswertung{% endblock %}</title>
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+    {% endblock %}
+</head>
+<body>
+<div class="app-shell">
+    <aside class="app-sidebar">
+        <div class="app-brand">
+            <div class="app-brand__logo">SVR</div>
+            <div class="app-brand__text">
+                <strong>SVR Auswertung</strong>
+                <span>Wettkämpfe & Ergebnisse</span>
+            </div>
+        </div>
+
+        <nav class="app-nav" aria-label="Hauptnavigation">
+            <div class="app-nav__group">
+                <div class="app-nav__label">Allgemein</div>
+
+                <a class="app-nav__link app-nav__link--active" href="/">
+                    <span class="app-nav__icon">▣</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a class="app-nav__link" href="#">
+                    <span class="app-nav__icon">◫</span>
+                    <span>Wettkämpfe</span>
+                </a>
+
+                <a class="app-nav__link" href="{{ path('clubs_list') }}">
+                    <span class="app-nav__icon">◪</span>
+                    <span>Vereine</span>
+                </a>
+            </div>
+
+            <div class="app-nav__group">
+                <div class="app-nav__label">Stammdaten</div>
+
+                <a class="app-nav__link" href="#">
+                    <span class="app-nav__icon">○</span>
+                    <span>Personen</span>
+                </a>
+
+                <a class="app-nav__link" href="#">
+                    <span class="app-nav__icon">◇</span>
+                    <span>Teams</span>
+                </a>
+
+                <a class="app-nav__link" href="#">
+                    <span class="app-nav__icon">△</span>
+                    <span>Disziplinen</span>
+                </a>
+            </div>
+
+            <div class="app-nav__group">
+                <div class="app-nav__label">Auswertung</div>
+
+                <a class="app-nav__link" href="#">
+                    <span class="app-nav__icon">▤</span>
+                    <span>Ergebnisse</span>
+                </a>
+
+                <a class="app-nav__link" href="#">
+                    <span class="app-nav__icon">⇩</span>
+                    <span>Export</span>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <div class="app-main">
+        <header class="app-header">
+            <div class="app-header__left">
+                <h1 class="app-page-title">{% block page_title %}Dashboard{% endblock %}</h1>
+                <div class="app-breadcrumbs">
+                    {% block breadcrumbs %}
+                        <span>SVR Auswertung</span>
+                    {% endblock %}
+                </div>
+            </div>
+
+            <div class="app-header__right">
+                {% block page_actions %}{% endblock %}
+
+                <details class="profile-menu">
+                    <summary class="profile-menu__trigger">
+                                <span class="profile-menu__avatar">
+                                    {{ app.user and app.user.email ? app.user.email|first|upper : 'U' }}
+                                </span>
+                        <span class="profile-menu__meta">
+                                    <strong>{{ app.user and app.user.email ? app.user.email : 'Profil' }}</strong>
+                                    <small>Benutzerkonto</small>
+                                </span>
+                    </summary>
+
+                    <div class="profile-menu__dropdown">
+                        <a href="#" class="profile-menu__item">Profil</a>
+                        <a href="#" class="profile-menu__item">Einstellungen</a>
+                        <hr class="profile-menu__divider">
+                        <a href="#" class="profile-menu__item">Abmelden</a>
+                    </div>
+                </details>
+            </div>
+        </header>
+
+        <main class="app-content">
+            {% block body %}
+                <section class="panel">
+                    <div class="panel__header">
+                        <h2 class="panel__title">Willkommen</h2>
+                    </div>
+
+                    <div class="panel__body">
+                        Inhalt
+                    </div>
+                </section>
+            {% endblock %}
+        </main>
+    </div>
+</div>
+
+{% block javascripts %}{% endblock %}
+</body>
 </html>
