@@ -11,8 +11,9 @@ class CompetitionContextProvider
 
     public function __construct(
         private readonly CompetitionRepository $competitionRepository,
-        private readonly RequestStack $requestStack,
-    ) {
+        private readonly RequestStack          $requestStack,
+    )
+    {
     }
 
     /**
@@ -46,9 +47,6 @@ class CompetitionContextProvider
     public function switchCompetition(?int $competitionId): void
     {
         $session = $this->requestStack->getSession();
-        if ($session === null) {
-            return;
-        }
 
         if ($competitionId === null) {
             $session->remove(self::SESSION_KEY);
@@ -66,9 +64,6 @@ class CompetitionContextProvider
     public function getSelectedCompetitionId(): ?int
     {
         $session = $this->requestStack->getSession();
-        if ($session === null) {
-            return null;
-        }
 
         $selectedCompetitionId = $session->get(self::SESSION_KEY);
 
