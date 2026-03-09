@@ -13,13 +13,20 @@
 <div class="app-shell">
     <aside class="app-sidebar">
         <div class="app-brand">
-            <div class="app-brand__logo">SVR</div>
-            <div class="app-brand__text">
-                {% set competitionContext = competition_context() %}
-                <strong>SVR Auswertung</strong>
+            {% set competitionContext = competition_context() %}
+            {# 1. Die Competition sicher holen (oder null, falls ID leer oder nicht vorhanden) #}
+            {% set selectedComp = competitionContext.competitions[competitionContext.selectedCompetitionId] ?? null %}
 
+            {# 2. Nur wenn selectedComp existiert, den Typen holen, sonst ein Fallback (z.B. 'None') #}
+            {% set selectedCompetitionType = selectedComp ? selectedComp.type.name|capitalize : 'None' %}
+
+            {# 3. Den Icon-Namen setzen (kann jetzt direkt den Typ übernehmen) #}
+            {% set iconName = selectedCompetitionType %}
+            <div class="app-competition__logo">
+                <img src="{{ asset('icon/Competition' ~ iconName ~ '.svg') }}"  title="{{ selectedCompetitionType }}"/>
+            </div>
+            <div class="app-brand__text">
                 <form class="app-brand__competition-form" method="get" action="{{ path('competition_context_switch') }}">
-                    <label class="app-brand__competition-label" for="active-competition">Wettkampf</label>
                     <select
                         class="app-brand__competition-select"
                         id="active-competition"

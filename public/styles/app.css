@@ -197,7 +197,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     box-shadow: var(--shadow-panel);
 }
 
-.app-brand__logo {
+.app-competition__logo {
     width: 42px;
     height: 42px;
     display: grid;
@@ -675,4 +675,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
         transition: none !important;
         scroll-behavior: auto !important;
     }
+}
+
+/** Tables **/
+table {
+    border: 1px solid var(--color-border);
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+
+thead {
+    background-color: var(--color-surface-elevated);
+}
+
+tr {
+    background-color: var(--color-bg);
+}
+tbody > tr:nth-of-type(2n+1) {
+    background-color: var(--color-bg-alt);
+}
+
+th, td {
+    padding: 10px;
 }

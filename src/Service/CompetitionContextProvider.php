@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Entity\Competition;
 use App\Repository\CompetitionRepository;
 use Symfony\Component\HttpFoundation\RequestStack;
 
@@ -27,14 +28,16 @@ class CompetitionContextProvider
         foreach ($competitions as $competition) {
             $id = $competition->getId();
             $name = $competition->getName();
+            $type = $competition->getType();
 
             if ($id === null || $name === null) {
                 continue;
             }
 
-            $competitionOptions[] = [
+            $competitionOptions[$id] = [
                 'id' => $id,
                 'name' => $name,
+                'type' => $type
             ];
         }
 
@@ -69,4 +72,5 @@ class CompetitionContextProvider
 
         return is_int($selectedCompetitionId) ? $selectedCompetitionId : null;
     }
+
 }

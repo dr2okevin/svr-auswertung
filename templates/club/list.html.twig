@@ -6,7 +6,7 @@
     <h1>Vereine</h1>
 
     <p>
-        <a href="{{ path('clubs_new') }}">Neuen Verein anlegen</a>
+        <a href="{{ path('clubs_new') }}" class="btn">Neuen Verein anlegen</a>
     </p>
 
     {% if clubs is empty %}
@@ -16,7 +16,7 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Eintrag</th>
+                <th>Name</th>
                 <th>Aktionen</th>
             </tr>
             </thead>
@@ -26,7 +26,7 @@
                     <td>{{ club.id }}</td>
                     <td>{{ club.title }}</td>
                     <td>
-                        <a href="{{ path('clubs_edit', {id: club.id}) }}">Bearbeiten</a>
+                        <a href="{{ path('clubs_edit', {id: club.id}) }}" class="btn">Bearbeiten</a>
                     </td>
                 </tr>
             {% endfor %}
