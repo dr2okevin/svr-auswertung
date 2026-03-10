@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wettkampf bearbeiten{% endblock %}
+
+{% block body %}
+    <h1>Wettkampf bearbeiten</h1>
+
+    {% include 'competition/_form.html.twig' with {
+        form: form,
+        button_label: 'Speichern'
+    } %}
+
+    <p>
+        <a href="{{ path('competitions_list') }}" class="btn">Zurück zur Liste</a>
+    </p>
+
+    {% include 'competition/_delete_form.html.twig' with {
+        competition: competition
+    } %}
+{% endblock %}

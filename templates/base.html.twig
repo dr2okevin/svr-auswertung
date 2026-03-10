@@ -58,7 +58,7 @@
                     <span>Dashboard</span>
                 </a>
 
-                <a class="app-nav__link" href="#">
+                <a class="app-nav__link{% if currentRoute starts with 'competitions_' %} app-nav__link--active{% endif %}" href="{{ path('competitions_list') }}">
                     <span class="app-nav__icon"><img src="{{ asset('icon/Competitions.svg') }}" alt="" /></span>
                     <span>Wettkämpfe</span>
                 </a>
