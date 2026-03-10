@@ -12,6 +12,7 @@
 <body>
 <div class="app-shell">
     <aside class="app-sidebar">
+        {% set currentRoute = app.request.attributes.get('_route') %}
         <div class="app-brand">
             {% set competitionContext = competition_context() %}
             {# 1. Die Competition sicher holen (oder null, falls ID leer oder nicht vorhanden) #}
@@ -22,6 +23,7 @@
 
             {# 3. Den Icon-Namen setzen (kann jetzt direkt den Typ übernehmen) #}
             {% set iconName = selectedCompetitionType %}
+            {% set hasSelectedCompetition = competitionContext.selectedCompetitionId is not null %}
             <div class="app-competition__logo">
                 <img src="{{ asset('icon/Competition' ~ iconName ~ '.svg') }}"  title="{{ selectedCompetitionType }}"/>
             </div>
@@ -51,7 +53,7 @@
             <div class="app-nav__group">
                 <div class="app-nav__label">Allgemein</div>
 
-                <a class="app-nav__link app-nav__link--active" href="{{ path('welcome') }}">
+                <a class="app-nav__link{% if currentRoute == 'welcome' %} app-nav__link--active{% endif %}" href="{{ path('welcome') }}">
                     <span class="app-nav__icon">▣</span>
                     <span>Dashboard</span>
                 </a>
@@ -61,7 +63,7 @@
                     <span>Wettkämpfe</span>
                 </a>
 
-                <a class="app-nav__link" href="{{ path('clubs_list') }}">
+                <a class="app-nav__link{% if currentRoute starts with 'clubs_' %} app-nav__link--active{% endif %}" href="{{ path('clubs_list') }}">
                     <span class="app-nav__icon">◪</span>
                     <span>Vereine</span>
                 </a>
@@ -75,29 +77,37 @@
                     <span>Personen</span>
                 </a>
 
-                <a class="app-nav__link" href="#">
-                    <span class="app-nav__icon">◇</span>
-                    <span>Teams</span>
-                </a>
+                {% if hasSelectedCompetition %}
+                    <a class="app-nav__link" href="#">
+                        <span class="app-nav__icon">◇</span>
+                        <span>Teams</span>
+                    </a>
+                {% endif %}
 
-                <a class="app-nav__link" href="#">
-                    <span class="app-nav__icon">△</span>
-                    <span>Disziplinen</span>
-                </a>
+                {% if hasSelectedCompetition %}
+                    <a class="app-nav__link" href="#">
+                        <span class="app-nav__icon">△</span>
+                        <span>Disziplinen</span>
+                    </a>
+                {% endif %}
             </div>
 
             <div class="app-nav__group">
                 <div class="app-nav__label">Auswertung</div>
 
-                <a class="app-nav__link" href="#">
-                    <span class="app-nav__icon">▤</span>
-                    <span>Ergebnisse</span>
-                </a>
+                {% if hasSelectedCompetition %}
+                    <a class="app-nav__link" href="#">
+                        <span class="app-nav__icon">▤</span>
+                        <span>Ergebnisse</span>
+                    </a>
+                {% endif %}
 
-                <a class="app-nav__link" href="#">
-                    <span class="app-nav__icon">⇩</span>
-                    <span>Export</span>
-                </a>
+                {% if hasSelectedCompetition %}
+                    <a class="app-nav__link" href="#">
+                        <span class="app-nav__icon">⇩</span>
+                        <span>Export</span>
+                    </a>
+                {% endif %}
             </div>
         </nav>
     </aside>
