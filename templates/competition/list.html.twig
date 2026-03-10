@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wettkämpfe{% endblock %}
+
+{% block body %}
+    <h1>Wettkämpfe</h1>
+
+    <p>
+        <a href="{{ path('competitions_new') }}" class="btn">Neuen Wettkampf anlegen</a>
+    </p>
+
+    {% if competitions is empty %}
+        <p>Keine Wettkämpfe vorhanden.</p>
+    {% else %}
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Typ</th>
+                <th>Start</th>
+                <th>Ende</th>
+                <th>Aktionen</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for competition in competitions %}
+                <tr>
+                    <td>{{ competition.id }}</td>
+                    <td>{{ competition.name }}</td>
+                    <td>{{ competition.type ? competition.type.getLabel() : '' }}</td>
+                    <td>{{ competition.startTime ? competition.startTime|date('d.m.Y H:i') : '' }}</td>
+                    <td>{{ competition.endTime ? competition.endTime|date('d.m.Y H:i') : '' }}</td>
+                    <td>
+                        <a href="{{ path('competitions_edit', {id: competition.id}) }}" class="btn">Bearbeiten</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

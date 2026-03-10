@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wettkampf anlegen{% endblock %}
+
+{% block body %}
+    <h1>Wettkampf anlegen</h1>
+
+    {% include 'competition/_form.html.twig' with {
+        form: form,
+        button_label: 'Speichern'
+    } %}
+
+    <p>
+        <a href="{{ path('competitions_list') }}" class="btn">Zurück zur Liste</a>
+    </p>
+{% endblock %}
