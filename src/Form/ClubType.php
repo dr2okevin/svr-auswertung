@@ -13,8 +13,8 @@ class ClubType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('address')
-            ->add('type')
+            ->add('address', null, ['required' => false, 'empty_data' => ''])
+            ->add('type', null, ['required' => false, 'empty_data' => ''])
         ;
     }
 
