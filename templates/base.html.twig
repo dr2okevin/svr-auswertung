@@ -68,7 +68,7 @@
                     <span>Vereine</span>
                 </a>
 
-                <a class="app-nav__link" href="#">
+                <a class="app-nav__link{% if currentRoute starts with 'persons_' %} app-nav__link--active{% endif %}" href="{{ path('persons_list') }}">
                     <span class="app-nav__icon"><img src="{{ asset('icon/Persons.svg') }}" alt="" /></span>
                     <span>Personen</span>
                 </a>

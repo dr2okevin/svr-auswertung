@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personen{% endblock %}
+
+{% block body %}
+    <h1>Personen</h1>
+
+    <p>
+        <a href="{{ path('persons_new') }}" class="btn">Neue Person anlegen</a>
+    </p>
+
+    {% if persons is empty %}
+        <p>Keine Personen vorhanden.</p>
+    {% else %}
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Geburtsdatum</th>
+                <th>Profi</th>
+                <th>Aktionen</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for person in persons %}
+                <tr>
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.fristName }}</td>
+                    <td>{{ person.lastName }}</td>
+                    <td>{{ person.birthdate ? person.birthdate|date('d.m.Y') : '' }}</td>
+                    <td>{{ person.professional ? 'Ja' : 'Nein' }}</td>
+                    <td>
+                        <a href="{{ path('persons_show', {id: person.id}) }}" class="btn">Anzeigen</a>
+                        <a href="{{ path('persons_edit', {id: person.id}) }}" class="btn">Bearbeiten</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

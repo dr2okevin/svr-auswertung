@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Person bearbeiten{% endblock %}
+
+{% block body %}
+    <h1>Person bearbeiten</h1>
+
+    {% include 'person/_form.html.twig' with {
+        form: form,
+        button_label: 'Speichern'
+    } %}
+
+    <p>
+        <a href="{{ path('persons_list') }}" class="btn">Zurück zur Liste</a>
+    </p>
+
+    {% include 'person/_delete_form.html.twig' with {
+        person: person
+    } %}
+{% endblock %}

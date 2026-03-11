@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Person anlegen{% endblock %}
+
+{% block body %}
+    <h1>Person anlegen</h1>
+
+    {% include 'person/_form.html.twig' with {
+        form: form,
+        button_label: 'Speichern'
+    } %}
+
+    <p>
+        <a href="{{ path('persons_list') }}" class="btn">Zurück zur Liste</a>
+    </p>
+{% endblock %}
