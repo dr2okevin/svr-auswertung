@@ -51,12 +51,12 @@
 
         <nav class="app-nav" aria-label="Hauptnavigation">
             <div class="app-nav__group">
-                <div class="app-nav__label">Allgemein</div>
-
                 <a class="app-nav__link{% if currentRoute == 'welcome' %} app-nav__link--active{% endif %}" href="{{ path('welcome') }}">
                     <span class="app-nav__icon"><img src="{{ asset('icon/Dashboard.svg') }}" alt="" /></span>
                     <span>Dashboard</span>
                 </a>
+
+                <div class="app-nav__label">Stammdaten</div>
 
                 <a class="app-nav__link{% if currentRoute starts with 'competitions_' %} app-nav__link--active{% endif %}" href="{{ path('competitions_list') }}">
                     <span class="app-nav__icon"><img src="{{ asset('icon/Competitions.svg') }}" alt="" /></span>
@@ -67,24 +67,22 @@
                     <span class="app-nav__icon"><img src="{{ asset('icon/Clubs.svg') }}" alt="" /></span>
                     <span>Vereine</span>
                 </a>
-            </div>
-
-            <div class="app-nav__group">
-                <div class="app-nav__label">Stammdaten</div>
 
                 <a class="app-nav__link" href="#">
                     <span class="app-nav__icon"><img src="{{ asset('icon/Persons.svg') }}" alt="" /></span>
                     <span>Personen</span>
                 </a>
+            </div>
+
+            <div class="app-nav__group">
+                <div class="app-nav__label">Wettkampf</div>
 
                 {% if hasSelectedCompetition %}
                     <a class="app-nav__link" href="#">
                         <span class="app-nav__icon"><img src="{{ asset('icon/Teams.svg') }}" alt="" /></span>
                         <span>Teams</span>
                     </a>
-                {% endif %}
 
-                {% if hasSelectedCompetition %}
                     <a class="app-nav__link" href="#">
                         <span class="app-nav__icon">△</span>
                         <span>Disziplinen</span>
