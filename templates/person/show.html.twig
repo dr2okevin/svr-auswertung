@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Person anzeigen{% endblock %}
+
+{% block body %}
+    <h1>Person anzeigen</h1>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>ID</th>
+            <td>{{ person.id }}</td>
+        </tr>
+        <tr>
+            <th>Vorname</th>
+            <td>{{ person.fristName }}</td>
+        </tr>
+        <tr>
+            <th>Nachname</th>
+            <td>{{ person.lastName }}</td>
+        </tr>
+        <tr>
+            <th>Geburtsdatum</th>
+            <td>{{ person.birthdate ? person.birthdate|date('d.m.Y') : '' }}</td>
+        </tr>
+        <tr>
+            <th>Profi</th>
+            <td>{{ person.professional ? 'Ja' : 'Nein' }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <a href="{{ path('persons_list') }}" class="btn">Zurück zur Liste</a>
+        <a href="{{ path('persons_edit', {id: person.id}) }}" class="btn">Bearbeiten</a>
+    </p>
+
+    {% include 'person/_delete_form.html.twig' with {
+        person: person
+    } %}
+{% endblock %}
