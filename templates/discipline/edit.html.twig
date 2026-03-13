@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Disziplin bearbeiten{% endblock %}
+
+{% block body %}
+    <h1>Disziplin bearbeiten</h1>
+
+    {% include 'discipline/_form.html.twig' with {
+        form: form,
+        button_label: 'Speichern'
+    } %}
+
+    <p>
+        <a href="{{ path('disciplines_list') }}" class="btn">Zurück zur Liste</a>
+    </p>
+
+    {% include 'discipline/_delete_form.html.twig' with {
+        discipline: discipline
+    } %}
+{% endblock %}

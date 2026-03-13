@@ -73,7 +73,7 @@
                     <span>Personen</span>
                 </a>
 
-                <a class="app-nav__link" href="#">
+                <a class="app-nav__link{% if currentRoute starts with 'disciplines_' %} app-nav__link--active{% endif %}" href="{{ path('disciplines_list') }}">
                     <span class="app-nav__icon"><img src="{{ asset('icon/Discipline.svg') }}" alt="" /></span>
                     <span>Disziplinen</span>
                 </a>
