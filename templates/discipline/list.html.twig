@@ -18,6 +18,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Schüsse je Serie</th>
+                <th>Max. Anzahl Serien</th>
                 <th>Wertungsmodus</th>
                 <th>Max. Ringe je Schuss</th>
                 <th>Aktionen</th>
@@ -29,6 +30,7 @@
                     <td>{{ discipline.id }}</td>
                     <td>{{ discipline.name }}</td>
                     <td>{{ discipline.shotsPerSeries }}</td>
+                    <td>{{ discipline.maxSeriesCount }}</td>
                     <td>{{ discipline.scoringMode ? discipline.scoringMode.getLabel() : '' }}</td>
                     <td>{{ discipline.maxScoresPerShot }}</td>
                     <td>
