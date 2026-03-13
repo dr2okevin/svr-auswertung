@@ -26,7 +26,7 @@ class DisciplineType extends AbstractType
                 'choice_label' => static fn (ScoringMode $mode): string => $mode->getLabel(),
             ])
             ->add('MaxScoresPerShot', null, [
-                'label' => 'Maximale Punktzahl je Schuss',
+                'label' => 'Maximale Ringe je Schuss',
             ])
         ;
     }
