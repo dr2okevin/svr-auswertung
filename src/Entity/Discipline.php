@@ -22,6 +22,9 @@ class Discipline
     #[ORM\Column]
     private ?int $ShotsPerSeries = null;
 
+    #[ORM\Column]
+    private ?int $MaxSeriesCount = null;
+
     #[ORM\Column(enumType: ScoringMode::class)]
     private ?ScoringMode $ScoringMode = null;
 
@@ -34,9 +37,16 @@ class Discipline
     #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Discipline', orphanRemoval: true)]
     private Collection $series;
 
+    /**
+     * @var Collection<int, Competition>
+     */
+    #[ORM\ManyToMany(targetEntity: Competition::class, mappedBy: 'disciplines')]
+    private Collection $competitions;
+
     public function __construct()
     {
         $this->series = new ArrayCollection();
+        $this->competitions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -64,6 +74,18 @@ class Discipline
     public function setShotsPerSeries(int $ShotsPerSeries): static
     {
         $this->ShotsPerSeries = $ShotsPerSeries;
+
+        return $this;
+    }
+
+    public function getMaxSeriesCount(): ?int
+    {
+        return $this->MaxSeriesCount;
+    }
+
+    public function setMaxSeriesCount(int $MaxSeriesCount): static
+    {
+        $this->MaxSeriesCount = $MaxSeriesCount;
 
         return $this;
     }
@@ -117,6 +139,33 @@ class Discipline
             if ($series->getDiscipline() === $this) {
                 $series->setDiscipline(null);
             }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Competition>
+     */
+    public function getCompetitions(): Collection
+    {
+        return $this->competitions;
+    }
+
+    public function addCompetition(Competition $competition): static
+    {
+        if (!$this->competitions->contains($competition)) {
+            $this->competitions->add($competition);
+            $competition->addDiscipline($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCompetition(Competition $competition): static
+    {
+        if ($this->competitions->removeElement($competition)) {
+            $competition->removeDiscipline($this);
         }
 
         return $this;

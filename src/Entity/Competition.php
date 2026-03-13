@@ -34,9 +34,19 @@ class Competition
     #[ORM\OneToMany(targetEntity: Round::class, mappedBy: 'Competition', orphanRemoval: true)]
     private Collection $rounds;
 
+    /**
+     * @var Collection<int, Discipline>
+     */
+    #[ORM\ManyToMany(targetEntity: Discipline::class, inversedBy: 'competitions')]
+    #[ORM\JoinTable(name: 'competitions_disciplines_mm')]
+    #[ORM\JoinColumn(name: 'competition', referencedColumnName: 'id', nullable: false)]
+    #[ORM\InverseJoinColumn(name: 'discipline', referencedColumnName: 'id', nullable: false)]
+    private Collection $disciplines;
+
     public function __construct()
     {
         $this->rounds = new ArrayCollection();
+        $this->disciplines = new ArrayCollection();
     }
 
 
@@ -119,6 +129,30 @@ class Competition
                 $round->setCompetition(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Discipline>
+     */
+    public function getDisciplines(): Collection
+    {
+        return $this->disciplines;
+    }
+
+    public function addDiscipline(Discipline $discipline): static
+    {
+        if (!$this->disciplines->contains($discipline)) {
+            $this->disciplines->add($discipline);
+        }
+
+        return $this;
+    }
+
+    public function removeDiscipline(Discipline $discipline): static
+    {
+        $this->disciplines->removeElement($discipline);
 
         return $this;
     }

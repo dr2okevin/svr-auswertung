@@ -59,6 +59,7 @@ Table "disciplines" {
   "uid" int(11) [pk, not null, increment]
   "name" varchar(255) [not null]
   "shots_per_series" int(11) [not null, default: 10]
+  "max_series_count" int(11) [not null, default: 1]
   "scoring_mode" scoring_mode_enum [not null, default: "tenths"]
   "max_score_per_shot" decimal(4,1) [not null, default: 10.9]
 }

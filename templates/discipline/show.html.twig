@@ -20,6 +20,10 @@
             <td>{{ discipline.shotsPerSeries }}</td>
         </tr>
         <tr>
+            <th>Max. Anzahl Serien</th>
+            <td>{{ discipline.maxSeriesCount }}</td>
+        </tr>
+        <tr>
             <th>Wertungsmodus</th>
             <td>{{ discipline.scoringMode ? discipline.scoringMode.getLabel() : '' }}</td>
         </tr>
@@ -34,6 +38,18 @@
         <a href="{{ path('disciplines_list') }}" class="btn">Zurück zur Liste</a>
         <a href="{{ path('disciplines_edit', {id: discipline.id}) }}" class="btn">Bearbeiten</a>
     </p>
+
+
+    <h2>Verknüpfte Wettkämpfe</h2>
+    {% if discipline.competitions is empty %}
+        <p>Keine Wettkämpfe verknüpft.</p>
+    {% else %}
+        <ul>
+            {% for competition in discipline.competitions %}
+                <li>{{ competition.name }}{% if competition.type %} ({{ competition.type.getLabel() }}){% endif %}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
     {% include 'discipline/_delete_form.html.twig' with {
         discipline: discipline

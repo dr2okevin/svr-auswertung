@@ -3,7 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Competition;
+use App\Entity\Discipline;
 use App\Enum\CompetitionType as CompetitionTypeEnum;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\EnumType;
@@ -34,6 +36,14 @@ class CompetitionType extends AbstractType
                 'widget' => 'single_text',
                 'input' => 'datetime',
                 'html5' => true,
+            ])
+            ->add('Disciplines', EntityType::class, [
+                'class' => Discipline::class,
+                'choice_label' => 'Name',
+                'label' => 'Disziplinen',
+                'required' => false,
+                'multiple' => true,
+                'by_reference' => false,
             ])
         ;
     }

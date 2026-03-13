@@ -20,6 +20,9 @@ class DisciplineType extends AbstractType
             ->add('ShotsPerSeries', null, [
                 'label' => 'Schüsse je Serie',
             ])
+            ->add('MaxSeriesCount', null, [
+                'label' => 'Maximale Anzahl von Serien',
+            ])
             ->add('ScoringMode', EnumType::class, [
                 'class' => ScoringMode::class,
                 'label' => 'Wertungsmodus',
