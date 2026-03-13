@@ -10,11 +10,14 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CompetitionContextController extends AbstractController
 {
+    public function __construct(private readonly CompetitionContextProvider $competitionContextProvider)
+    {
+    }
     #[Route('/competition-context/switch', name: 'competition_context_switch', methods: ['GET'])]
-    public function switch(Request $request, CompetitionContextProvider $competitionContextProvider): RedirectResponse
+    public function switch(Request $request): RedirectResponse
     {
         $competitionId = $request->query->getInt('competition_id');
-        $competitionContextProvider->switchCompetition($competitionId > 0 ? $competitionId : null);
+        $this->competitionContextProvider->switchCompetition($competitionId > 0 ? $competitionId : null);
 
         $referer = $request->headers->get('referer');
 

@@ -11,18 +11,19 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-#[Route('/clubs')]
 class ClubController extends AbstractController
 {
-    #[Route('', name: 'clubs_list', methods: ['GET'])]
-    public function listClubs(ClubRepository $clubRepository): Response
+    public function __construct(private readonly ClubRepository $clubRepository)
+    {
+    }
+    #[Route('/clubs', name: 'clubs_list', methods: ['GET'])]
+    public function listClubs(): Response
     {
         return $this->render('club/list.html.twig', [
-            'clubs' => $clubRepository->findAll(),
+            'clubs' => $this->clubRepository->findAll(),
         ]);
     }
-
-    #[Route('/new', name: 'clubs_new', methods: ['GET', 'POST'])]
+    #[Route('/clubs/new', name: 'clubs_new', methods: ['GET', 'POST'])]
     public function newClub(Request $request, EntityManagerInterface $entityManager): Response
     {
         $club = new Club();
@@ -41,16 +42,14 @@ class ClubController extends AbstractController
             'form' => $form,
         ]);
     }
-
-    #[Route('/{id}', name: 'clubs_show', methods: ['GET'])]
+    #[Route('/clubs/{id}', name: 'clubs_show', methods: ['GET'])]
     public function showClub(Club $club): Response
     {
         return $this->render('club/show.html.twig', [
             'club' => $club,
         ]);
     }
-
-    #[Route('/{id}/edit', name: 'clubs_edit', methods: ['GET', 'POST'])]
+    #[Route('/clubs/{id}/edit', name: 'clubs_edit', methods: ['GET', 'POST'])]
     public function editClub(Request $request, Club $club, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(ClubType::class, $club);
@@ -67,8 +66,7 @@ class ClubController extends AbstractController
             'form' => $form,
         ]);
     }
-
-    #[Route('/{id}/delete', name: 'clubs_delete', methods: ['POST'])]
+    #[Route('/clubs/{id}/delete', name: 'clubs_delete', methods: ['POST'])]
     public function deleteClub(Request $request, Club $club, EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('delete_club_' . $club->getId(), (string) $request->request->get('_token'))) {
