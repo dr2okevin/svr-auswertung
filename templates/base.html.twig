@@ -84,7 +84,7 @@
                 <div class="app-nav__label">Wettkampf</div>
 
                 {% if hasSelectedCompetition %}
-                    <a class="app-nav__link" href="#">
+                    <a class="app-nav__link{% if currentRoute starts with 'teams_' %} app-nav__link--active{% endif %}" href="{{ path('teams_list') }}">
                         <span class="app-nav__icon"><img src="{{ asset('icon/Teams.svg') }}" alt="" /></span>
                         <span>Teams</span>
                     </a>

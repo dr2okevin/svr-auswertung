@@ -53,6 +53,7 @@ Table "competitions" {
   "type" competition_type_enum
   "start" datetime [not null]
   "end" datetime [not null]
+  "max_team_size" int(11) [default: NULL]
 }
 
 Table "disciplines" {
@@ -77,10 +78,15 @@ Table "rounds" {
   "end" datetime [not null]
 }
 
-Table "person_team_mm" {
-  "person" int(11) [not null]
+Table "team_member" {
+  "uid" int(11) [pk, not null, increment]
   "team" int(11) [not null]
+  "person" int(11) [not null]
   "discipline" int(11) [not null]
+
+  indexes {
+    (team, person, discipline) [unique]
+  }
 }
 
 Table "series" {
@@ -103,8 +109,9 @@ Table "shots" {
   "recorded_at" datetime [not null, default: `current_timestamp()`]
 }
 
-Ref: "person_team_mm"."person" > "persons"."uid"
-Ref: "person_team_mm"."team" > "teams"."uid"
+Ref: "team_member"."person" > "persons"."uid"
+Ref: "team_member"."team" > "teams"."uid"
+Ref: "team_member"."discipline" > "disciplines"."uid"
 
 Ref: "teams"."competition" > "competitions"."uid"
 

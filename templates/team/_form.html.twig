@@ -1,0 +1,61 @@
+{{ form_start(form) }}
+    {{ form_row(form.Name) }}
+    {{ form_row(form.Type) }}
+
+    <div class="team-members" data-prototype="{{ form_widget(form.TeamMembers.vars.prototype)|e('html_attr') }}">
+        <h3>Teammitglieder</h3>
+        <div class="team-members__items">
+            {% for memberForm in form.TeamMembers %}
+                <div class="team-member-item">
+                    {{ form_row(memberForm.Person) }}
+                    {{ form_row(memberForm.Discipline) }}
+                    <button type="button" class="btn js-remove-member">Entfernen</button>
+                </div>
+            {% endfor %}
+        </div>
+        <button type="button" class="btn js-add-member">Mitglied hinzufügen</button>
+    </div>
+
+    <button type="submit" class="btn">{{ button_label|default('Speichern') }}</button>
+{{ form_end(form) }}
+
+<script>
+(() => {
+    const wrapper = document.querySelector('.team-members');
+
+    if (!wrapper) {
+        return;
+    }
+
+    const itemsContainer = wrapper.querySelector('.team-members__items');
+    const addButton = wrapper.querySelector('.js-add-member');
+    let index = itemsContainer.querySelectorAll('.team-member-item').length;
+
+    const attachRemoveHandler = (button) => {
+        button.addEventListener('click', () => {
+            button.closest('.team-member-item')?.remove();
+        });
+    };
+
+    itemsContainer.querySelectorAll('.js-remove-member').forEach(attachRemoveHandler);
+
+    addButton?.addEventListener('click', () => {
+        const prototype = wrapper.dataset.prototype;
+        const html = prototype.replace(/__name__/g, index.toString());
+        index += 1;
+
+        const item = document.createElement('div');
+        item.classList.add('team-member-item');
+        item.innerHTML = html;
+
+        const removeButton = document.createElement('button');
+        removeButton.type = 'button';
+        removeButton.classList.add('btn', 'js-remove-member');
+        removeButton.textContent = 'Entfernen';
+        item.appendChild(removeButton);
+        attachRemoveHandler(removeButton);
+
+        itemsContainer.appendChild(item);
+    });
+})();
+</script>

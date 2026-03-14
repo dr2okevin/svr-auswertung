@@ -18,7 +18,7 @@ class CompetitionContextProvider
     }
 
     /**
-     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string}>}
+     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string, type: ?\App\Enum\CompetitionType}>}
      */
     public function getContext(): array
     {

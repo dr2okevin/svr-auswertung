@@ -14,7 +14,7 @@ class CompetitionContextExtension
     }
 
     /**
-     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string}>}
+     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string, type: ?\App\Enum\CompetitionType}>}
      */
     #[AsTwigFunction(name: 'competition_context')]
     public function competitionContext(): array

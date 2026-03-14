@@ -20,6 +20,7 @@
                 <th>Typ</th>
                 <th>Start</th>
                 <th>Ende</th>
+                <th>Max. Teamgröße</th>
                 <th>Aktionen</th>
             </tr>
             </thead>
@@ -31,6 +32,7 @@
                     <td>{{ competition.type ? competition.type.getLabel() : '' }}</td>
                     <td>{{ competition.startTime ? competition.startTime|date('d.m.Y H:i') : '' }}</td>
                     <td>{{ competition.endTime ? competition.endTime|date('d.m.Y H:i') : '' }}</td>
+                    <td>{{ competition.maxTeamSize ?? '—' }}</td>
                     <td>
                         <a href="{{ path('competitions_edit', {id: competition.id}) }}" class="btn">Bearbeiten</a>
                     </td>

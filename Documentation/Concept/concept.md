@@ -21,6 +21,16 @@ Für die Mannschaftswertung werden alle Ergebnisse aller Disziplinen zusammen ge
 Es kann eine getrennte Wertung für Teams mit und ohne Profischützen geben.
 Es kann vorkommen das eine Person in mehreren Teams schießt.
 
+
+## Team-Zuordnung (fachliches Konzept)
+Für Wettbewerbe mit Mannschaften wird die Zuordnung als eigene Entität modelliert: **TeamMember**.
+Ein TeamMember verknüpft genau ein Team, genau eine Person und genau eine Disziplin.
+Damit kann dieselbe Person in einem Team mehrfach vorkommen, solange die Disziplin unterschiedlich ist.
+Zusätzlich wird `(team, person, discipline)` als eindeutige Kombination geführt, um Dubletten zu vermeiden.
+
+Der Wettkampf erhält optional das Feld `max_team_size`. Ist der Wert gesetzt, darf ein Team höchstens so viele TeamMember-Einträge enthalten.
+Ist kein Wert gesetzt, gibt es keine harte Obergrenze.
+
 ## Anbindung DISAG
 Der SVR nutzt aktuell für 50 m KK und 10 m Luft jeweils ein DISAG OptiScore system welches alle Schüsse digital erfasst. Das Programm ermöglicht einen Export als xls. Dort enthalten sind alle Schüße einer Serie mit ihrem Wert und der exakten Position.
 
@@ -53,6 +63,17 @@ Für den Fall das diese nicht getrennt gewertet werden, erfolgt bei Ergebnisglei
 
 ## Datenbank
 Als Datenbank soll MySQL oder MariaDB zum einsatz kommen. Ein Konzept für Tabellen liegt in der datei [database.dbml](database.dbml)
+
+
+## Team-Zuordnung (fachliches Konzept)
+Für Wettbewerbe mit Teams wird eine eigene Zuordnungstabelle `TeamMember` verwendet.
+Ein Eintrag verknüpft genau **ein Team**, **eine Person** und **eine Disziplin**.
+So kann dieselbe Person innerhalb eines Teams mehrfach vorkommen, wenn unterschiedliche Disziplinen geschossen werden.
+Die Kombination `(team, person, discipline)` ist eindeutig und verhindert Dubletten.
+
+Zusätzlich erhält ein Wettkampf optional das Feld `max_team_size`.
+Ist es gesetzt, darf ein Team höchstens so viele TeamMember-Einträge enthalten.
+Ist es leer, gibt es keine feste Obergrenze.
 
 ## Export
 Es soll einen Export für jeden Wettkampf geben. Dabei soll es verschiedene Formate geben.

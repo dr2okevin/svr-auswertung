@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Teams{% endblock %}
+
+{% block body %}
+    <h1>Teams für {{ competition.name }}</h1>
+
+    <p>
+        <a href="{{ path('teams_new') }}" class="btn">Neues Team anlegen</a>
+    </p>
+
+    {% if teams is empty %}
+        <p>Keine Teams vorhanden.</p>
+    {% else %}
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Typ</th>
+                <th>Mitglieder</th>
+                <th>Aktionen</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for team in teams %}
+                <tr>
+                    <td>{{ team.id }}</td>
+                    <td>{{ team.name }}</td>
+                    <td>{{ team.type ? team.type.getLabel() : '' }}</td>
+                    <td>{{ team.teamMembers|length }}</td>
+                    <td>
+                        <a href="{{ path('teams_edit', {id: team.id}) }}" class="btn">Bearbeiten</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

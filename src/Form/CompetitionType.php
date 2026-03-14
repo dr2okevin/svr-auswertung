@@ -9,6 +9,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\EnumType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -36,6 +37,13 @@ class CompetitionType extends AbstractType
                 'widget' => 'single_text',
                 'input' => 'datetime',
                 'html5' => true,
+            ])
+            ->add('MaxTeamSize', IntegerType::class, [
+                'label' => 'Maximale Teamgröße',
+                'required' => false,
+                'attr' => [
+                    'min' => 1,
+                ],
             ])
             ->add('Disciplines', EntityType::class, [
                 'class' => Discipline::class,
