@@ -39,8 +39,8 @@ class Competition
      */
     #[ORM\ManyToMany(targetEntity: Discipline::class, inversedBy: 'competitions')]
     #[ORM\JoinTable(name: 'competitions_disciplines_mm')]
-    #[ORM\JoinColumn(name: 'competition', referencedColumnName: 'id', nullable: false)]
-    #[ORM\InverseJoinColumn(name: 'discipline', referencedColumnName: 'id', nullable: false)]
+    #[ORM\JoinColumn(name: 'competition', referencedColumnName: 'id')]
+    #[ORM\InverseJoinColumn(name: 'discipline', referencedColumnName: 'id')]
     private Collection $disciplines;
 
     public function __construct()

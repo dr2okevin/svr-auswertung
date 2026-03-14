@@ -79,6 +79,7 @@
     },
     "require-dev": {
         "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-doctrine": "^2.0.20",
         "phpunit/phpunit": "^12.4",
         "rector/rector": "^2.2",
         "symfony/maker-bundle": "^1.65",

@@ -63,7 +63,7 @@ Es soll einen Export für jeden Wettkampf geben. Dabei soll es verschiedene Form
 Für die erste Phase gibt es nur Admin user welche alle Daten eingeben und später die Auswertung exportieren. Später könnten noch einfache Nutzer dazu kommen, welche einem Schützen zugeordnet werden, welcher damit seine ergebnisse gesammelt einsehen kann.
 
 ## Framework
-Als Framework kommt Symfony 7.3 zum einsatz. Abhängigkeiten werden via Composer verwaltet. Templates sind in twig.
+Als Framework kommt Symfony 7.4 zum einsatz. Abhängigkeiten werden via Composer verwaltet. Templates sind in twig.
 
 ## Datenerfassung
 Die Datenerfassung erfolgt über ein Web Formular.

@@ -80,7 +80,7 @@ Table "rounds" {
 Table "person_team_mm" {
   "person" int(11) [not null]
   "team" int(11) [not null]
-  "position" int(4) [default: NULL]
+  "discipline" int(11) [not null]
 }
 
 Table "series" {
