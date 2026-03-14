@@ -28,6 +28,9 @@ class Competition
     #[ORM\Column]
     private ?\DateTime $EndTime = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $MaxTeamSize = null;
+
     /**
      * @var Collection<int, Round>
      */
@@ -43,10 +46,17 @@ class Competition
     #[ORM\InverseJoinColumn(name: 'discipline', referencedColumnName: 'id')]
     private Collection $disciplines;
 
+    /**
+     * @var Collection<int, Team>
+     */
+    #[ORM\OneToMany(targetEntity: Team::class, mappedBy: 'Competition', orphanRemoval: true)]
+    private Collection $teams;
+
     public function __construct()
     {
         $this->rounds = new ArrayCollection();
         $this->disciplines = new ArrayCollection();
+        $this->teams = new ArrayCollection();
     }
 
 
@@ -103,6 +113,18 @@ class Competition
         return $this;
     }
 
+    public function getMaxTeamSize(): ?int
+    {
+        return $this->MaxTeamSize;
+    }
+
+    public function setMaxTeamSize(?int $MaxTeamSize): static
+    {
+        $this->MaxTeamSize = $MaxTeamSize;
+
+        return $this;
+    }
+
     /**
      * @return Collection<int, Round>
      */
@@ -153,6 +175,35 @@ class Competition
     public function removeDiscipline(Discipline $discipline): static
     {
         $this->disciplines->removeElement($discipline);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Team>
+     */
+    public function getTeams(): Collection
+    {
+        return $this->teams;
+    }
+
+    public function addTeam(Team $team): static
+    {
+        if (!$this->teams->contains($team)) {
+            $this->teams->add($team);
+            $team->setCompetition($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTeam(Team $team): static
+    {
+        if ($this->teams->removeElement($team)) {
+            if ($team->getCompetition() === $this) {
+                $team->setCompetition(null);
+            }
+        }
 
         return $this;
     }

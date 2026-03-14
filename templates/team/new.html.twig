@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Team anlegen{% endblock %}
+
+{% block body %}
+    <h1>Team anlegen für {{ competition.name }}</h1>
+
+    {% if competition.maxTeamSize is not null %}
+        <p>Maximale Teamgröße: {{ competition.maxTeamSize }}</p>
+    {% endif %}
+
+    {% include 'team/_form.html.twig' with {
+        form: form,
+        button_label: 'Speichern'
+    } %}
+
+    <p>
+        <a href="{{ path('teams_list') }}" class="btn">Zurück zur Liste</a>
+    </p>
+{% endblock %}

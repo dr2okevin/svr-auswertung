@@ -34,9 +34,17 @@ class Person
     #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Person', orphanRemoval: true)]
     private Collection $series;
 
+    /**
+     * @var Collection<int, TeamMember>
+     */
+    #[ORM\OneToMany(targetEntity: TeamMember::class, mappedBy: 'Person', orphanRemoval: true)]
+    private Collection $teamMembers;
+
+
     public function __construct()
     {
         $this->series = new ArrayCollection();
+        $this->teamMembers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -121,4 +129,35 @@ class Person
 
         return $this;
     }
+
+
+    /**
+     * @return Collection<int, TeamMember>
+     */
+    public function getTeamMembers(): Collection
+    {
+        return $this->teamMembers;
+    }
+
+    public function addTeamMember(TeamMember $teamMember): static
+    {
+        if (!$this->teamMembers->contains($teamMember)) {
+            $this->teamMembers->add($teamMember);
+            $teamMember->setPerson($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTeamMember(TeamMember $teamMember): static
+    {
+        if ($this->teamMembers->removeElement($teamMember)) {
+            if ($teamMember->getPerson() === $this) {
+                $teamMember->setPerson(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

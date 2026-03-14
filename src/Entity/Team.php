@@ -22,15 +22,26 @@ class Team
     #[ORM\Column(enumType: TeamType::class)]
     private ?TeamType $Type = null;
 
+    #[ORM\ManyToOne(inversedBy: 'teams')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Competition $Competition = null;
+
     /**
      * @var Collection<int, Series>
      */
-    #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Team', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: Series::class, mappedBy: 'Team')]
     private Collection $series;
+
+    /**
+     * @var Collection<int, TeamMember>
+     */
+    #[ORM\OneToMany(targetEntity: TeamMember::class, mappedBy: 'Team', orphanRemoval: true, cascade: ['persist'])]
+    private Collection $teamMembers;
 
     public function __construct()
     {
         $this->series = new ArrayCollection();
+        $this->teamMembers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -62,6 +73,18 @@ class Team
         return $this;
     }
 
+    public function getCompetition(): ?Competition
+    {
+        return $this->Competition;
+    }
+
+    public function setCompetition(?Competition $Competition): static
+    {
+        $this->Competition = $Competition;
+
+        return $this;
+    }
+
     /**
      * @return Collection<int, Series>
      */
@@ -86,6 +109,35 @@ class Team
             // set the owning side to null (unless already changed)
             if ($series->getTeam() === $this) {
                 $series->setTeam(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, TeamMember>
+     */
+    public function getTeamMembers(): Collection
+    {
+        return $this->teamMembers;
+    }
+
+    public function addTeamMember(TeamMember $teamMember): static
+    {
+        if (!$this->teamMembers->contains($teamMember)) {
+            $this->teamMembers->add($teamMember);
+            $teamMember->setTeam($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTeamMember(TeamMember $teamMember): static
+    {
+        if ($this->teamMembers->removeElement($teamMember)) {
+            if ($teamMember->getTeam() === $this) {
+                $teamMember->setTeam(null);
             }
         }
 
