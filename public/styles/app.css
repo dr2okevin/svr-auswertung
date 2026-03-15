@@ -584,6 +584,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     color: var(--color-error-text);
 }
 
+.form__control option[selected] {
+    border-left: 2px solid var(--color-accent);
+}
+
 /* Checkbox specific wrapper */
 .form__check-group {
     display: flex;
