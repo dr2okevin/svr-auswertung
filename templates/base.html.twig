@@ -89,7 +89,7 @@
                         <span>Teams</span>
                     </a>
 
-                    <a class="app-nav__link" href="#">
+                    <a class="app-nav__link{% if currentRoute starts with 'shots_' %} app-nav__link--active{% endif %}" href="{{ path('shots_person_list') }}">
                         <span class="app-nav__icon"><img src="{{ asset('icon/Shoots.svg') }}" alt="" /></span>
                         <span>Schüsse</span>
                     </a>
@@ -105,9 +105,7 @@
                         <span class="app-nav__icon"><img src="{{ asset('icon/Results.svg') }}" alt="" /></span>
                         <span>Ergebnisse</span>
                     </a>
-                {% endif %}
 
-                {% if hasSelectedCompetition %}
                     <a class="app-nav__link" href="#">
                         <span class="app-nav__icon"><img src="{{ asset('icon/Export.svg') }}" alt="" /></span>
                         <span>Export</span>

@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Schüsse{% endblock %}
+
+{% block body %}
+    <form>
+        <label> Runde:
+            <select name="round">
+                <option value="1">Runde 1</option>
+                <option value="2">Runde 2</option>
+            </select>
+        </label>
+    </form>
+
+    <table>
+        <thead>
+        <tr>
+            <th colspan="5">Disziplin 1</th>
+        </tr>
+        <tr>
+            <td>Person</td>
+            <td>Disziplin</td>
+            <td>Team</td>
+            <td colspan="2">Schüsse</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Test Person 1</td>
+            <td>Test Disziplin 1</td>
+            <td>Test Team 1</td>
+            <td>0/20</td>
+            <td><a href="#" class="btn">bearbeiten</a></td>
+        </tr>
+        <tr>
+            <td>Test Person 2</td>
+            <td>Test Disziplin 1</td>
+            <td>Test Team 2</td>
+            <td>19/20</td>
+            <td><a href="#" class="btn">bearbeiten</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th colspan="5">Disziplin 2</th>
+        </tr>
+        <tr>
+            <td>Person</td>
+            <td>Disziplin</td>
+            <td>Team</td>
+            <td colspan="2">Schüsse</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Test Person 1</td>
+            <td>Test Disziplin 2</td>
+            <td>Test Team 1</td>
+            <td>10/10</td>
+            <td><a href="#" class="btn">bearbeiten</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+{% endblock %}
