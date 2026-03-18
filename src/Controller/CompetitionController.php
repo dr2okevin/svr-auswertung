@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Competition;
 use App\Form\CompetitionType;
 use App\Repository\CompetitionRepository;
+use App\Service\CompetitionRoundManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,7 +14,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CompetitionController extends AbstractController
 {
-    public function __construct(private readonly CompetitionRepository $competitionRepository)
+    public function __construct(
+        private readonly CompetitionRepository $competitionRepository,
+        private readonly CompetitionRoundManager $competitionRoundManager,
+    )
     {
     }
     #[Route('/competitions', name: 'competitions_list', methods: ['GET'])]
@@ -32,6 +36,7 @@ class CompetitionController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($competition);
+            $this->competitionRoundManager->syncRoundsForCompetition($competition, $entityManager);
             $entityManager->flush();
 
             return $this->redirectToRoute('competitions_list');
@@ -49,6 +54,7 @@ class CompetitionController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->competitionRoundManager->syncRoundsForCompetition($competition, $entityManager);
             $entityManager->flush();
 
             return $this->redirectToRoute('competitions_list');

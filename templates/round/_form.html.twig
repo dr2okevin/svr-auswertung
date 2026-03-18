@@ -1,0 +1,7 @@
+{{ form_start(form) }}
+    {{ form_row(form.Name) }}
+    {{ form_row(form.StartDate) }}
+    {{ form_row(form.EndDate) }}
+
+    <button type="submit" class="btn">{{ button_label|default('Speichern') }}</button>
+{{ form_end(form) }}
