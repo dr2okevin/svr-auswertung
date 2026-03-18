@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Runde anlegen{% endblock %}
+
+{% block body %}
+    <h1>Runde anlegen</h1>
+
+    {% include 'round/_form.html.twig' with {form: form} %}
+{% endblock %}

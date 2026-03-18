@@ -89,6 +89,13 @@
                         <span>Teams</span>
                     </a>
 
+                    {% if selectedComp and selectedComp.type and selectedComp.type.value == 'rounds' %}
+                        <a class="app-nav__link{% if currentRoute starts with 'rounds_' %} app-nav__link--active{% endif %}" href="{{ path('rounds_list') }}">
+                            <span class="app-nav__icon"><img src="{{ asset('icon/CompetitionRounds.svg') }}" alt="" /></span>
+                            <span>Runden</span>
+                        </a>
+                    {% endif %}
+
                     <a class="app-nav__link{% if currentRoute starts with 'shots_' %} app-nav__link--active{% endif %}" href="{{ path('shots_person_list') }}">
                         <span class="app-nav__icon"><img src="{{ asset('icon/Shoots.svg') }}" alt="" /></span>
                         <span>Schüsse</span>
