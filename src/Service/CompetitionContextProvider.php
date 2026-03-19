@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Enum\CompetitionType;
 use App\Entity\Competition;
 use App\Repository\CompetitionRepository;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -18,7 +19,7 @@ class CompetitionContextProvider
     }
 
     /**
-     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string, type: ?\App\Enum\CompetitionType}>}
+     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string, type: ?CompetitionType}>}
      */
     public function getContext(): array
     {

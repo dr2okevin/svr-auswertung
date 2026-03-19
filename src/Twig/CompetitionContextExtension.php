@@ -2,6 +2,7 @@
 
 namespace App\Twig;
 
+use App\Enum\CompetitionType;
 use Twig\Attribute\AsTwigFunction;
 use App\Service\CompetitionContextProvider;
 use Twig\Extension\AbstractExtension;
@@ -14,7 +15,7 @@ class CompetitionContextExtension
     }
 
     /**
-     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string, type: ?\App\Enum\CompetitionType}>}
+     * @return array{selectedCompetitionId: int|null, competitions: array<int, array{id: int, name: string, type: ?CompetitionType}>}
      */
     #[AsTwigFunction(name: 'competition_context')]
     public function competitionContext(): array

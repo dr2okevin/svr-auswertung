@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Competition;
 use App\Entity\Team;
 use App\Entity\TeamMember;
 use App\Form\TeamType;
@@ -122,7 +123,7 @@ class TeamController extends AbstractController
         return $this->redirectToRoute('teams_list');
     }
 
-    private function getSelectedCompetition(): ?\App\Entity\Competition
+    private function getSelectedCompetition(): ?Competition
     {
         $selectedCompetitionId = $this->competitionContextProvider->getSelectedCompetitionId();
 
