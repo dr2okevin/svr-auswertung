@@ -1,0 +1,1757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<result type="sc" date="23.03.2026" location="na" competitionsname="Export Test" id="25" additional=""
+        printDateTime="23.03.2026 18:13:42" showDecimalShots="0" additional_comments="" showAllShots="0" MaxSeries="4">
+    <shooters>
+        <shooter firstname="Levi" lastname="G" internid="" identification="" birthyear="2024"
+                 clubsname="Test Verein" clubsnumber="" dq="false" dq_comment="" result_qualification="0"
+                 fidRanges="7" hits_time="00:23:23" hits_time_seconds="1403" last_shot="2,4" count_hits="30"
+                 totalscore="179" totalscore_t="193.8" totalcount_innerten="0" worstdistance="2139.8" count11="0"
+                 count10="0" count9="4" count8="2" count7="6" count6="8" count5="2" count4="5" count3="1" count2="2"
+                 count1="0" count0="0">
+            <shots>
+                <shootoff totalscore="0" totalscore_t="0"/>
+                <series totalscore="64" totalscore_t="67.8" id="1">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="0"
+                          shotcount="0" run="2" isvalid="true" ishot="true" iswarm="false" x="324" y="-194"
+                          teiler="377.6" disktyp="lg" dummy="false" shotTime="639098847924820740" menuid="100_3"
+                          datetime="23.03.2026 17:50:01" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="97b71dcf-45a5-4800-9799-8f13d32a2266" full="9" dec="9.4" remark="" innerten_value="0"
+                          hotcount="1" comment="">9.4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="1"
+                          shotcount="1" run="2" isvalid="true" ishot="true" iswarm="false" x="506" y="-986"
+                          teiler="1108.2" disktyp="lg" dummy="false" shotTime="639098848274146340" menuid="100_3"
+                          datetime="23.03.2026 17:50:36" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="ecaf2f3d-81d1-4d8b-8d7a-ee01f2c91aff" full="6" dec="6.5" remark="" innerten_value="0"
+                          hotcount="2" comment="">6.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="2"
+                          shotcount="2" run="2" isvalid="true" ishot="true" iswarm="false" x="1464" y="-939"
+                          teiler="1739.2" disktyp="lg" dummy="false" shotTime="639098848614470480" menuid="100_3"
+                          datetime="23.03.2026 17:51:10" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="ac6db1b8-103c-414e-a627-47b0c03c8ed1" full="4" dec="4.0" remark="" innerten_value="0"
+                          hotcount="3" comment="">4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="3"
+                          shotcount="3" run="2" isvalid="true" ishot="true" iswarm="false" x="-1211" y="92"
+                          teiler="1214.4" disktyp="lg" dummy="false" shotTime="639098849132649160" menuid="100_3"
+                          datetime="23.03.2026 17:52:02" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="490b5006-74b8-4f19-b7a3-1030cc34394e" full="6" dec="6.1" remark="" innerten_value="0"
+                          hotcount="4" comment="">6.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="4"
+                          shotcount="4" run="2" isvalid="true" ishot="true" iswarm="false" x="695" y="-1036"
+                          teiler="1247.5" disktyp="lg" dummy="false" shotTime="639098849521553900" menuid="100_3"
+                          datetime="23.03.2026 17:52:40" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="fb957b4b-58ca-4826-b2ee-8d765666d144" full="6" dec="6.0" remark="" innerten_value="0"
+                          hotcount="5" comment="">6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="5"
+                          shotcount="5" run="2" isvalid="true" ishot="true" iswarm="false" x="-1003" y="183"
+                          teiler="1019.5" disktyp="lg" dummy="false" shotTime="639098850011573790" menuid="100_3"
+                          datetime="23.03.2026 17:53:29" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="ff8b771d-ca5d-4369-8a21-88f030def5d5" full="6" dec="6.9" remark="" innerten_value="0"
+                          hotcount="6" comment="">6.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="6"
+                          shotcount="6" run="2" isvalid="true" ishot="true" iswarm="false" x="-198" y="378"
+                          teiler="426.7" disktyp="lg" dummy="false" shotTime="639098850448406490" menuid="100_3"
+                          datetime="23.03.2026 17:54:13" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="390b5a78-904b-4964-93e4-cc7d83739224" full="9" dec="9.2" remark="" innerten_value="0"
+                          hotcount="7" comment="">9.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="7"
+                          shotcount="7" run="2" isvalid="true" ishot="true" iswarm="false" x="141" y="-740"
+                          teiler="753.3" disktyp="lg" dummy="false" shotTime="639098850832438720" menuid="100_3"
+                          datetime="23.03.2026 17:54:52" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="d5b28ee2-5317-4ae7-837a-d85c10142591" full="7" dec="7.9" remark="" innerten_value="0"
+                          hotcount="8" comment="">7.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="8"
+                          shotcount="8" run="2" isvalid="true" ishot="true" iswarm="false" x="-588" y="-781"
+                          teiler="977.6" disktyp="lg" dummy="false" shotTime="639098851800349560" menuid="100_3"
+                          datetime="23.03.2026 17:56:29" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f3235f53-3354-45dd-a171-147e0d3c6cbf" full="7" dec="7.0" remark="" innerten_value="0"
+                          hotcount="9" comment="">7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="9"
+                          shotcount="9" run="2" isvalid="true" ishot="true" iswarm="false" x="-1037" y="-1127"
+                          teiler="1531.5" disktyp="lg" dummy="false" shotTime="639098852097366120" menuid="100_3"
+                          datetime="23.03.2026 17:56:58" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="3aee5e5d-ba93-4191-b0dc-a02d5b94a635" full="4" dec="4.8" remark="" innerten_value="0"
+                          hotcount="10" comment="">4.8
+                    </shot>
+                </series>
+                <series totalscore="59" totalscore_t="64.2" id="2">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="10"
+                          shotcount="10" run="2" isvalid="true" ishot="true" iswarm="false" x="-124" y="-1085"
+                          teiler="1092" disktyp="lg" dummy="false" shotTime="639098852552751920" menuid="100_3"
+                          datetime="23.03.2026 17:57:44" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c8ba46f8-c808-48be-9528-2227f4cb7ecd" full="6" dec="6.6" remark="" innerten_value="0"
+                          hotcount="11" comment="">6.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="11"
+                          shotcount="11" run="2" isvalid="true" ishot="true" iswarm="false" x="-1012" y="1166"
+                          teiler="1543.9" disktyp="lg" dummy="false" shotTime="639098852896552330" menuid="100_3"
+                          datetime="23.03.2026 17:58:18" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="618084c1-6f59-4834-922c-7f252bd42655" full="4" dec="4.8" remark="" innerten_value="0"
+                          hotcount="12" comment="">4.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="12"
+                          shotcount="12" run="2" isvalid="true" ishot="true" iswarm="false" x="1278" y="145"
+                          teiler="1286.1" disktyp="lg" dummy="false" shotTime="639098853291078710" menuid="100_3"
+                          datetime="23.03.2026 17:58:57" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="d173bb66-ad18-41cd-86bf-9adfdf7fdcf2" full="5" dec="5.8" remark="" innerten_value="0"
+                          hotcount="13" comment="">5.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="13"
+                          shotcount="13" run="2" isvalid="true" ishot="true" iswarm="false" x="-320" y="-1707"
+                          teiler="1736.7" disktyp="lg" dummy="false" shotTime="639098853978856690" menuid="100_3"
+                          datetime="23.03.2026 18:00:06" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="423ecfe9-f8c4-4fbe-ae88-7d196c3e5a3e" full="4" dec="4.0" remark="" innerten_value="0"
+                          hotcount="14" comment="">4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="14"
+                          shotcount="14" run="2" isvalid="true" ishot="true" iswarm="false" x="76" y="589"
+                          teiler="593.8" disktyp="lg" dummy="false" shotTime="639098854534075960" menuid="100_3"
+                          datetime="23.03.2026 18:01:02" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2444187e-8d30-49c9-b08e-add710fc0f1a" full="8" dec="8.6" remark="" innerten_value="0"
+                          hotcount="15" comment="">8.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="15"
+                          shotcount="15" run="2" isvalid="true" ishot="true" iswarm="false" x="807" y="-1375"
+                          teiler="1594.3" disktyp="lg" dummy="false" shotTime="639098854757361050" menuid="100_3"
+                          datetime="23.03.2026 18:01:24" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="26ac1e24-6659-4ba4-80b1-62101f07318e" full="4" dec="4.6" remark="" innerten_value="0"
+                          hotcount="16" comment="">4.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="16"
+                          shotcount="16" run="2" isvalid="true" ishot="true" iswarm="false" x="-354" y="636"
+                          teiler="727.8" disktyp="lg" dummy="false" shotTime="639098855046105060" menuid="100_3"
+                          datetime="23.03.2026 18:01:53" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9eb7fa06-1dda-48e9-bd2b-94b4da01e055" full="8" dec="8.0" remark="" innerten_value="0"
+                          hotcount="17" comment="">8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="17"
+                          shotcount="17" run="2" isvalid="true" ishot="true" iswarm="false" x="1126" y="-919"
+                          teiler="1453.4" disktyp="lg" dummy="false" shotTime="639098855410695110" menuid="100_3"
+                          datetime="23.03.2026 18:02:30" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="81b6f1d5-0def-4e8b-a482-6b1d778a8ff9" full="5" dec="5.1" remark="" innerten_value="0"
+                          hotcount="18" comment="">5.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="18"
+                          shotcount="18" run="2" isvalid="true" ishot="true" iswarm="false" x="-251" y="29"
+                          teiler="252.6" disktyp="lg" dummy="false" shotTime="639098855677654460" menuid="100_3"
+                          datetime="23.03.2026 18:02:56" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="8f569ddf-a2c7-4594-bb41-72075c9eeb63" full="9" dec="9.9" remark="" innerten_value="0"
+                          hotcount="19" comment="">9.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="19"
+                          shotcount="19" run="2" isvalid="true" ishot="true" iswarm="false" x="-827" y="608"
+                          teiler="1026.4" disktyp="lg" dummy="false" shotTime="639098856013207530" menuid="100_3"
+                          datetime="23.03.2026 18:03:30" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="3cffb522-9dc0-4520-bcdf-987c99aa90e9" full="6" dec="6.8" remark="" innerten_value="0"
+                          hotcount="20" comment="">6.8
+                    </shot>
+                </series>
+                <series totalscore="56" totalscore_t="61.8" id="3">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="20"
+                          shotcount="20" run="2" isvalid="true" ishot="true" iswarm="false" x="-506" y="771"
+                          teiler="922.2" disktyp="lg" dummy="false" shotTime="639098856277656960" menuid="100_3"
+                          datetime="23.03.2026 18:03:56" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f3203cba-d895-4e11-b32c-df4efb99dea4" full="7" dec="7.3" remark="" innerten_value="0"
+                          hotcount="21" comment="">7.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="21"
+                          shotcount="21" run="2" isvalid="true" ishot="true" iswarm="false" x="-451" y="-1020"
+                          teiler="1115.2" disktyp="lg" dummy="false" shotTime="639098856751820720" menuid="100_3"
+                          datetime="23.03.2026 18:04:44" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="04871a94-b393-4081-afe1-d679e5b4e1ee" full="6" dec="6.5" remark="" innerten_value="0"
+                          hotcount="22" comment="">6.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="22"
+                          shotcount="22" run="2" isvalid="true" ishot="true" iswarm="false" x="574" y="-593"
+                          teiler="825.3" disktyp="lg" dummy="false" shotTime="639098857036917150" menuid="100_3"
+                          datetime="23.03.2026 18:05:12" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="744341b0-8c2a-4014-a04e-784b4c7b5fcf" full="7" dec="7.7" remark="" innerten_value="0"
+                          hotcount="23" comment="">7.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="23"
+                          shotcount="23" run="2" isvalid="true" ishot="true" iswarm="false" x="-1465" y="-1046"
+                          teiler="1800" disktyp="lg" dummy="false" shotTime="639098857294448330" menuid="100_3"
+                          datetime="23.03.2026 18:05:38" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="bae00531-52cd-455f-89e8-c5b187dbfc63" full="3" dec="3.8" remark="" innerten_value="0"
+                          hotcount="24" comment="">3.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="24"
+                          shotcount="24" run="2" isvalid="true" ishot="true" iswarm="false" x="-1668" y="1214"
+                          teiler="2063" disktyp="lg" dummy="false" shotTime="639098857549401070" menuid="100_3"
+                          datetime="23.03.2026 18:06:03" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="5748eb6f-a50c-4fb1-b73c-ce3a6a333456" full="2" dec="2.7" remark="" innerten_value="0"
+                          hotcount="25" comment="">2.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="25"
+                          shotcount="25" run="2" isvalid="true" ishot="true" iswarm="false" x="-17" y="-966"
+                          teiler="966.1" disktyp="lg" dummy="false" shotTime="639098857834031540" menuid="100_3"
+                          datetime="23.03.2026 18:06:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="efc611ee-fbfc-4090-b856-0d4c4c91e4db" full="7" dec="7.1" remark="" innerten_value="0"
+                          hotcount="26" comment="">7.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="26"
+                          shotcount="26" run="2" isvalid="true" ishot="true" iswarm="false" x="-124" y="-760"
+                          teiler="770" disktyp="lg" dummy="false" shotTime="639098858122631480" menuid="100_3"
+                          datetime="23.03.2026 18:07:01" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2c8a06c2-474b-4dc6-8522-ddd5f85a56ba" full="7" dec="7.9" remark="" innerten_value="0"
+                          hotcount="27" comment="">7.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="27"
+                          shotcount="27" run="2" isvalid="true" ishot="true" iswarm="false" x="-29" y="278"
+                          teiler="279.5" disktyp="lg" dummy="false" shotTime="639098858344895240" menuid="100_3"
+                          datetime="23.03.2026 18:07:23" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="da19c355-f9b5-428e-81a3-53bca73783c6" full="9" dec="9.8" remark="" innerten_value="0"
+                          hotcount="28" comment="">9.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="28"
+                          shotcount="28" run="2" isvalid="true" ishot="true" iswarm="false" x="-1063" y="243"
+                          teiler="1090.4" disktyp="lg" dummy="false" shotTime="639098858731541820" menuid="100_3"
+                          datetime="23.03.2026 18:08:01" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a8bd6a31-fadc-4690-888f-f49f0b4531dc" full="6" dec="6.6" remark="" innerten_value="0"
+                          hotcount="29" comment="">6.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="29"
+                          shotcount="29" run="2" isvalid="true" ishot="true" iswarm="false" x="416" y="-2099"
+                          teiler="2139.8" disktyp="lg" dummy="false" shotTime="639098858953271960" menuid="100_3"
+                          datetime="23.03.2026 18:08:24" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c9069b8a-5a13-461b-9a03-f844d55e8fc6" full="2" dec="2.4" remark="" innerten_value="0"
+                          hotcount="30" comment="">2.4
+                    </shot>
+                </series>
+                <sighting>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="0"
+                          shotcount="0" run="1" isvalid="true" ishot="false" iswarm="true" x="-713" y="-39" teiler="714"
+                          disktyp="lg" dummy="false" shotTime="639098844922573110" menuid="100_3"
+                          datetime="23.03.2026 17:45:01" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c2953175-861a-4a83-acf2-a5c1f380f05a" full="8" dec="8.1" remark="" innerten_value="0"
+                          comment="">8.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="1"
+                          shotcount="1" run="1" isvalid="true" ishot="false" iswarm="true" x="-2439" y="239"
+                          teiler="2450.6" disktyp="lg" dummy="false" shotTime="639098845218992790" menuid="100_3"
+                          datetime="23.03.2026 17:45:30" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f9b12fbd-ef2a-493f-8bcc-f9e428052d97" full="1" dec="1.2" remark="" innerten_value="0"
+                          comment="">1.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="2"
+                          shotcount="2" run="1" isvalid="true" ishot="false" iswarm="true" x="233" y="880"
+                          teiler="910.3" disktyp="lg" dummy="false" shotTime="639098845970500730" menuid="100_3"
+                          datetime="23.03.2026 17:46:45" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="0382aa85-3076-47ea-be1e-53fef622ef26" full="7" dec="7.3" remark="" innerten_value="0"
+                          comment="">7.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="7" shootersid="92" shot="3"
+                          shotcount="3" run="1" isvalid="true" ishot="false" iswarm="true" x="1435" y="-221"
+                          teiler="1451.9" disktyp="lg" dummy="false" shotTime="639098846931861240" menuid="100_3"
+                          datetime="23.03.2026 17:48:22" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f3fc0d55-5d39-46a2-909f-d32d0b7e18d3" full="5" dec="5.1" remark="" innerten_value="0"
+                          comment="">5.1
+                    </shot>
+                </sighting>
+            </shots>
+        </shooter>
+        <shooter firstname="Ayana" lastname="P" internid="" identification="" birthyear="2024"
+                 clubsname="Test Verein" clubsnumber="" dq="false" dq_comment="" result_qualification="0"
+                 fidRanges="5" hits_time="00:19:49" hits_time_seconds="1189" last_shot="0,0" count_hits="27"
+                 totalscore="147" totalscore_t="161.6" totalcount_innerten="0" worstdistance="5123.8" count11="0"
+                 count10="1" count9="2" count8="4" count7="5" count6="4" count5="1" count4="0" count3="4" count2="5"
+                 count1="1" count0="3">
+            <shots>
+                <shootoff totalscore="0" totalscore_t="0"/>
+                <series totalscore="64" totalscore_t="69.5" id="1">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="0"
+                          shotcount="0" run="2" isvalid="true" ishot="true" iswarm="false" x="219" y="-922"
+                          teiler="947.6" disktyp="lg" dummy="false" shotTime="639098850872257400" menuid="100_3"
+                          datetime="23.03.2026 17:54:56" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c6b1557d-d5c2-4efa-bc94-443295b94302" full="7" dec="7.2" remark="" innerten_value="0"
+                          hotcount="1" comment="">7.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="1"
+                          shotcount="1" run="2" isvalid="true" ishot="true" iswarm="false" x="-155" y="209"
+                          teiler="260.2" disktyp="lg" dummy="false" shotTime="639098851116584380" menuid="100_3"
+                          datetime="23.03.2026 17:55:20" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f3725a6c-018d-4f90-8c47-76d781c3f388" full="9" dec="9.9" remark="" innerten_value="0"
+                          hotcount="2" comment="">9.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="2"
+                          shotcount="2" run="2" isvalid="true" ishot="true" iswarm="false" x="-568" y="968"
+                          teiler="1122.3" disktyp="lg" dummy="false" shotTime="639098851335363320" menuid="100_3"
+                          datetime="23.03.2026 17:55:42" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e449a358-df9c-4d25-9662-b7ece65d35bc" full="6" dec="6.5" remark="" innerten_value="0"
+                          hotcount="3" comment="">6.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="3"
+                          shotcount="3" run="2" isvalid="true" ishot="true" iswarm="false" x="413" y="-1812"
+                          teiler="1858.4" disktyp="lg" dummy="false" shotTime="639098851701349590" menuid="100_3"
+                          datetime="23.03.2026 17:56:19" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4653f2f7-f53a-45c7-bb86-82b8a57fd185" full="3" dec="3.5" remark="" innerten_value="0"
+                          hotcount="4" comment="">3.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="4"
+                          shotcount="4" run="2" isvalid="true" ishot="true" iswarm="false" x="-140" y="501"
+                          teiler="520.1" disktyp="lg" dummy="false" shotTime="639098852031298140" menuid="100_3"
+                          datetime="23.03.2026 17:56:52" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="08bfd6d2-aea5-45cd-994f-7b1399d751bb" full="8" dec="8.9" remark="" innerten_value="0"
+                          hotcount="5" comment="">8.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="5"
+                          shotcount="5" run="2" isvalid="true" ishot="true" iswarm="false" x="-406" y="-841"
+                          teiler="933.8" disktyp="lg" dummy="false" shotTime="639098852291406710" menuid="100_3"
+                          datetime="23.03.2026 17:57:18" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="7fd51c9e-ec7a-4e53-a29a-b7f6a85303b9" full="7" dec="7.2" remark="" innerten_value="0"
+                          hotcount="6" comment="">7.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="6"
+                          shotcount="6" run="2" isvalid="true" ishot="true" iswarm="false" x="-667" y="101"
+                          teiler="674.6" disktyp="lg" dummy="false" shotTime="639098852631077990" menuid="100_3"
+                          datetime="23.03.2026 17:57:52" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="53d191ca-e53c-4cae-bca7-e908f837facf" full="8" dec="8.3" remark="" innerten_value="0"
+                          hotcount="7" comment="">8.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="7"
+                          shotcount="7" run="2" isvalid="true" ishot="true" iswarm="false" x="-1088" y="-36"
+                          teiler="1088.5" disktyp="lg" dummy="false" shotTime="639098852894270970" menuid="100_3"
+                          datetime="23.03.2026 17:58:18" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="298f6aa6-2706-46ca-b8f1-546d75eab95b" full="6" dec="6.6" remark="" innerten_value="0"
+                          hotcount="8" comment="">6.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="8"
+                          shotcount="8" run="2" isvalid="true" ishot="true" iswarm="false" x="-768" y="419"
+                          teiler="874.8" disktyp="lg" dummy="false" shotTime="639098853220622460" menuid="100_3"
+                          datetime="23.03.2026 17:58:50" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="73d5c6cf-e549-43f6-8848-6a0c4483d132" full="7" dec="7.5" remark="" innerten_value="0"
+                          hotcount="9" comment="">7.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="9"
+                          shotcount="9" run="2" isvalid="true" ishot="true" iswarm="false" x="-1703" y="-491"
+                          teiler="1772.3" disktyp="lg" dummy="false" shotTime="639098853493804060" menuid="100_3"
+                          datetime="23.03.2026 17:59:18" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a2b808ce-e6a0-4771-81ff-5d51cab04062" full="3" dec="3.9" remark="" innerten_value="0"
+                          hotcount="10" comment="">3.9
+                    </shot>
+                </series>
+                <series totalscore="49" totalscore_t="53.4" id="2">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="10"
+                          shotcount="10" run="2" isvalid="true" ishot="true" iswarm="false" x="-781" y="-624"
+                          teiler="999.6" disktyp="lg" dummy="false" shotTime="639098853807851980" menuid="100_3"
+                          datetime="23.03.2026 17:59:49" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="b1934220-926f-4382-93a0-ff0e50c03e15" full="7" dec="7.0" remark="" innerten_value="0"
+                          hotcount="11" comment="">7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="11"
+                          shotcount="11" run="2" isvalid="true" ishot="true" iswarm="false" x="-85" y="-200"
+                          teiler="217.3" disktyp="lg" dummy="false" shotTime="639098854205139560" menuid="100_3"
+                          datetime="23.03.2026 18:00:29" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="7515dc5d-5f2b-4682-a2e5-a6de77b23e37" full="10" dec="10.1" remark="" innerten_value="0"
+                          hotcount="12" comment="">10.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="12"
+                          shotcount="12" run="2" isvalid="true" ishot="true" iswarm="false" x="-1988" y="314"
+                          teiler="2012.6" disktyp="lg" dummy="false" shotTime="639098854507690100" menuid="100_3"
+                          datetime="23.03.2026 18:00:59" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f5bfd7b8-db06-4c76-b452-880803a91c8a" full="2" dec="2.9" remark="" innerten_value="0"
+                          hotcount="13" comment="">2.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="13"
+                          shotcount="13" run="2" isvalid="true" ishot="true" iswarm="false" x="84" y="377"
+                          teiler="386.2" disktyp="lg" dummy="false" shotTime="639098854800603430" menuid="100_3"
+                          datetime="23.03.2026 18:01:28" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="8a0a2f0d-3fc6-4e98-9db8-499a1151f009" full="9" dec="9.4" remark="" innerten_value="0"
+                          hotcount="14" comment="">9.4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="14"
+                          shotcount="14" run="2" isvalid="true" ishot="true" iswarm="false" x="231" y="-476"
+                          teiler="529" disktyp="lg" dummy="false" shotTime="639098855074319190" menuid="100_3"
+                          datetime="23.03.2026 18:01:56" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="0a9a10f9-5762-4217-a62e-0cf77e2106aa" full="8" dec="8.8" remark="" innerten_value="0"
+                          hotcount="15" comment="">8.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="15"
+                          shotcount="15" run="2" isvalid="true" ishot="true" iswarm="false" x="1338" y="-1741"
+                          teiler="2195.7" disktyp="lg" dummy="false" shotTime="639098855329072790" menuid="100_3"
+                          datetime="23.03.2026 18:02:22" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="49f27980-6083-4fe3-8996-39c75bad135c" full="2" dec="2.2" remark="" innerten_value="0"
+                          hotcount="16" comment="">2.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="16"
+                          shotcount="16" run="2" isvalid="true" ishot="true" iswarm="false" x="-951" y="-1769"
+                          teiler="2008.4" disktyp="lg" dummy="false" shotTime="639098855580221560" menuid="100_3"
+                          datetime="23.03.2026 18:02:47" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="473c04de-52d8-42ed-89d4-385838435b65" full="2" dec="2.9" remark="" innerten_value="0"
+                          hotcount="17" comment="">2.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="17"
+                          shotcount="17" run="2" isvalid="true" ishot="true" iswarm="false" x="-939" y="-3135"
+                          teiler="3272.6" disktyp="lg" dummy="false" shotTime="639098855896139150" menuid="100_3"
+                          datetime="23.03.2026 18:03:18" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6c5a4a0f-83c8-438b-8dd3-62aa42e2b586" full="0" dec="0.0" remark="" innerten_value="0"
+                          hotcount="18" comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="18"
+                          shotcount="18" run="2" isvalid="true" ishot="true" iswarm="false" x="-1427" y="-1900"
+                          teiler="2376.2" disktyp="lg" dummy="false" shotTime="639098856248126900" menuid="100_3"
+                          datetime="23.03.2026 18:03:53" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2d95999d-4e31-4b24-94a6-fe56cc2153bb" full="1" dec="1.4" remark="" innerten_value="0"
+                          hotcount="19" comment="">1.4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="19"
+                          shotcount="19" run="2" isvalid="true" ishot="true" iswarm="false" x="-549" y="-127"
+                          teiler="563.4" disktyp="lg" dummy="false" shotTime="639098856532080460" menuid="100_3"
+                          datetime="23.03.2026 18:04:22" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="00ff68c6-71dc-4c3e-b467-c2e6a3b07fb0" full="8" dec="8.7" remark="" innerten_value="0"
+                          hotcount="20" comment="">8.7
+                    </shot>
+                </series>
+                <series totalscore="34" totalscore_t="38.7" id="3">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="20"
+                          shotcount="20" run="2" isvalid="true" ishot="true" iswarm="false" x="-675" y="558"
+                          teiler="875.7" disktyp="lg" dummy="false" shotTime="639098856903108940" menuid="100_3"
+                          datetime="23.03.2026 18:04:59" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="fa5bbfca-6371-4fac-80d9-bd0f58da319d" full="7" dec="7.5" remark="" innerten_value="0"
+                          hotcount="21" comment="">7.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="21"
+                          shotcount="21" run="2" isvalid="true" ishot="true" iswarm="false" x="-570" y="1823"
+                          teiler="1910" disktyp="lg" dummy="false" shotTime="639098857222544510" menuid="100_3"
+                          datetime="23.03.2026 18:05:31" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="ba6c078b-3b08-4a7a-b9bd-90bfc2aab7b1" full="3" dec="3.3" remark="" innerten_value="0"
+                          hotcount="22" comment="">3.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="22"
+                          shotcount="22" run="2" isvalid="true" ishot="true" iswarm="false" x="-374" y="1010"
+                          teiler="1077" disktyp="lg" dummy="false" shotTime="639098857484034790" menuid="100_3"
+                          datetime="23.03.2026 18:05:57" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="67ad629a-dd8a-4f77-9b05-f1844e8ea012" full="6" dec="6.6" remark="" innerten_value="0"
+                          hotcount="23" comment="">6.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="23"
+                          shotcount="23" run="2" isvalid="true" ishot="true" iswarm="false" x="-948" y="-2506"
+                          teiler="2679.3" disktyp="lg" dummy="false" shotTime="639098857723178050" menuid="100_3"
+                          datetime="23.03.2026 18:06:21" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c727f648-24ad-452f-9a85-382c0b8a1d50" full="0" dec="0.0" remark="" innerten_value="0"
+                          hotcount="24" comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="24"
+                          shotcount="24" run="2" isvalid="true" ishot="true" iswarm="false" x="-1108" y="915"
+                          teiler="1436.9" disktyp="lg" dummy="false" shotTime="639098858120154150" menuid="100_3"
+                          datetime="23.03.2026 18:07:00" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6c130377-e325-4255-b81d-0a6af007cf4c" full="5" dec="5.2" remark="" innerten_value="0"
+                          hotcount="25" comment="">5.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="25"
+                          shotcount="25" run="2" isvalid="true" ishot="true" iswarm="false" x="36" y="-1772"
+                          teiler="1772.3" disktyp="lg" dummy="false" shotTime="639098858744960500" menuid="100_3"
+                          datetime="23.03.2026 18:08:03" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="208afe87-4220-43c6-bc29-e55f8a258dc2" full="3" dec="3.9" remark="" innerten_value="0"
+                          hotcount="26" comment="">3.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="26"
+                          shotcount="26" run="2" isvalid="true" ishot="true" iswarm="false" x="1077" y="-1809"
+                          teiler="2105.3" disktyp="lg" dummy="false" shotTime="639098859155966480" menuid="100_3"
+                          datetime="23.03.2026 18:08:44" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9b479f27-4216-4d6e-93a4-f7e3d840f6a2" full="2" dec="2.5" remark="" innerten_value="0"
+                          hotcount="27" comment="">2.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="27"
+                          shotcount="27" run="2" isvalid="true" ishot="true" iswarm="false" x="-332" y="-993"
+                          teiler="1047" disktyp="lg" dummy="false" shotTime="639098860114454570" menuid="100_3"
+                          datetime="23.03.2026 18:10:20" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6685e286-e9cb-4be6-8995-a11bfa656698" full="6" dec="6.8" remark="" innerten_value="0"
+                          hotcount="28" comment="">6.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="28"
+                          shotcount="28" run="2" isvalid="true" ishot="true" iswarm="false" x="-113" y="-2013"
+                          teiler="2016.1" disktyp="lg" dummy="false" shotTime="639098860406133260" menuid="100_3"
+                          datetime="23.03.2026 18:10:49" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="7b377e58-06f4-4da2-90cc-4cedf1aceb82" full="2" dec="2.9" remark="" innerten_value="0"
+                          hotcount="29" comment="">2.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="29"
+                          shotcount="29" run="2" isvalid="true" ishot="true" iswarm="false" x="3053" y="-4115"
+                          teiler="5123.8" disktyp="lg" dummy="false" shotTime="639098860682147300" menuid="100_3"
+                          datetime="23.03.2026 18:11:17" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2ac55b56-6932-48c3-85fd-d92ab5f61ea9" full="0" dec="0.0" remark="" innerten_value="0"
+                          hotcount="30" comment="">0
+                    </shot>
+                </series>
+                <sighting>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="0"
+                          shotcount="0" run="1" isvalid="true" ishot="false" iswarm="true" x="4717" y="-4493"
+                          teiler="6514.3" disktyp="lg" dummy="false" shotTime="639098848793740110" menuid="100_3"
+                          datetime="23.03.2026 17:51:28" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c28a09bc-3281-4fe2-bc01-3f8421675d11" full="0" dec="0.0" remark="" innerten_value="0"
+                          comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="1"
+                          shotcount="1" run="1" isvalid="true" ishot="false" iswarm="true" x="-2902" y="518"
+                          teiler="2947.8" disktyp="lg" dummy="false" shotTime="639098849139365920" menuid="100_3"
+                          datetime="23.03.2026 17:52:02" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="494bb5ed-7c51-49d0-b946-471ffbca971c" full="0" dec="0.0" remark="" innerten_value="0"
+                          comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="2"
+                          shotcount="2" run="1" isvalid="true" ishot="false" iswarm="true" x="3494" y="-2563"
+                          teiler="4333.2" disktyp="lg" dummy="false" shotTime="639098849582310690" menuid="100_3"
+                          datetime="23.03.2026 17:52:46" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="1cca65f3-c89c-444d-b09f-95a894829329" full="0" dec="0.0" remark="" innerten_value="0"
+                          comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="3"
+                          shotcount="3" run="1" isvalid="true" ishot="false" iswarm="true" x="952" y="673"
+                          teiler="1165.8" disktyp="lg" dummy="false" shotTime="639098849966541350" menuid="100_3"
+                          datetime="23.03.2026 17:53:25" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c7e5fcc3-9213-4063-8cae-e8c7220a5e09" full="6" dec="6.3" remark="" innerten_value="0"
+                          comment="">6.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="5" shootersid="96" shot="4"
+                          shotcount="4" run="1" isvalid="true" ishot="false" iswarm="true" x="-1722" y="733"
+                          teiler="1871.5" disktyp="lg" dummy="false" shotTime="639098850377635960" menuid="100_3"
+                          datetime="23.03.2026 17:54:06" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4e223ea9-67c6-4235-9b9b-03c0e7c392b5" full="3" dec="3.5" remark="" innerten_value="0"
+                          comment="">3.5
+                    </shot>
+                </sighting>
+            </shots>
+        </shooter>
+        <shooter firstname="Franjo" lastname="H" internid="" identification="" birthyear="1900"
+                 clubsname="Test Verein" clubsnumber="" dq="false" dq_comment="" result_qualification="0"
+                 fidRanges="10" hits_time="00:14:31" hits_time_seconds="871" last_shot="7,9" count_hits="30"
+                 totalscore="205" totalscore_t="220.4" totalcount_innerten="2" worstdistance="1865.1" count11="0"
+                 count10="3" count9="3" count8="4" count7="7" count6="7" count5="3" count4="1" count3="2" count2="0"
+                 count1="0" count0="0">
+            <shots>
+                <shootoff totalscore="0" totalscore_t="0"/>
+                <series totalscore="67" totalscore_t="73.8" id="1">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="0"
+                          shotcount="0" run="2" isvalid="true" ishot="true" iswarm="false" x="672" y="-747"
+                          teiler="1004.7" disktyp="lg" dummy="false" shotTime="639098845660304530" menuid="100_3"
+                          datetime="23.03.2026 17:46:15" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6248e112-5f4d-424b-b9da-90b678afa83c" full="6" dec="6.9" remark="" innerten_value="0"
+                          hotcount="1" comment="">6.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="1"
+                          shotcount="1" run="2" isvalid="true" ishot="true" iswarm="false" x="-698" y="-397"
+                          teiler="803" disktyp="lg" dummy="false" shotTime="639098845986608890" menuid="100_3"
+                          datetime="23.03.2026 17:46:47" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="baa86b09-e772-4807-a70d-c6bb0c8ee752" full="7" dec="7.7" remark="" innerten_value="0"
+                          hotcount="2" comment="">7.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="2"
+                          shotcount="2" run="2" isvalid="true" ishot="true" iswarm="false" x="-913" y="-203"
+                          teiler="935.2" disktyp="lg" dummy="false" shotTime="639098846168775730" menuid="100_3"
+                          datetime="23.03.2026 17:47:05" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="8f38cbdc-4ff3-4f70-90a1-83074a072487" full="7" dec="7.2" remark="" innerten_value="0"
+                          hotcount="3" comment="">7.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="3"
+                          shotcount="3" run="2" isvalid="true" ishot="true" iswarm="false" x="-1" y="32" teiler="32"
+                          disktyp="lg" dummy="false" shotTime="639098846376931410" menuid="100_3"
+                          datetime="23.03.2026 17:47:26" placeholder="False" weaponstype="lg" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="aa4db2e4-2eaf-44c7-aa8c-b5713e8d218a" full="10" dec="10.8" remark="" innerten_value="1"
+                          hotcount="4" comment="">10.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="4"
+                          shotcount="4" run="2" isvalid="true" ishot="true" iswarm="false" x="-1222" y="1030"
+                          teiler="1598.1" disktyp="lg" dummy="false" shotTime="639098846772249460" menuid="100_3"
+                          datetime="23.03.2026 17:48:06" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="d9b2434d-da0f-42fc-9cda-acbe2cf64c45" full="4" dec="4.6" remark="" innerten_value="0"
+                          hotcount="5" comment="">4.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="5"
+                          shotcount="5" run="2" isvalid="true" ishot="true" iswarm="false" x="-180" y="-797"
+                          teiler="817" disktyp="lg" dummy="false" shotTime="639098847124224580" menuid="100_3"
+                          datetime="23.03.2026 17:48:41" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="1ae61b52-d16e-4f1b-b57d-0fb708c5693d" full="7" dec="7.7" remark="" innerten_value="0"
+                          hotcount="6" comment="">7.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="6"
+                          shotcount="6" run="2" isvalid="true" ishot="true" iswarm="false" x="-225" y="115"
+                          teiler="252.6" disktyp="lg" dummy="false" shotTime="639098847666721650" menuid="100_3"
+                          datetime="23.03.2026 17:49:35" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="28b61120-415c-4e90-b87b-3b4fac69f9ab" full="9" dec="9.9" remark="" innerten_value="0"
+                          hotcount="7" comment="">9.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="7"
+                          shotcount="7" run="2" isvalid="true" ishot="true" iswarm="false" x="1011" y="-2" teiler="1011"
+                          disktyp="lg" dummy="false" shotTime="639098847834778680" menuid="100_3"
+                          datetime="23.03.2026 17:49:52" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="74878633-8fa2-4add-81d6-afb11ec40af0" full="6" dec="6.9" remark="" innerten_value="0"
+                          hotcount="8" comment="">6.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="8"
+                          shotcount="8" run="2" isvalid="true" ishot="true" iswarm="false" x="-868" y="-535"
+                          teiler="1019.6" disktyp="lg" dummy="false" shotTime="639098848024831840" menuid="100_3"
+                          datetime="23.03.2026 17:50:11" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="96b8701c-3cc3-4217-a308-74af45bf3546" full="6" dec="6.9" remark="" innerten_value="0"
+                          hotcount="9" comment="">6.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="9"
+                          shotcount="9" run="2" isvalid="true" ishot="true" iswarm="false" x="52" y="1435"
+                          teiler="1435.9" disktyp="lg" dummy="false" shotTime="639098848227959570" menuid="100_3"
+                          datetime="23.03.2026 17:50:31" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4f0c4c57-4f7f-45b8-ba05-5777e809b810" full="5" dec="5.2" remark="" innerten_value="0"
+                          hotcount="10" comment="">5.2
+                    </shot>
+                </series>
+                <series totalscore="67" totalscore_t="71.0" id="2">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="10"
+                          shotcount="10" run="2" isvalid="true" ishot="true" iswarm="false" x="-243" y="-19"
+                          teiler="243.7" disktyp="lg" dummy="false" shotTime="639098848441254610" menuid="100_3"
+                          datetime="23.03.2026 17:50:52" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="911a0522-f89d-4cfe-92da-f6db710b3dc1" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="11" comment="">10
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="11"
+                          shotcount="11" run="2" isvalid="true" ishot="true" iswarm="false" x="-661" y="340"
+                          teiler="743.3" disktyp="lg" dummy="false" shotTime="639098848884110880" menuid="100_3"
+                          datetime="23.03.2026 17:51:37" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="26dd5f1d-bcf9-4443-afae-f4bd99aeb7c4" full="8" dec="8.0" remark="" innerten_value="0"
+                          hotcount="12" comment="">8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="12"
+                          shotcount="12" run="2" isvalid="true" ishot="true" iswarm="false" x="-564" y="-482"
+                          teiler="741.9" disktyp="lg" dummy="false" shotTime="639098849098138610" menuid="100_3"
+                          datetime="23.03.2026 17:51:58" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="5c4b24ac-fc9a-4b3c-a234-45fd785bd4ae" full="8" dec="8.0" remark="" innerten_value="0"
+                          hotcount="13" comment="">8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="13"
+                          shotcount="13" run="2" isvalid="true" ishot="true" iswarm="false" x="-585" y="-1771"
+                          teiler="1865.1" disktyp="lg" dummy="false" shotTime="639098849423727750" menuid="100_3"
+                          datetime="23.03.2026 17:52:31" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2ecbda4a-c080-425f-ad4e-b25bae1367bd" full="3" dec="3.5" remark="" innerten_value="0"
+                          hotcount="14" comment="">3.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="14"
+                          shotcount="14" run="2" isvalid="true" ishot="true" iswarm="false" x="646" y="-388"
+                          teiler="753.5" disktyp="lg" dummy="false" shotTime="639098849824896210" menuid="100_3"
+                          datetime="23.03.2026 17:53:11" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="7809de73-4c1e-4c96-8d2c-e671f1dfe31c" full="7" dec="7.9" remark="" innerten_value="0"
+                          hotcount="15" comment="">7.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="15"
+                          shotcount="15" run="2" isvalid="true" ishot="true" iswarm="false" x="375" y="-974"
+                          teiler="1043.6" disktyp="lg" dummy="false" shotTime="639098850033311830" menuid="100_3"
+                          datetime="23.03.2026 17:53:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4d5a0818-7e29-44b6-80e6-33f196c00df2" full="6" dec="6.8" remark="" innerten_value="0"
+                          hotcount="16" comment="">6.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="16"
+                          shotcount="16" run="2" isvalid="true" ishot="true" iswarm="false" x="665" y="-870"
+                          teiler="1095" disktyp="lg" dummy="false" shotTime="639098850201805850" menuid="100_3"
+                          datetime="23.03.2026 17:53:49" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="073c4685-d368-421e-b398-8c84dbb905c8" full="6" dec="6.6" remark="" innerten_value="0"
+                          hotcount="17" comment="">6.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="17"
+                          shotcount="17" run="2" isvalid="true" ishot="true" iswarm="false" x="-953" y="178"
+                          teiler="969.4" disktyp="lg" dummy="false" shotTime="639098850486957480" menuid="100_3"
+                          datetime="23.03.2026 17:54:17" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a69eb200-13e3-4cbf-bcb5-0f017927cdf3" full="7" dec="7.1" remark="" innerten_value="0"
+                          hotcount="18" comment="">7.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="18"
+                          shotcount="18" run="2" isvalid="true" ishot="true" iswarm="false" x="208" y="350"
+                          teiler="407.1" disktyp="lg" dummy="false" shotTime="639098850773636550" menuid="100_3"
+                          datetime="23.03.2026 17:54:46" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="61ed53b7-8708-4ca2-a2c6-d31b898f73b1" full="9" dec="9.3" remark="" innerten_value="0"
+                          hotcount="19" comment="">9.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="19"
+                          shotcount="19" run="2" isvalid="true" ishot="true" iswarm="false" x="-1773" y="-241"
+                          teiler="1789.3" disktyp="lg" dummy="false" shotTime="639098851010392720" menuid="100_3"
+                          datetime="23.03.2026 17:55:10" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="be148ed5-48ff-47f1-87fd-43f5c53a9f65" full="3" dec="3.8" remark="" innerten_value="0"
+                          hotcount="20" comment="">3.8
+                    </shot>
+                </series>
+                <series totalscore="71" totalscore_t="75.6" id="3">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="20"
+                          shotcount="20" run="2" isvalid="true" ishot="true" iswarm="false" x="138" y="96"
+                          teiler="168.1" disktyp="lg" dummy="false" shotTime="639098851418867260" menuid="100_3"
+                          datetime="23.03.2026 17:55:50" placeholder="False" weaponstype="lg" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="d3b5b645-7d9a-433b-b570-6029db233fc9" full="10" dec="10.3" remark="" innerten_value="1"
+                          hotcount="21" comment="">10.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="21"
+                          shotcount="21" run="2" isvalid="true" ishot="true" iswarm="false" x="-1256" y="360"
+                          teiler="1306.5" disktyp="lg" dummy="false" shotTime="639098851603653410" menuid="100_3"
+                          datetime="23.03.2026 17:56:09" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9e223b31-9a2d-4398-84cd-49c9716bdf1f" full="5" dec="5.7" remark="" innerten_value="0"
+                          hotcount="22" comment="">5.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="22"
+                          shotcount="22" run="2" isvalid="true" ishot="true" iswarm="false" x="-812" y="-717"
+                          teiler="1083.2" disktyp="lg" dummy="false" shotTime="639098851836492560" menuid="100_3"
+                          datetime="23.03.2026 17:56:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="47a903e0-4b9d-48fc-b471-79a74f0b27cd" full="6" dec="6.6" remark="" innerten_value="0"
+                          hotcount="23" comment="">6.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="23"
+                          shotcount="23" run="2" isvalid="true" ishot="true" iswarm="false" x="-795" y="1257"
+                          teiler="1487.3" disktyp="lg" dummy="false" shotTime="639098852028132960" menuid="100_3"
+                          datetime="23.03.2026 17:56:51" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9de3447b-9121-4849-8455-c3639efec199" full="5" dec="5.0" remark="" innerten_value="0"
+                          hotcount="24" comment="">5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="24"
+                          shotcount="24" run="2" isvalid="true" ishot="true" iswarm="false" x="312" y="-442"
+                          teiler="541" disktyp="lg" dummy="false" shotTime="639098852392304900" menuid="100_3"
+                          datetime="23.03.2026 17:57:28" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9a94f840-9e07-4b3c-96dd-84c5ab194273" full="8" dec="8.8" remark="" innerten_value="0"
+                          hotcount="25" comment="">8.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="25"
+                          shotcount="25" run="2" isvalid="true" ishot="true" iswarm="false" x="200" y="-274"
+                          teiler="339.2" disktyp="lg" dummy="false" shotTime="639098852590486840" menuid="100_3"
+                          datetime="23.03.2026 17:57:47" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="7f82f269-26ac-4ee0-aa3e-4bb313c3ab13" full="9" dec="9.6" remark="" innerten_value="0"
+                          hotcount="26" comment="">9.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="26"
+                          shotcount="26" run="2" isvalid="true" ishot="true" iswarm="false" x="-809" y="816"
+                          teiler="1149" disktyp="lg" dummy="false" shotTime="639098852784597740" menuid="100_3"
+                          datetime="23.03.2026 17:58:07" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="b09a1c18-a9ef-4d67-b6b3-53104ee161b7" full="6" dec="6.4" remark="" innerten_value="0"
+                          hotcount="27" comment="">6.4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="27"
+                          shotcount="27" run="2" isvalid="true" ishot="true" iswarm="false" x="-570" y="-764"
+                          teiler="953.2" disktyp="lg" dummy="false" shotTime="639098853008900860" menuid="100_3"
+                          datetime="23.03.2026 17:58:29" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4db650a5-4485-4467-b327-76acbb537963" full="7" dec="7.1" remark="" innerten_value="0"
+                          hotcount="28" comment="">7.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="28"
+                          shotcount="28" run="2" isvalid="true" ishot="true" iswarm="false" x="-303" y="621"
+                          teiler="690.9" disktyp="lg" dummy="false" shotTime="639098853581386020" menuid="100_3"
+                          datetime="23.03.2026 17:59:26" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="315c6c3b-7928-465a-b8d6-b63c06c46687" full="8" dec="8.2" remark="" innerten_value="0"
+                          hotcount="29" comment="">8.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="29"
+                          shotcount="29" run="2" isvalid="true" ishot="true" iswarm="false" x="-757" y="-30"
+                          teiler="757.5" disktyp="lg" dummy="false" shotTime="639098853770125250" menuid="100_3"
+                          datetime="23.03.2026 17:59:45" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="b871fb00-c000-493c-894f-b3dd1b2921ef" full="7" dec="7.9" remark="" innerten_value="0"
+                          hotcount="30" comment="">7.9
+                    </shot>
+                </series>
+                <sighting>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="0"
+                          shotcount="0" run="1" isvalid="true" ishot="false" iswarm="true" x="389" y="-86"
+                          teiler="398.3" disktyp="lg" dummy="false" shotTime="639098845051189430" menuid="100_3"
+                          datetime="23.03.2026 17:45:14" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="5b524a20-a7ce-4fc0-aa01-37df00f2613b" full="9" dec="9.4" remark="" innerten_value="0"
+                          comment="">9.4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="10" shootersid="141" shot="1"
+                          shotcount="1" run="1" isvalid="true" ishot="false" iswarm="true" x="149" y="-563"
+                          teiler="582.3" disktyp="lg" dummy="false" shotTime="639098845321444410" menuid="100_3"
+                          datetime="23.03.2026 17:45:41" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="ba5d8a39-21a8-48f5-bab8-f3e65e329eb7" full="8" dec="8.6" remark="" innerten_value="0"
+                          comment="">8.6
+                    </shot>
+                </sighting>
+            </shots>
+        </shooter>
+        <shooter firstname="Oliver" lastname="G" internid="" identification="" birthyear="1900"
+                 clubsname="Test Verein" clubsnumber="" dq="false" dq_comment="" result_qualification="0"
+                 fidRanges="3" hits_time="00:14:07" hits_time_seconds="847" last_shot="10,0" count_hits="30"
+                 totalscore="284" totalscore_t="294.1" totalcount_innerten="4" worstdistance="1979.0" count11="0"
+                 count10="16" count9="12" count8="2" count7="0" count6="0" count5="0" count4="0" count3="0" count2="0"
+                 count1="0" count0="0">
+            <shots>
+                <shootoff totalscore="0" totalscore_t="0"/>
+                <series totalscore="94" totalscore_t="97.6" id="1">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="0"
+                          shotcount="0" run="2" isvalid="true" ishot="true" iswarm="false" x="111" y="147"
+                          teiler="184.2" disktyp="lp" dummy="false" shotTime="639098845463771390" menuid="300_3"
+                          datetime="23.03.2026 17:45:55" placeholder="False" weaponstype="lp" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="ae69b0ab-984d-4968-ad21-6ba16a9ca425" full="10" dec="10.7" remark="" innerten_value="1"
+                          hotcount="1" comment="">10.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="1"
+                          shotcount="1" run="2" isvalid="true" ishot="true" iswarm="false" x="-255" y="-527"
+                          teiler="585.4" disktyp="lp" dummy="false" shotTime="639098845651027170" menuid="300_3"
+                          datetime="23.03.2026 17:46:14" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="b0cdad7f-1e47-470d-b9c3-82abfb1de71d" full="10" dec="10.2" remark="" innerten_value="0"
+                          hotcount="2" comment="">10.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="2"
+                          shotcount="2" run="2" isvalid="true" ishot="true" iswarm="false" x="-8" y="-318"
+                          teiler="318.1" disktyp="lp" dummy="false" shotTime="639098845804206340" menuid="300_3"
+                          datetime="23.03.2026 17:46:29" placeholder="False" weaponstype="lp" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="768e2d9c-13ff-4247-ba2b-25f1bfd7cbe9" full="10" dec="10.6" remark="" innerten_value="1"
+                          hotcount="3" comment="">10.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="3"
+                          shotcount="3" run="2" isvalid="true" ishot="true" iswarm="false" x="-499" y="-614"
+                          teiler="791.1" disktyp="lp" dummy="false" shotTime="639098846010729870" menuid="300_3"
+                          datetime="23.03.2026 17:46:50" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="dcce1da0-68f5-4bf8-892b-faafe7aaba42" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="4" comment="">10
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="4"
+                          shotcount="4" run="2" isvalid="true" ishot="true" iswarm="false" x="-255" y="691"
+                          teiler="736.5" disktyp="lp" dummy="false" shotTime="639098846224316950" menuid="300_3"
+                          datetime="23.03.2026 17:47:11" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e743cfc1-548d-493b-b75e-626e198936ac" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="5" comment="">10
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="5"
+                          shotcount="5" run="2" isvalid="true" ishot="true" iswarm="false" x="-510" y="-1767"
+                          teiler="1839.1" disktyp="lp" dummy="false" shotTime="639098846426890610" menuid="300_3"
+                          datetime="23.03.2026 17:47:31" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="16d6da4f-1caf-4fbb-9203-03e842a05ed9" full="8" dec="8.7" remark="" innerten_value="0"
+                          hotcount="6" comment="">8.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="6"
+                          shotcount="6" run="2" isvalid="true" ishot="true" iswarm="false" x="-684" y="715"
+                          teiler="989.4" disktyp="lp" dummy="false" shotTime="639098847381449480" menuid="300_3"
+                          datetime="23.03.2026 17:49:07" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="28a4fcff-b55c-4315-9425-0b277ce61fdd" full="9" dec="9.7" remark="" innerten_value="0"
+                          hotcount="7" comment="">9.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="7"
+                          shotcount="7" run="2" isvalid="true" ishot="true" iswarm="false" x="-886" y="-630"
+                          teiler="1087.1" disktyp="lp" dummy="false" shotTime="639098847545724560" menuid="300_3"
+                          datetime="23.03.2026 17:49:23" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a7262531-7680-41a3-a6bb-fc9f02711fe1" full="9" dec="9.6" remark="" innerten_value="0"
+                          hotcount="8" comment="">9.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="8"
+                          shotcount="8" run="2" isvalid="true" ishot="true" iswarm="false" x="-1398" y="-492"
+                          teiler="1482" disktyp="lp" dummy="false" shotTime="639098847851260560" menuid="300_3"
+                          datetime="23.03.2026 17:49:54" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="ed514cf0-7ea8-4521-af4b-55fe18c59448" full="9" dec="9.1" remark="" innerten_value="0"
+                          hotcount="9" comment="">9.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="9"
+                          shotcount="9" run="2" isvalid="true" ishot="true" iswarm="false" x="338" y="-1561"
+                          teiler="1597.1" disktyp="lp" dummy="false" shotTime="639098848293848300" menuid="300_3"
+                          datetime="23.03.2026 17:50:38" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="44636528-92a6-4556-a472-adf59d94d4eb" full="9" dec="9.0" remark="" innerten_value="0"
+                          hotcount="10" comment="">9
+                    </shot>
+                </series>
+                <series totalscore="97" totalscore_t="100.6" id="2">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="10"
+                          shotcount="10" run="2" isvalid="true" ishot="true" iswarm="false" x="130" y="-466"
+                          teiler="483.7" disktyp="lp" dummy="false" shotTime="639098848497608690" menuid="300_3"
+                          datetime="23.03.2026 17:50:58" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="50617366-0775-4a0d-937e-6f77c26adf59" full="10" dec="10.3" remark="" innerten_value="0"
+                          hotcount="11" comment="">10.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="11"
+                          shotcount="11" run="2" isvalid="true" ishot="true" iswarm="false" x="113" y="-91" teiler="145"
+                          disktyp="lp" dummy="false" shotTime="639098848726602040" menuid="300_3"
+                          datetime="23.03.2026 17:51:21" placeholder="False" weaponstype="lp" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="55669647-9735-46ae-8710-8239ecca557f" full="10" dec="10.8" remark="" innerten_value="1"
+                          hotcount="12" comment="">10.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="12"
+                          shotcount="12" run="2" isvalid="true" ishot="true" iswarm="false" x="585" y="-142"
+                          teiler="601.9" disktyp="lp" dummy="false" shotTime="639098848923830890" menuid="300_3"
+                          datetime="23.03.2026 17:51:41" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2e12d244-4d02-42eb-9aca-310345caf203" full="10" dec="10.2" remark="" innerten_value="0"
+                          hotcount="13" comment="">10.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="13"
+                          shotcount="13" run="2" isvalid="true" ishot="true" iswarm="false" x="-1332" y="-398"
+                          teiler="1390.1" disktyp="lp" dummy="false" shotTime="639098849187948050" menuid="300_3"
+                          datetime="23.03.2026 17:52:07" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4a74dd59-ce20-4a9c-9f20-2b3cec42e55a" full="9" dec="9.2" remark="" innerten_value="0"
+                          hotcount="14" comment="">9.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="14"
+                          shotcount="14" run="2" isvalid="true" ishot="true" iswarm="false" x="146" y="-608"
+                          teiler="625.2" disktyp="lp" dummy="false" shotTime="639098849684019540" menuid="300_3"
+                          datetime="23.03.2026 17:52:57" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="008e7c7b-3f5a-408f-bfd2-cb956f3dbcd3" full="10" dec="10.2" remark="" innerten_value="0"
+                          hotcount="15" comment="">10.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="15"
+                          shotcount="15" run="2" isvalid="true" ishot="true" iswarm="false" x="-194" y="-282"
+                          teiler="342.2" disktyp="lp" dummy="false" shotTime="639098849875458090" menuid="300_3"
+                          datetime="23.03.2026 17:53:16" placeholder="False" weaponstype="lp" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="d14bd4e4-d17b-4d11-ad1e-e06da768e75f" full="10" dec="10.5" remark="" innerten_value="1"
+                          hotcount="16" comment="">10.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="16"
+                          shotcount="16" run="2" isvalid="true" ishot="true" iswarm="false" x="-208" y="-1358"
+                          teiler="1373.8" disktyp="lp" dummy="false" shotTime="639098850065539180" menuid="300_3"
+                          datetime="23.03.2026 17:53:35" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6da817ea-c875-4359-83c9-531a60bf3405" full="9" dec="9.2" remark="" innerten_value="0"
+                          hotcount="17" comment="">9.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="17"
+                          shotcount="17" run="2" isvalid="true" ishot="true" iswarm="false" x="628" y="604"
+                          teiler="871.3" disktyp="lp" dummy="false" shotTime="639098850330475350" menuid="300_3"
+                          datetime="23.03.2026 17:54:01" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4479214b-ad7e-4615-8246-c2e64ce42a4c" full="9" dec="9.9" remark="" innerten_value="0"
+                          hotcount="18" comment="">9.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="18"
+                          shotcount="18" run="2" isvalid="true" ishot="true" iswarm="false" x="-507" y="-119"
+                          teiler="520.7" disktyp="lp" dummy="false" shotTime="639098850608521000" menuid="300_3"
+                          datetime="23.03.2026 17:54:29" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="7c3a1cc1-deba-4c9b-968a-3586cadabf30" full="10" dec="10.3" remark="" innerten_value="0"
+                          hotcount="19" comment="">10.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="19"
+                          shotcount="19" run="2" isvalid="true" ishot="true" iswarm="false" x="-98" y="788" teiler="794"
+                          disktyp="lp" dummy="false" shotTime="639098850823322180" menuid="300_3"
+                          datetime="23.03.2026 17:54:51" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="55afe2dd-fd91-41e4-86d7-42eb1d5cb5a5" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="20" comment="">10
+                    </shot>
+                </series>
+                <series totalscore="93" totalscore_t="95.9" id="3">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="20"
+                          shotcount="20" run="2" isvalid="true" ishot="true" iswarm="false" x="-764" y="-123"
+                          teiler="773.8" disktyp="lp" dummy="false" shotTime="639098851029563870" menuid="300_3"
+                          datetime="23.03.2026 17:55:12" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4550a3b1-53dc-448b-94ac-f42d0db5ebf6" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="21" comment="">10
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="21"
+                          shotcount="21" run="2" isvalid="true" ishot="true" iswarm="false" x="-513" y="-1453"
+                          teiler="1540.9" disktyp="lp" dummy="false" shotTime="639098851218339530" menuid="300_3"
+                          datetime="23.03.2026 17:55:30" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="8bb5872c-1c08-4688-937c-772ef7ca0eb8" full="9" dec="9.0" remark="" innerten_value="0"
+                          hotcount="22" comment="">9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="22"
+                          shotcount="22" run="2" isvalid="true" ishot="true" iswarm="false" x="-421" y="-910"
+                          teiler="1002.6" disktyp="lp" dummy="false" shotTime="639098851414058280" menuid="300_3"
+                          datetime="23.03.2026 17:55:50" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4cb98c00-f619-420b-a1e8-205bbaccca2b" full="9" dec="9.7" remark="" innerten_value="0"
+                          hotcount="23" comment="">9.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="23"
+                          shotcount="23" run="2" isvalid="true" ishot="true" iswarm="false" x="154" y="1973"
+                          teiler="1979" disktyp="lp" dummy="false" shotTime="639098851617873480" menuid="300_3"
+                          datetime="23.03.2026 17:56:10" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="fab1e5fd-2e67-4c8f-ae3e-03220f3d4657" full="8" dec="8.5" remark="" innerten_value="0"
+                          hotcount="24" comment="">8.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="24"
+                          shotcount="24" run="2" isvalid="true" ishot="true" iswarm="false" x="-647" y="17"
+                          teiler="647.2" disktyp="lp" dummy="false" shotTime="639098851789058840" menuid="300_3"
+                          datetime="23.03.2026 17:56:27" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="3498c3f2-c996-4514-ab51-069788ba0e21" full="10" dec="10.1" remark="" innerten_value="0"
+                          hotcount="25" comment="">10.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="25"
+                          shotcount="25" run="2" isvalid="true" ishot="true" iswarm="false" x="-690" y="-334"
+                          teiler="766.5" disktyp="lp" dummy="false" shotTime="639098852002420480" menuid="300_3"
+                          datetime="23.03.2026 17:56:49" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c2e80c5a-36eb-440b-8a44-7d0abfc0b2aa" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="26" comment="">10
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="26"
+                          shotcount="26" run="2" isvalid="true" ishot="true" iswarm="false" x="-434" y="1274"
+                          teiler="1345.8" disktyp="lp" dummy="false" shotTime="639098852204042570" menuid="300_3"
+                          datetime="23.03.2026 17:57:09" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f8dca1b4-6bcc-483e-b270-68351b44c079" full="9" dec="9.3" remark="" innerten_value="0"
+                          hotcount="27" comment="">9.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="27"
+                          shotcount="27" run="2" isvalid="true" ishot="true" iswarm="false" x="-515" y="-1061"
+                          teiler="1179.3" disktyp="lp" dummy="false" shotTime="639098852850585500" menuid="300_3"
+                          datetime="23.03.2026 17:58:13" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="7ae8119a-c01e-4fb0-a1c2-98b5cd72bbe6" full="9" dec="9.5" remark="" innerten_value="0"
+                          hotcount="28" comment="">9.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="28"
+                          shotcount="28" run="2" isvalid="true" ishot="true" iswarm="false" x="315" y="874" teiler="929"
+                          disktyp="lp" dummy="false" shotTime="639098853047447760" menuid="300_3"
+                          datetime="23.03.2026 17:58:33" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a46bdc07-3339-41a5-b26e-5e221846f6a0" full="9" dec="9.8" remark="" innerten_value="0"
+                          hotcount="29" comment="">9.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="29"
+                          shotcount="29" run="2" isvalid="true" ishot="true" iswarm="false" x="-264" y="756"
+                          teiler="800.7" disktyp="lp" dummy="false" shotTime="639098853273581400" menuid="300_3"
+                          datetime="23.03.2026 17:58:56" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="26eeda28-8c93-4940-9afe-e8183ad5b81a" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="30" comment="">10
+                    </shot>
+                </series>
+                <sighting>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="0"
+                          shotcount="0" run="1" isvalid="true" ishot="false" iswarm="true" x="-1844" y="-1429"
+                          teiler="2332.8" disktyp="lp" dummy="false" shotTime="639098844808513240" menuid="300_3"
+                          datetime="23.03.2026 17:44:49" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="69d3731d-fa45-4c2d-aaaf-89839a3b56e5" full="8" dec="8.0" remark="" innerten_value="0"
+                          comment="">8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="3" shootersid="171" shot="1"
+                          shotcount="1" run="1" isvalid="true" ishot="false" iswarm="true" x="377" y="-1763"
+                          teiler="1802.8" disktyp="lp" dummy="false" shotTime="639098845010184180" menuid="300_3"
+                          datetime="23.03.2026 17:45:09" placeholder="False" weaponstype="lp" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="d0c2c5d0-2e41-4dfa-ae46-16d0d3d023df" full="8" dec="8.7" remark="" innerten_value="0"
+                          comment="">8.7
+                    </shot>
+                </sighting>
+            </shots>
+        </shooter>
+        <shooter firstname="Amelie" lastname="F" internid="" identification="" birthyear="1900"
+                 clubsname="Test Verein" clubsnumber="" dq="false" dq_comment="" result_qualification="0"
+                 fidRanges="9" hits_time="00:14:51" hits_time_seconds="891" last_shot="6,2" count_hits="27"
+                 totalscore="159" totalscore_t="171.7" totalcount_innerten="1" worstdistance="3531.3" count11="0"
+                 count10="1" count9="2" count8="3" count7="6" count6="3" count5="4" count4="5" count3="2" count2="0"
+                 count1="1" count0="3">
+            <shots>
+                <shootoff totalscore="0" totalscore_t="0"/>
+                <series totalscore="58" totalscore_t="61.2" id="1">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="0"
+                          shotcount="0" run="2" isvalid="true" ishot="true" iswarm="false" x="1069" y="-973"
+                          teiler="1445.5" disktyp="lg" dummy="false" shotTime="639098845842981440" menuid="100_3"
+                          datetime="23.03.2026 17:46:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="81d34a83-d9ea-4ff1-b6a6-09e295cf0be7" full="5" dec="5.2" remark="" innerten_value="0"
+                          hotcount="1" comment="">5.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="1"
+                          shotcount="1" run="2" isvalid="true" ishot="true" iswarm="false" x="612" y="1229"
+                          teiler="1372.9" disktyp="lg" dummy="false" shotTime="639098846094902600" menuid="100_3"
+                          datetime="23.03.2026 17:46:58" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4cdea54d-52d7-4879-ae99-5ac58703af25" full="5" dec="5.5" remark="" innerten_value="0"
+                          hotcount="2" comment="">5.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="2"
+                          shotcount="2" run="2" isvalid="true" ishot="true" iswarm="false" x="-895" y="-197"
+                          teiler="916.4" disktyp="lg" dummy="false" shotTime="639098846375881470" menuid="100_3"
+                          datetime="23.03.2026 17:47:26" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="961d7a24-5425-4445-b9a9-910dcbc558c0" full="7" dec="7.3" remark="" innerten_value="0"
+                          hotcount="3" comment="">7.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="3"
+                          shotcount="3" run="2" isvalid="true" ishot="true" iswarm="false" x="1243" y="-1159"
+                          teiler="1699.5" disktyp="lg" dummy="false" shotTime="639098846674783790" menuid="100_3"
+                          datetime="23.03.2026 17:47:56" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c3f57f44-3d2b-47b2-a578-0bd8549bee39" full="4" dec="4.2" remark="" innerten_value="0"
+                          hotcount="4" comment="">4.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="4"
+                          shotcount="4" run="2" isvalid="true" ishot="true" iswarm="false" x="-891" y="299"
+                          teiler="939.8" disktyp="lg" dummy="false" shotTime="639098846951628350" menuid="100_3"
+                          datetime="23.03.2026 17:48:24" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="ab8d816a-5859-481d-8bfb-fa4fb7aaa91e" full="7" dec="7.2" remark="" innerten_value="0"
+                          hotcount="5" comment="">7.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="5"
+                          shotcount="5" run="2" isvalid="true" ishot="true" iswarm="false" x="39" y="-97" teiler="104.5"
+                          disktyp="lg" dummy="false" shotTime="639098847275157050" menuid="100_3"
+                          datetime="23.03.2026 17:48:56" placeholder="False" weaponstype="lg" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="e9057654-b5a1-4231-bd4f-ed35d2e31aab" full="10" dec="10.5" remark="" innerten_value="1"
+                          hotcount="6" comment="">10.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="6"
+                          shotcount="6" run="2" isvalid="true" ishot="true" iswarm="false" x="-847" y="-652"
+                          teiler="1068.8" disktyp="lg" dummy="false" shotTime="639098847576749140" menuid="100_3"
+                          datetime="23.03.2026 17:49:26" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="486e64d6-3bde-41e9-894f-1287c99a65a7" full="6" dec="6.7" remark="" innerten_value="0"
+                          hotcount="7" comment="">6.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="7"
+                          shotcount="7" run="2" isvalid="true" ishot="true" iswarm="false" x="893" y="-1004"
+                          teiler="1343.6" disktyp="lg" dummy="false" shotTime="639098847838577110" menuid="100_3"
+                          datetime="23.03.2026 17:49:52" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c1817acc-65ca-4dae-89a1-095f39f72b98" full="5" dec="5.6" remark="" innerten_value="0"
+                          hotcount="8" comment="">5.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="8"
+                          shotcount="8" run="2" isvalid="true" ishot="true" iswarm="false" x="1134" y="-2403"
+                          teiler="2657.1" disktyp="lg" dummy="false" shotTime="639098848093207710" menuid="100_3"
+                          datetime="23.03.2026 17:50:18" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="8085de05-d888-4a16-8fe2-f5ceaa3a033e" full="0" dec="0.0" remark="" innerten_value="0"
+                          hotcount="9" comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="9"
+                          shotcount="9" run="2" isvalid="true" ishot="true" iswarm="false" x="495" y="-18"
+                          teiler="495.3" disktyp="lg" dummy="false" shotTime="639098848411068890" menuid="100_3"
+                          datetime="23.03.2026 17:50:49" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="975d28b3-be5d-4b7f-91c1-e23fba03bff4" full="9" dec="9.0" remark="" innerten_value="0"
+                          hotcount="10" comment="">9
+                    </shot>
+                </series>
+                <series totalscore="52" totalscore_t="56.9" id="2">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="10"
+                          shotcount="10" run="2" isvalid="true" ishot="true" iswarm="false" x="-1324" y="898"
+                          teiler="1599.8" disktyp="lg" dummy="false" shotTime="639098848716550970" menuid="100_3"
+                          datetime="23.03.2026 17:51:20" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e2e5fa38-7181-41b5-a5db-3de39ec3e57d" full="4" dec="4.6" remark="" innerten_value="0"
+                          hotcount="11" comment="">4.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="11"
+                          shotcount="11" run="2" isvalid="true" ishot="true" iswarm="false" x="-560" y="-471"
+                          teiler="731.7" disktyp="lg" dummy="false" shotTime="639098849021984390" menuid="100_3"
+                          datetime="23.03.2026 17:51:51" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="5a5a4734-d9ec-49cf-a6a6-18768d7a7686" full="8" dec="8.0" remark="" innerten_value="0"
+                          hotcount="12" comment="">8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="12"
+                          shotcount="12" run="2" isvalid="true" ishot="true" iswarm="false" x="-790" y="340"
+                          teiler="860" disktyp="lg" dummy="false" shotTime="639098849325290380" menuid="100_3"
+                          datetime="23.03.2026 17:52:21" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="d69ea712-46bd-4d7f-8008-9727b01abc5e" full="7" dec="7.5" remark="" innerten_value="0"
+                          hotcount="13" comment="">7.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="13"
+                          shotcount="13" run="2" isvalid="true" ishot="true" iswarm="false" x="276" y="-1315"
+                          teiler="1343.6" disktyp="lg" dummy="false" shotTime="639098849730172390" menuid="100_3"
+                          datetime="23.03.2026 17:53:01" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="79dcb463-2879-4297-9733-7c883bedc36f" full="5" dec="5.6" remark="" innerten_value="0"
+                          hotcount="14" comment="">5.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="14"
+                          shotcount="14" run="2" isvalid="true" ishot="true" iswarm="false" x="-141" y="-279"
+                          teiler="312.6" disktyp="lg" dummy="false" shotTime="639098850012324900" menuid="100_3"
+                          datetime="23.03.2026 17:53:29" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e58dad82-67b4-4718-a7a8-b8c4a73844ab" full="9" dec="9.7" remark="" innerten_value="0"
+                          hotcount="15" comment="">9.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="15"
+                          shotcount="15" run="2" isvalid="true" ishot="true" iswarm="false" x="-1867" y="5"
+                          teiler="1867" disktyp="lg" dummy="false" shotTime="639098850305643280" menuid="100_3"
+                          datetime="23.03.2026 17:53:59" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="50f58b5d-cd7b-4da9-8953-85237ab9e207" full="3" dec="3.5" remark="" innerten_value="0"
+                          hotcount="16" comment="">3.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="16"
+                          shotcount="16" run="2" isvalid="true" ishot="true" iswarm="false" x="1540" y="-185"
+                          teiler="1551" disktyp="lg" dummy="false" shotTime="639098850708669800" menuid="100_3"
+                          datetime="23.03.2026 17:54:39" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2a41300c-7e36-48bc-9e29-7c85dea81491" full="4" dec="4.7" remark="" innerten_value="0"
+                          hotcount="17" comment="">4.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="17"
+                          shotcount="17" run="2" isvalid="true" ishot="true" iswarm="false" x="-1514" y="689"
+                          teiler="1663.4" disktyp="lg" dummy="false" shotTime="639098851037417420" menuid="100_3"
+                          datetime="23.03.2026 17:55:12" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="014259d0-be76-4cf4-9c03-a80f66dfdd34" full="4" dec="4.3" remark="" innerten_value="0"
+                          hotcount="18" comment="">4.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="18"
+                          shotcount="18" run="2" isvalid="true" ishot="true" iswarm="false" x="-1029" y="-2202"
+                          teiler="2430.5" disktyp="lg" dummy="false" shotTime="639098851399749720" menuid="100_3"
+                          datetime="23.03.2026 17:55:49" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c738a507-ed97-491f-8267-9c9b14b3e3c7" full="1" dec="1.2" remark="" innerten_value="0"
+                          hotcount="19" comment="">1.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="19"
+                          shotcount="19" run="2" isvalid="true" ishot="true" iswarm="false" x="239" y="-745"
+                          teiler="782.3" disktyp="lg" dummy="false" shotTime="639098851627420820" menuid="100_3"
+                          datetime="23.03.2026 17:56:11" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="04cd21fd-4073-4910-ba08-1ac4154fd358" full="7" dec="7.8" remark="" innerten_value="0"
+                          hotcount="20" comment="">7.8
+                    </shot>
+                </series>
+                <series totalscore="49" totalscore_t="53.6" id="3">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="20"
+                          shotcount="20" run="2" isvalid="true" ishot="true" iswarm="false" x="818" y="771"
+                          teiler="1124" disktyp="lg" dummy="false" shotTime="639098851866162470" menuid="100_3"
+                          datetime="23.03.2026 17:56:35" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="600ac002-5944-420e-8fcb-ae69824ea4b9" full="6" dec="6.5" remark="" innerten_value="0"
+                          hotcount="21" comment="">6.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="21"
+                          shotcount="21" run="2" isvalid="true" ishot="true" iswarm="false" x="-1625" y="-936"
+                          teiler="1875.2" disktyp="lg" dummy="false" shotTime="639098852131673930" menuid="100_3"
+                          datetime="23.03.2026 17:57:02" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e9b2234a-4124-4b19-b538-ffd03c422597" full="3" dec="3.5" remark="" innerten_value="0"
+                          hotcount="22" comment="">3.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="22"
+                          shotcount="22" run="2" isvalid="true" ishot="true" iswarm="false" x="-2482" y="2512"
+                          teiler="3531.3" disktyp="lg" dummy="false" shotTime="639098852435755280" menuid="100_3"
+                          datetime="23.03.2026 17:57:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="b5b86303-12e2-4dbd-8077-1e91b12065e1" full="0" dec="0.0" remark="" innerten_value="0"
+                          hotcount="23" comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="23"
+                          shotcount="23" run="2" isvalid="true" ishot="true" iswarm="false" x="-533" y="-264"
+                          teiler="594.7" disktyp="lg" dummy="false" shotTime="639098852724967780" menuid="100_3"
+                          datetime="23.03.2026 17:58:01" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="fc1706d5-5c4c-4a1a-a966-d6b1d9ebfeaf" full="8" dec="8.6" remark="" innerten_value="0"
+                          hotcount="24" comment="">8.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="24"
+                          shotcount="24" run="2" isvalid="true" ishot="true" iswarm="false" x="252" y="-452"
+                          teiler="517.5" disktyp="lg" dummy="false" shotTime="639098852962914090" menuid="100_3"
+                          datetime="23.03.2026 17:58:25" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="d5f1a464-8be8-49d8-8a74-575670261865" full="8" dec="8.9" remark="" innerten_value="0"
+                          hotcount="25" comment="">8.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="25"
+                          shotcount="25" run="2" isvalid="true" ishot="true" iswarm="false" x="-2421" y="-1260"
+                          teiler="2729.2" disktyp="lg" dummy="false" shotTime="639098853291274450" menuid="100_3"
+                          datetime="23.03.2026 17:58:57" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a1a9a40f-1ef0-400b-860e-955498ea3b91" full="0" dec="0.0" remark="" innerten_value="0"
+                          hotcount="26" comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="26"
+                          shotcount="26" run="2" isvalid="true" ishot="true" iswarm="false" x="-285" y="-719"
+                          teiler="773.4" disktyp="lg" dummy="false" shotTime="639098853637974380" menuid="100_3"
+                          datetime="23.03.2026 17:59:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9fc56bd1-5e35-4634-b3b6-caa3d1657616" full="7" dec="7.9" remark="" innerten_value="0"
+                          hotcount="27" comment="">7.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="27"
+                          shotcount="27" run="2" isvalid="true" ishot="true" iswarm="false" x="836" y="-410"
+                          teiler="931.1" disktyp="lg" dummy="false" shotTime="639098853870020990" menuid="100_3"
+                          datetime="23.03.2026 17:59:55" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a34c547d-5cea-4797-9d0c-6f257bf61cac" full="7" dec="7.2" remark="" innerten_value="0"
+                          hotcount="28" comment="">7.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="28"
+                          shotcount="28" run="2" isvalid="true" ishot="true" iswarm="false" x="-1401" y="631"
+                          teiler="1536.5" disktyp="lg" dummy="false" shotTime="639098854130195450" menuid="100_3"
+                          datetime="23.03.2026 18:00:21" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="fa4402b8-ba40-4b45-b14c-3775cf44ecf7" full="4" dec="4.8" remark="" innerten_value="0"
+                          hotcount="29" comment="">4.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="29"
+                          shotcount="29" run="2" isvalid="true" ishot="true" iswarm="false" x="1018" y="-603"
+                          teiler="1183.1" disktyp="lg" dummy="false" shotTime="639098854477143640" menuid="100_3"
+                          datetime="23.03.2026 18:00:56" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9b403e69-9964-4a9e-aa3f-b2ed5bc769cd" full="6" dec="6.2" remark="" innerten_value="0"
+                          hotcount="30" comment="">6.2
+                    </shot>
+                </series>
+                <sighting>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="9" shootersid="173" shot="0"
+                          shotcount="0" run="1" isvalid="true" ishot="false" iswarm="true" x="862" y="87" teiler="866.3"
+                          disktyp="lg" dummy="false" shotTime="639098845571426170" menuid="100_3"
+                          datetime="23.03.2026 17:46:05" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="1eaea47a-010d-47cc-9187-219ee421c0c2" full="7" dec="7.5" remark="" innerten_value="0"
+                          comment="">7.5
+                    </shot>
+                </sighting>
+            </shots>
+        </shooter>
+        <shooter firstname="Adrian" lastname="B" internid="" identification="" birthyear="1900"
+                 clubsname="Test Verein" clubsnumber="" dq="false" dq_comment="" result_qualification="0"
+                 fidRanges="8" hits_time="00:22:31" hits_time_seconds="1351" last_shot="3,7" count_hits="39"
+                 totalscore="302" totalscore_t="318.6" totalcount_innerten="2" worstdistance="3541.0" count11="0"
+                 count10="4" count9="12" count8="13" count7="2" count6="1" count5="4" count4="1" count3="2" count2="0"
+                 count1="0" count0="1">
+            <shots>
+                <shootoff totalscore="0" totalscore_t="0"/>
+                <series totalscore="81" totalscore_t="86.4" id="1">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="0"
+                          shotcount="0" run="2" isvalid="true" ishot="true" iswarm="false" x="-185" y="-411"
+                          teiler="450.7" disktyp="lg" dummy="false" shotTime="639098849526020550" menuid="100_4"
+                          datetime="23.03.2026 17:52:41" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f8dd1eab-8efe-4eec-8da2-2819fe4fc020" full="9" dec="9.2" remark="" innerten_value="0"
+                          hotcount="1" comment="">9.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="1"
+                          shotcount="1" run="2" isvalid="true" ishot="true" iswarm="false" x="-813" y="-301"
+                          teiler="866.9" disktyp="lg" dummy="false" shotTime="639098850204615040" menuid="100_4"
+                          datetime="23.03.2026 17:53:49" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="badd7948-5712-4651-8f58-77f116daf370" full="7" dec="7.5" remark="" innerten_value="0"
+                          hotcount="2" comment="">7.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="2"
+                          shotcount="2" run="2" isvalid="true" ishot="true" iswarm="false" x="174" y="-130"
+                          teiler="217.2" disktyp="lg" dummy="false" shotTime="639098851693336470" menuid="100_4"
+                          datetime="23.03.2026 17:56:18" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="53a6fb8e-682e-4aff-9e58-35050de8a1d7" full="10" dec="10.1" remark="" innerten_value="0"
+                          hotcount="3" comment="">10.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="3"
+                          shotcount="3" run="2" isvalid="true" ishot="true" iswarm="false" x="533" y="119"
+                          teiler="546.1" disktyp="lg" dummy="false" shotTime="639098851939694790" menuid="100_4"
+                          datetime="23.03.2026 17:56:42" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="da7719bd-7ae1-41a4-966b-efb17b2e3e62" full="8" dec="8.8" remark="" innerten_value="0"
+                          hotcount="4" comment="">8.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="4"
+                          shotcount="4" run="2" isvalid="true" ishot="true" iswarm="false" x="-45" y="-335" teiler="338"
+                          disktyp="lg" dummy="false" shotTime="639098852305440990" menuid="100_4"
+                          datetime="23.03.2026 17:57:19" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c95369bf-3568-435c-a367-9fc7c29073f5" full="9" dec="9.6" remark="" innerten_value="0"
+                          hotcount="5" comment="">9.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="5"
+                          shotcount="5" run="2" isvalid="true" ishot="true" iswarm="false" x="-421" y="-497"
+                          teiler="651.3" disktyp="lg" dummy="false" shotTime="639098852832843390" menuid="100_4"
+                          datetime="23.03.2026 17:58:12" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e8704ccd-f3cd-42b5-aa3f-839ae6fa21f8" full="8" dec="8.3" remark="" innerten_value="0"
+                          hotcount="6" comment="">8.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="6"
+                          shotcount="6" run="2" isvalid="true" ishot="true" iswarm="false" x="-170" y="-487"
+                          teiler="515.8" disktyp="lg" dummy="false" shotTime="639098853082974870" menuid="100_4"
+                          datetime="23.03.2026 17:58:37" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c4559c8e-0241-4f2d-84c6-39167d9d3947" full="8" dec="8.9" remark="" innerten_value="0"
+                          hotcount="7" comment="">8.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="7"
+                          shotcount="7" run="2" isvalid="true" ishot="true" iswarm="false" x="-1321" y="326"
+                          teiler="1360.6" disktyp="lg" dummy="false" shotTime="639098853627229970" menuid="100_4"
+                          datetime="23.03.2026 17:59:31" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="a4c29f8e-00f3-4a42-98c5-e993b86ceaf6" full="5" dec="5.5" remark="" innerten_value="0"
+                          hotcount="8" comment="">5.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="8"
+                          shotcount="8" run="2" isvalid="true" ishot="true" iswarm="false" x="237" y="138"
+                          teiler="274.2" disktyp="lg" dummy="false" shotTime="639098853863240140" menuid="100_4"
+                          datetime="23.03.2026 17:59:55" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6fcf478a-a139-4872-a6ce-3bc6e4ecec2d" full="9" dec="9.9" remark="" innerten_value="0"
+                          hotcount="9" comment="">9.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="9"
+                          shotcount="9" run="2" isvalid="true" ishot="true" iswarm="false" x="586" y="39" teiler="587.2"
+                          disktyp="lg" dummy="false" shotTime="639098854202649680" menuid="100_4"
+                          datetime="23.03.2026 18:00:29" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="1360f74e-931d-4590-beca-8fc197ab38e7" full="8" dec="8.6" remark="" innerten_value="0"
+                          hotcount="10" comment="">8.6
+                    </shot>
+                </series>
+                <series totalscore="78" totalscore_t="82.5" id="2">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="10"
+                          shotcount="10" run="2" isvalid="true" ishot="true" iswarm="false" x="125" y="-190"
+                          teiler="227.4" disktyp="lg" dummy="false" shotTime="639098854478781700" menuid="100_4"
+                          datetime="23.03.2026 18:00:56" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="d39aa854-dcc4-4683-b049-75cb8259022c" full="10" dec="10.0" remark="" innerten_value="0"
+                          hotcount="11" comment="">10
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="11"
+                          shotcount="11" run="2" isvalid="true" ishot="true" iswarm="false" x="725" y="813"
+                          teiler="1089.3" disktyp="lg" dummy="false" shotTime="639098854759552230" menuid="100_4"
+                          datetime="23.03.2026 18:01:25" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6fb72e3c-a1ef-4483-876b-bcd34e725e24" full="6" dec="6.6" remark="" innerten_value="0"
+                          hotcount="12" comment="">6.6
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="12"
+                          shotcount="12" run="2" isvalid="true" ishot="true" iswarm="false" x="-397" y="366"
+                          teiler="539.9" disktyp="lg" dummy="false" shotTime="639098855811105460" menuid="100_4"
+                          datetime="23.03.2026 18:03:10" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="82a25960-c06b-48cd-9a00-dd4d5960b5fb" full="8" dec="8.8" remark="" innerten_value="0"
+                          hotcount="13" comment="">8.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="13"
+                          shotcount="13" run="2" isvalid="true" ishot="true" iswarm="false" x="-474" y="448"
+                          teiler="652.2" disktyp="lg" dummy="false" shotTime="639098856240572220" menuid="100_4"
+                          datetime="23.03.2026 18:03:53" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="95f7fe17-9d55-4530-82f1-1d1b3bdee7fc" full="8" dec="8.3" remark="" innerten_value="0"
+                          hotcount="14" comment="">8.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="14"
+                          shotcount="14" run="2" isvalid="true" ishot="true" iswarm="false" x="-328" y="-1434"
+                          teiler="1471" disktyp="lg" dummy="false" shotTime="639098856444575840" menuid="100_4"
+                          datetime="23.03.2026 18:04:13" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="3915293d-5d8b-4a55-bb7c-3450e539e339" full="5" dec="5.1" remark="" innerten_value="0"
+                          hotcount="15" comment="">5.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="15"
+                          shotcount="15" run="2" isvalid="true" ishot="true" iswarm="false" x="-607" y="10" teiler="607"
+                          disktyp="lg" dummy="false" shotTime="639098856671881140" menuid="100_4"
+                          datetime="23.03.2026 18:04:36" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="b83f0148-12a0-4ebd-a839-52d60dc46908" full="8" dec="8.5" remark="" innerten_value="0"
+                          hotcount="16" comment="">8.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="16"
+                          shotcount="16" run="2" isvalid="true" ishot="true" iswarm="false" x="233" y="187"
+                          teiler="298.7" disktyp="lg" dummy="false" shotTime="639098856888003890" menuid="100_4"
+                          datetime="23.03.2026 18:04:57" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="2e6c508d-cb05-446c-98c2-b056e1900ac0" full="9" dec="9.8" remark="" innerten_value="0"
+                          hotcount="17" comment="">9.8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="17"
+                          shotcount="17" run="2" isvalid="true" ishot="true" iswarm="false" x="-358" y="337"
+                          teiler="491.6" disktyp="lg" dummy="false" shotTime="639098857126122440" menuid="100_4"
+                          datetime="23.03.2026 18:05:21" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="318926b2-0494-4ae8-ae16-f8fde4b031f9" full="9" dec="9.0" remark="" innerten_value="0"
+                          hotcount="18" comment="">9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="18"
+                          shotcount="18" run="2" isvalid="true" ishot="true" iswarm="false" x="1262" y="46"
+                          teiler="1262.8" disktyp="lg" dummy="false" shotTime="639098857339429330" menuid="100_4"
+                          datetime="23.03.2026 18:05:42" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="da7bb6f4-ab3b-4ff3-966e-3508207c1ef8" full="5" dec="5.9" remark="" innerten_value="0"
+                          hotcount="19" comment="">5.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="19"
+                          shotcount="19" run="2" isvalid="true" ishot="true" iswarm="false" x="8" y="106" teiler="106.3"
+                          disktyp="lg" dummy="false" shotTime="639098857538051360" menuid="100_4"
+                          datetime="23.03.2026 18:06:02" placeholder="False" weaponstype="lg" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="86bd20ab-0932-49b1-bb94-8b0891874275" full="10" dec="10.5" remark="" innerten_value="1"
+                          hotcount="20" comment="">10.5
+                    </shot>
+                </series>
+                <series totalscore="72" totalscore_t="75.5" id="3">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="20"
+                          shotcount="20" run="2" isvalid="true" ishot="true" iswarm="false" x="283" y="618"
+                          teiler="679.7" disktyp="lg" dummy="false" shotTime="639098857773357580" menuid="100_4"
+                          datetime="23.03.2026 18:06:26" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4446574d-9a9e-4b0b-9099-debd6bac3da6" full="8" dec="8.2" remark="" innerten_value="0"
+                          hotcount="21" comment="">8.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="21"
+                          shotcount="21" run="2" isvalid="true" ishot="true" iswarm="false" x="400" y="-179"
+                          teiler="438.2" disktyp="lg" dummy="false" shotTime="639098857941492210" menuid="100_4"
+                          datetime="23.03.2026 18:06:43" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f7011371-8d75-4ba4-8d6d-b80b148c3e76" full="9" dec="9.2" remark="" innerten_value="0"
+                          hotcount="22" comment="">9.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="22"
+                          shotcount="22" run="2" isvalid="true" ishot="true" iswarm="false" x="-840" y="382"
+                          teiler="922.7" disktyp="lg" dummy="false" shotTime="639098858137686090" menuid="100_4"
+                          datetime="23.03.2026 18:07:02" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="47424843-ed3d-4e1a-ba66-f4e8f37c950f" full="7" dec="7.3" remark="" innerten_value="0"
+                          hotcount="23" comment="">7.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="23"
+                          shotcount="23" run="2" isvalid="true" ishot="true" iswarm="false" x="-384" y="147"
+                          teiler="411.1" disktyp="lg" dummy="false" shotTime="639098858367973780" menuid="100_4"
+                          datetime="23.03.2026 18:07:25" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4b0f7801-85f2-463b-bb9e-7bdb6791cba0" full="9" dec="9.3" remark="" innerten_value="0"
+                          hotcount="24" comment="">9.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="24"
+                          shotcount="24" run="2" isvalid="true" ishot="true" iswarm="false" x="-1493" y="879"
+                          teiler="1732.5" disktyp="lg" dummy="false" shotTime="639098858573550110" menuid="100_4"
+                          datetime="23.03.2026 18:07:46" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="1625740e-ade8-4ce4-90ad-2deec50bdec7" full="4" dec="4.0" remark="" innerten_value="0"
+                          hotcount="25" comment="">4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="25"
+                          shotcount="25" run="2" isvalid="true" ishot="true" iswarm="false" x="-1135" y="-580"
+                          teiler="1274.6" disktyp="lg" dummy="false" shotTime="639098858940426540" menuid="100_4"
+                          datetime="23.03.2026 18:08:22" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="4ab8370b-d2fc-4373-9396-eb07c5feb013" full="5" dec="5.9" remark="" innerten_value="0"
+                          hotcount="26" comment="">5.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="26"
+                          shotcount="26" run="2" isvalid="true" ishot="true" iswarm="false" x="-130" y="-450"
+                          teiler="468.4" disktyp="lg" dummy="false" shotTime="639098859209246660" menuid="100_4"
+                          datetime="23.03.2026 18:08:49" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="475c5928-ea8a-4b15-920a-32a21143609c" full="9" dec="9.1" remark="" innerten_value="0"
+                          hotcount="27" comment="">9.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="27"
+                          shotcount="27" run="2" isvalid="true" ishot="true" iswarm="false" x="1679" y="716"
+                          teiler="1825.2" disktyp="lg" dummy="false" shotTime="639098859459703350" menuid="100_4"
+                          datetime="23.03.2026 18:09:14" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9792154a-2324-40fe-8752-971808df457b" full="3" dec="3.7" remark="" innerten_value="0"
+                          hotcount="28" comment="">3.7
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="28"
+                          shotcount="28" run="2" isvalid="true" ishot="true" iswarm="false" x="390" y="97"
+                          teiler="401.8" disktyp="lg" dummy="false" shotTime="639098859707963880" menuid="100_4"
+                          datetime="23.03.2026 18:09:39" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="91877df5-c98c-47e7-92f6-fe7c126fa10c" full="9" dec="9.3" remark="" innerten_value="0"
+                          hotcount="29" comment="">9.3
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="29"
+                          shotcount="29" run="2" isvalid="true" ishot="true" iswarm="false" x="-131" y="347"
+                          teiler="370.9" disktyp="lg" dummy="false" shotTime="639098859946261260" menuid="100_4"
+                          datetime="23.03.2026 18:10:03" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="3c37b697-9cc4-4bfb-856e-d4689375edff" full="9" dec="9.5" remark="" innerten_value="0"
+                          hotcount="30" comment="">9.5
+                    </shot>
+                </series>
+                <series totalscore="71" totalscore_t="74.2" id="4">
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="30"
+                          shotcount="30" run="2" isvalid="true" ishot="true" iswarm="false" x="-633" y="-62"
+                          teiler="636" disktyp="lg" dummy="false" shotTime="639098860177641200" menuid="100_4"
+                          datetime="23.03.2026 18:10:26" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e47b0010-a855-4624-b89b-9cedcf37b32b" full="8" dec="8.4" remark="" innerten_value="0"
+                          hotcount="31" comment="">8.4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="31"
+                          shotcount="31" run="2" isvalid="true" ishot="true" iswarm="false" x="482" y="361"
+                          teiler="602.2" disktyp="lg" dummy="false" shotTime="639098860366343340" menuid="100_4"
+                          datetime="23.03.2026 18:10:45" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="f7adee2d-f6bc-4469-9b28-95e711ae2691" full="8" dec="8.5" remark="" innerten_value="0"
+                          hotcount="32" comment="">8.5
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="32"
+                          shotcount="32" run="2" isvalid="true" ishot="true" iswarm="false" x="439" y="241"
+                          teiler="500.8" disktyp="lg" dummy="false" shotTime="639098860609934420" menuid="100_4"
+                          datetime="23.03.2026 18:11:10" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="e04509c6-3dcd-4e5a-9009-81f5000a16b8" full="9" dec="9.0" remark="" innerten_value="0"
+                          hotcount="33" comment="">9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="33"
+                          shotcount="33" run="2" isvalid="true" ishot="true" iswarm="false" x="358" y="-355"
+                          teiler="504.1" disktyp="lg" dummy="false" shotTime="639098860834436280" menuid="100_4"
+                          datetime="23.03.2026 18:11:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="6f29c285-197e-490d-9cdb-cdb8cd08fc20" full="8" dec="8.9" remark="" innerten_value="0"
+                          hotcount="34" comment="">8.9
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="34"
+                          shotcount="34" run="2" isvalid="true" ishot="true" iswarm="false" x="98" y="-165"
+                          teiler="191.9" disktyp="lg" dummy="false" shotTime="639098861007137900" menuid="100_4"
+                          datetime="23.03.2026 18:11:49" placeholder="False" weaponstype="lg" isinnerten="true"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="X" winkel="303"
+                          uuid="cc925c77-75f6-40bc-a145-7dd3db4e7f45" full="10" dec="10.2" remark="" innerten_value="1"
+                          hotcount="35" comment="">10.2
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="35"
+                          shotcount="35" run="2" isvalid="true" ishot="true" iswarm="false" x="-620" y="188"
+                          teiler="647.8" disktyp="lg" dummy="false" shotTime="639098861232598040" menuid="100_4"
+                          datetime="23.03.2026 18:12:12" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="c8da375f-8261-483e-b8c8-aa452a7bedb0" full="8" dec="8.4" remark="" innerten_value="0"
+                          hotcount="36" comment="">8.4
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="36"
+                          shotcount="36" run="2" isvalid="true" ishot="true" iswarm="false" x="-665" y="3478"
+                          teiler="3541" disktyp="lg" dummy="false" shotTime="639098861415792140" menuid="100_4"
+                          datetime="23.03.2026 18:12:30" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="18136e83-ea33-4fed-accd-9ccb76b99a23" full="0" dec="0.0" remark="" innerten_value="0"
+                          hotcount="37" comment="">0
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="37"
+                          shotcount="37" run="2" isvalid="true" ishot="true" iswarm="false" x="458" y="-15"
+                          teiler="458.2" disktyp="lg" dummy="false" shotTime="639098861661824070" menuid="100_4"
+                          datetime="23.03.2026 18:12:55" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="99195b5c-5312-4c44-9f2a-6f420a97d29d" full="9" dec="9.1" remark="" innerten_value="0"
+                          hotcount="38" comment="">9.1
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="38"
+                          shotcount="38" run="2" isvalid="true" ishot="true" iswarm="false" x="213" y="707"
+                          teiler="738.3" disktyp="lg" dummy="false" shotTime="639098861881999530" menuid="100_4"
+                          datetime="23.03.2026 18:13:17" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="9b33c0c2-4d67-416e-9106-78a05a29e1f3" full="8" dec="8.0" remark="" innerten_value="0"
+                          hotcount="39" comment="">8
+                    </shot>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="39"
+                          shotcount="39" run="2" isvalid="true" ishot="true" iswarm="false" x="-1822" y="35"
+                          teiler="1822.3" disktyp="lg" dummy="false" shotTime="639098862039227250" menuid="100_4"
+                          datetime="23.03.2026 18:13:32" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="238576c7-2c2b-4625-a303-860fc7aaa344" full="3" dec="3.7" remark="" innerten_value="0"
+                          hotcount="40" comment="">3.7
+                    </shot>
+                </series>
+                <sighting>
+                    <shot source="os" tlstatus="0" tlight="off" tltime="0" shootingrange="8" shootersid="203" shot="0"
+                          shotcount="0" run="1" isvalid="true" ishot="false" iswarm="true" x="644" y="369"
+                          teiler="742.2" disktyp="lg" dummy="false" shotTime="639098848527946750" menuid="100_4"
+                          datetime="23.03.2026 17:51:01" placeholder="False" weaponstype="lg" isinnerten="false"
+                          commentvalid="" valuation="" flexCompetitionId="0" innerten="" winkel="303"
+                          uuid="bfe02881-8a34-427f-a6cb-f102ce2f1f52" full="8" dec="8.0" remark="" innerten_value="0"
+                          comment="">8
+                    </shot>
+                </sighting>
+            </shots>
+        </shooter>
+    </shooters>
+    <comments/>
+</result>
