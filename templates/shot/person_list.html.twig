@@ -47,7 +47,13 @@
                                 <td>{{ entry.disciplineName }}</td>
                                 <td>{{ entry.teamName }}</td>
                                 <td>{{ entry.shotCount }}/{{ entry.totalShots }}</td>
-                                <td><a href="{{ path('shots_series_edit', {id: entry.series.id}) }}" class="btn">Bearbeiten</a></td>
+                                <td>
+                                    {% if entry.series %}
+                                        <a href="{{ path('shots_series_edit', {id: entry.series.id}) }}" class="btn">Bearbeiten</a>
+                                    {% else %}
+                                        <a href="{{ path('shots_series_open', {round: selectedRound.id, teamMember: entry.teamMember.id}) }}" class="btn">Schüsse eintragen</a>
+                                    {% endif %}
+                                </td>
                             </tr>
                         {% endfor %}
                         </tbody>

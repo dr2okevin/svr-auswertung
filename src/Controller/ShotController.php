@@ -3,13 +3,16 @@
 namespace App\Controller;
 
 use App\Entity\Competition;
+use App\Entity\Round;
 use App\Entity\Series;
 use App\Entity\Shot;
+use App\Entity\TeamMember;
 use App\Form\ShotType;
 use App\Repository\CompetitionRepository;
 use App\Repository\RoundRepository;
 use App\Repository\SeriesRepository;
 use App\Repository\ShotRepository;
+use App\Repository\TeamMemberRepository;
 use App\Service\CompetitionContextProvider;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,6 +28,7 @@ class ShotController extends AbstractController
         private readonly RoundRepository $roundRepository,
         private readonly SeriesRepository $seriesRepository,
         private readonly ShotRepository $shotRepository,
+        private readonly TeamMemberRepository $teamMemberRepository,
     ) {
     }
 
@@ -40,57 +44,12 @@ class ShotController extends AbstractController
         }
 
         $rounds = $this->roundRepository->findBy(['Competition' => $competition], ['StartDate' => 'ASC', 'Name' => 'ASC']);
-        $selectedRound = null;
-
-        $selectedRoundId = $request->query->getInt('round', 0);
-        if ($selectedRoundId > 0) {
-            foreach ($rounds as $round) {
-                if ($round->getId() === $selectedRoundId) {
-                    $selectedRound = $round;
-                    break;
-                }
-            }
-        }
-
-        if ($selectedRound === null && $rounds !== []) {
-            $selectedRound = $rounds[0];
-        }
+        $selectedRound = $this->resolveSelectedRound($rounds, $request->query->getInt('round', 0));
 
         $seriesByDiscipline = [];
 
         if ($selectedRound !== null) {
-            $series = $this->seriesRepository->findBy(['Round' => $selectedRound], ['id' => 'ASC']);
-
-            foreach ($series as $entry) {
-                $discipline = $entry->getDiscipline();
-                if ($discipline === null) {
-                    continue;
-                }
-
-                $disciplineName = (string) $discipline->getName();
-                if (!isset($seriesByDiscipline[$disciplineName])) {
-                    $seriesByDiscipline[$disciplineName] = [];
-                }
-
-                $shotCount = $this->shotRepository->count(['Series' => $entry]);
-                $totalShots = ($discipline->getShotsPerSeries() ?? 0) * ($discipline->getMaxSeriesCount() ?? 0);
-                if ($totalShots <= 0) {
-                    $totalShots = $discipline->getShotsPerSeries() ?? 0;
-                }
-
-                $personName = trim(sprintf('%s %s', $entry->getPerson()?->getFristName() ?? '', $entry->getPerson()?->getLastName() ?? ''));
-
-                $seriesByDiscipline[$disciplineName][] = [
-                    'series' => $entry,
-                    'personName' => $personName,
-                    'disciplineName' => $disciplineName,
-                    'teamName' => $entry->getTeam()?->getName() ?? '-',
-                    'shotCount' => $shotCount,
-                    'totalShots' => $totalShots,
-                ];
-            }
-
-            ksort($seriesByDiscipline);
+            $seriesByDiscipline = $this->buildSeriesEntriesByDiscipline($competition, $selectedRound);
         }
 
         return $this->render('shot/person_list.html.twig', [
@@ -99,6 +58,38 @@ class ShotController extends AbstractController
             'selectedRound' => $selectedRound,
             'seriesByDiscipline' => $seriesByDiscipline,
         ]);
+    }
+
+    #[Route('/shots/open/{round}/{teamMember}', name: 'shots_series_open', methods: ['GET'])]
+    public function openSeries(Round $round, TeamMember $teamMember, EntityManagerInterface $entityManager): Response
+    {
+        $competition = $this->getSelectedCompetition();
+
+        if ($competition === null || $round->getCompetition()?->getId() !== $competition->getId() || $teamMember->getTeam()?->getCompetition()?->getId() !== $competition->getId()) {
+            throw $this->createNotFoundException();
+        }
+
+        $series = $this->seriesRepository->findOneBy([
+            'Round' => $round,
+            'Team' => $teamMember->getTeam(),
+            'Person' => $teamMember->getPerson(),
+            'Discipline' => $teamMember->getDiscipline(),
+        ]);
+
+        if (!$series instanceof Series) {
+            $series = new Series();
+            $series->setRound($round);
+            $series->setTeam($teamMember->getTeam());
+            $series->setPerson($teamMember->getPerson());
+            $series->setDiscipline($teamMember->getDiscipline());
+            $series->setShotsCount(0);
+            $series->setImportFile(null);
+
+            $entityManager->persist($series);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('shots_series_edit', ['id' => $series->getId()]);
     }
 
     #[Route('/shots/series/{id}/edit', name: 'shots_series_edit', methods: ['GET'])]
@@ -129,6 +120,7 @@ class ShotController extends AbstractController
         $shot = new Shot();
         $shot->setSeries($series);
         $shot->setRecordTime(new \DateTime());
+        $shot->setShotIndex($this->shotRepository->count(['Series' => $series]) + 1);
 
         $form = $this->createForm(ShotType::class, $shot);
         $form->handleRequest($request);
@@ -212,6 +204,96 @@ class ShotController extends AbstractController
         }
 
         return $this->competitionRepository->find($selectedCompetitionId);
+    }
+
+    /**
+     * @param array<int, Round> $rounds
+     */
+    private function resolveSelectedRound(array $rounds, int $selectedRoundId): ?Round
+    {
+        if ($selectedRoundId > 0) {
+            foreach ($rounds as $round) {
+                if ($round->getId() === $selectedRoundId) {
+                    return $round;
+                }
+            }
+        }
+
+        return $rounds[0] ?? null;
+    }
+
+    /**
+     * @return array<string, array<int, array{series: ?Series, teamMember: TeamMember, personName: string, disciplineName: string, teamName: string, shotCount: int, totalShots: int}>>
+     */
+    private function buildSeriesEntriesByDiscipline(Competition $competition, Round $selectedRound): array
+    {
+        $teamMembers = $this->teamMemberRepository->createQueryBuilder('tm')
+            ->innerJoin('tm.Team', 't')
+            ->addSelect('t')
+            ->innerJoin('tm.Person', 'p')
+            ->addSelect('p')
+            ->innerJoin('tm.Discipline', 'd')
+            ->addSelect('d')
+            ->andWhere('t.Competition = :competition')
+            ->setParameter('competition', $competition)
+            ->orderBy('d.Name', 'ASC')
+            ->addOrderBy('p.LastName', 'ASC')
+            ->addOrderBy('p.FristName', 'ASC')
+            ->getQuery()
+            ->getResult();
+
+        $seriesForRound = $this->seriesRepository->findBy(['Round' => $selectedRound]);
+        $seriesMap = [];
+
+        foreach ($seriesForRound as $series) {
+            $seriesMap[$this->buildAssignmentKey($series->getTeam()?->getId(), $series->getPerson()?->getId(), $series->getDiscipline()?->getId())] = $series;
+        }
+
+        $seriesByDiscipline = [];
+
+        foreach ($teamMembers as $teamMember) {
+            if (!$teamMember instanceof TeamMember) {
+                continue;
+            }
+
+            $discipline = $teamMember->getDiscipline();
+            $disciplineName = (string) $discipline?->getName();
+            if ($disciplineName === '') {
+                continue;
+            }
+
+            $assignmentKey = $this->buildAssignmentKey($teamMember->getTeam()?->getId(), $teamMember->getPerson()?->getId(), $discipline?->getId());
+            $series = $seriesMap[$assignmentKey] ?? null;
+            $shotCount = $series instanceof Series ? $this->shotRepository->count(['Series' => $series]) : 0;
+
+            $totalShots = ($discipline?->getShotsPerSeries() ?? 0) * ($discipline?->getMaxSeriesCount() ?? 0);
+            if ($totalShots <= 0) {
+                $totalShots = $discipline?->getShotsPerSeries() ?? 0;
+            }
+
+            $personName = trim(sprintf('%s %s', $teamMember->getPerson()?->getFristName() ?? '', $teamMember->getPerson()?->getLastName() ?? ''));
+
+            if (!isset($seriesByDiscipline[$disciplineName])) {
+                $seriesByDiscipline[$disciplineName] = [];
+            }
+
+            $seriesByDiscipline[$disciplineName][] = [
+                'series' => $series,
+                'teamMember' => $teamMember,
+                'personName' => $personName,
+                'disciplineName' => $disciplineName,
+                'teamName' => $teamMember->getTeam()?->getName() ?? '-',
+                'shotCount' => $shotCount,
+                'totalShots' => $totalShots,
+            ];
+        }
+
+        return $seriesByDiscipline;
+    }
+
+    private function buildAssignmentKey(?int $teamId, ?int $personId, ?int $disciplineId): string
+    {
+        return sprintf('%d-%d-%d', $teamId ?? 0, $personId ?? 0, $disciplineId ?? 0);
     }
 
     private function seriesBelongsToCompetition(Series $series, Competition $competition): bool
