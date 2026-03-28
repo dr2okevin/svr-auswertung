@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Schüsse bearbeiten{% endblock %}
+
+{% block body %}
+    <h1>Serie bearbeiten</h1>
+
+    <p>
+        <strong>Person:</strong> {{ series.person.fristName }} {{ series.person.lastName }}<br>
+        <strong>Disziplin:</strong> {{ series.discipline.name }}<br>
+        <strong>Team:</strong> {{ series.team ? series.team.name : '-' }}<br>
+        <strong>Runde:</strong> {{ series.round.name }}
+    </p>
+
+    <p>
+        <a href="{{ path('shots_new', {id: series.id}) }}" class="btn">Neuen Schuss erfassen</a>
+        <a href="{{ path('shots_person_list', {round: series.round.id}) }}" class="btn">Zurück zur Übersicht</a>
+    </p>
+
+    {% if shots is empty %}
+        <p>Noch keine Schüsse vorhanden.</p>
+    {% else %}
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Wert</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>Aufnahmezeit</th>
+                <th>Aktionen</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for shot in shots %}
+                <tr>
+                    <td>{{ shot.shotIndex }}</td>
+                    <td>{{ shot.value|number_format(1, ',', '.') }}</td>
+                    <td>{{ shot.xPosition is not null ? shot.xPosition|number_format(4, ',', '.') : '-' }}</td>
+                    <td>{{ shot.yPosition is not null ? shot.yPosition|number_format(4, ',', '.') : '-' }}</td>
+                    <td>{{ shot.recordTime|date('d.m.Y H:i:s') }}</td>
+                    <td>
+                        <a href="{{ path('shots_edit', {id: shot.id}) }}" class="btn">Bearbeiten</a>
+                        {% include 'shot/_delete_form.html.twig' with {shot: shot} %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

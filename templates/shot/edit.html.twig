@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Schuss bearbeiten{% endblock %}
+
+{% block body %}
+    <h1>Schuss bearbeiten</h1>
+
+    {% include 'shot/_form.html.twig' with {
+        form: form,
+        button_label: 'Speichern'
+    } %}
+
+    <p>
+        <a href="{{ path('shots_series_edit', {id: series.id}) }}" class="btn">Zurück zur Serie</a>
+    </p>
+
+    {% include 'shot/_delete_form.html.twig' with {
+        shot: shot
+    } %}
+{% endblock %}
