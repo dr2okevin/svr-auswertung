@@ -7,6 +7,7 @@ use App\Entity\Round;
 use App\Entity\Series;
 use App\Entity\Shot;
 use App\Entity\TeamMember;
+use App\Form\ShotBatchType;
 use App\Form\ShotType;
 use App\Repository\CompetitionRepository;
 use App\Repository\RoundRepository;
@@ -92,8 +93,8 @@ class ShotController extends AbstractController
         return $this->redirectToRoute('shots_series_edit', ['id' => $series->getId()]);
     }
 
-    #[Route('/shots/series/{id}/edit', name: 'shots_series_edit', methods: ['GET'])]
-    public function editSeries(Series $series): Response
+    #[Route('/shots/series/{id}/edit', name: 'shots_series_edit', methods: ['GET', 'POST'])]
+    public function editSeries(Request $request, Series $series, EntityManagerInterface $entityManager): Response
     {
         $competition = $this->getSelectedCompetition();
 
@@ -101,10 +102,85 @@ class ShotController extends AbstractController
             throw $this->createNotFoundException();
         }
 
+        $targetShotCount = $this->getTargetShotCount($series);
+        $existingShots = $this->shotRepository->findBy(['Series' => $series], ['ShotIndex' => 'ASC']);
+
+        $rows = [];
+        $existingShotsByIndex = [];
+
+        foreach ($existingShots as $existingShot) {
+            $existingShotsByIndex[$existingShot->getShotIndex() ?? 0] = $existingShot;
+        }
+
+        for ($shotIndex = 1; $shotIndex <= $targetShotCount; $shotIndex++) {
+            $existingShot = $existingShotsByIndex[$shotIndex] ?? null;
+
+            $rows[] = [
+                'ShotIndex' => $shotIndex,
+                'value' => $existingShot?->getValue(),
+                'XPosition' => $existingShot?->getXPosition(),
+                'YPosition' => $existingShot?->getYPosition(),
+                'RecordTime' => $existingShot?->getRecordTime() ?? new \DateTime(),
+            ];
+        }
+
+        $form = $this->createForm(ShotBatchType::class, ['shots' => $rows]);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            /** @var array{shots: array<int, array{ShotIndex: int|string, value: float|string|null, XPosition: float|string|null, YPosition: float|string|null, RecordTime: \DateTimeInterface|string|null}>} $data */
+            $data = $form->getData();
+            $submittedRows = $data['shots'] ?? [];
+
+            foreach ($submittedRows as $row) {
+                $shotIndex = (int) ($row['ShotIndex'] ?? 0);
+
+                if ($shotIndex <= 0) {
+                    continue;
+                }
+
+                $rawValue = $row['value'] ?? null;
+                $value = $rawValue === null || $rawValue === '' ? null : (float) $rawValue;
+                $recordTime = $row['RecordTime'] ?? null;
+
+                $existingShot = $existingShotsByIndex[$shotIndex] ?? null;
+
+                if ($value === null) {
+                    if ($existingShot instanceof Shot) {
+                        $entityManager->remove($existingShot);
+                    }
+
+                    continue;
+                }
+
+                $shot = $existingShot;
+                if (!$shot instanceof Shot) {
+                    $shot = new Shot();
+                    $shot->setSeries($series);
+                }
+
+                $shot->setShotIndex($shotIndex);
+                $shot->setValue($value);
+                $shot->setXPosition($this->toNullableFloat($row['XPosition'] ?? null));
+                $shot->setYPosition($this->toNullableFloat($row['YPosition'] ?? null));
+                $shot->setRecordTime($recordTime instanceof \DateTimeInterface ? \DateTime::createFromInterface($recordTime) : new \DateTime());
+
+                $entityManager->persist($shot);
+            }
+
+            $entityManager->flush();
+            $this->syncSeriesShotCount($series, $entityManager);
+
+            $this->addFlash('success', 'Schüsse wurden gespeichert.');
+
+            return $this->redirectToRoute('shots_series_edit', ['id' => $series->getId()]);
+        }
+
         return $this->render('shot/edit_series.html.twig', [
             'competition' => $competition,
             'series' => $series,
-            'shots' => $this->shotRepository->findBy(['Series' => $series], ['ShotIndex' => 'ASC', 'RecordTime' => 'ASC']),
+            'form' => $form,
+            'targetShotCount' => $targetShotCount,
         ]);
     }
 
@@ -291,9 +367,32 @@ class ShotController extends AbstractController
         return $seriesByDiscipline;
     }
 
+    private function getTargetShotCount(Series $series): int
+    {
+        $discipline = $series->getDiscipline();
+        $shotsPerSeries = $discipline?->getShotsPerSeries() ?? 0;
+        $maxSeriesCount = $discipline?->getMaxSeriesCount() ?? 0;
+
+        $targetShotCount = $shotsPerSeries * $maxSeriesCount;
+        if ($targetShotCount <= 0) {
+            $targetShotCount = $shotsPerSeries;
+        }
+
+        return max($targetShotCount, 1);
+    }
+
     private function buildAssignmentKey(?int $teamId, ?int $personId, ?int $disciplineId): string
     {
         return sprintf('%d-%d-%d', $teamId ?? 0, $personId ?? 0, $disciplineId ?? 0);
+    }
+
+    private function toNullableFloat(mixed $value): ?float
+    {
+        if ($value === null || $value === '') {
+            return null;
+        }
+
+        return (float) $value;
     }
 
     private function seriesBelongsToCompetition(Series $series, Competition $competition): bool

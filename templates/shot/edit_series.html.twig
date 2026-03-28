@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Schüsse bearbeiten{% endblock %}
+{% block title %}Schüsse erfassen{% endblock %}
 
 {% block body %}
-    <h1>Serie bearbeiten</h1>
+    <h1>Schüsse erfassen</h1>
 
     <p>
         <strong>Person:</strong> {{ series.person.fristName }} {{ series.person.lastName }}<br>
@@ -12,14 +12,9 @@
         <strong>Runde:</strong> {{ series.round.name }}
     </p>
 
-    <p>
-        <a href="{{ path('shots_new', {id: series.id}) }}" class="btn">Neuen Schuss erfassen</a>
-        <a href="{{ path('shots_person_list', {round: series.round.id}) }}" class="btn">Zurück zur Übersicht</a>
-    </p>
+    <p>Erfasse die Serie gesammelt in einem Formular ({{ targetShotCount }} Schüsse).</p>
 
-    {% if shots is empty %}
-        <p>Noch keine Schüsse vorhanden.</p>
-    {% else %}
+    {{ form_start(form) }}
         <table>
             <thead>
             <tr>
@@ -28,24 +23,24 @@
                 <th>X</th>
                 <th>Y</th>
                 <th>Aufnahmezeit</th>
-                <th>Aktionen</th>
             </tr>
             </thead>
             <tbody>
-            {% for shot in shots %}
+            {% for shotRow in form.shots %}
                 <tr>
-                    <td>{{ shot.shotIndex }}</td>
-                    <td>{{ shot.value|number_format(1, ',', '.') }}</td>
-                    <td>{{ shot.xPosition is not null ? shot.xPosition|number_format(4, ',', '.') : '-' }}</td>
-                    <td>{{ shot.yPosition is not null ? shot.yPosition|number_format(4, ',', '.') : '-' }}</td>
-                    <td>{{ shot.recordTime|date('d.m.Y H:i:s') }}</td>
-                    <td>
-                        <a href="{{ path('shots_edit', {id: shot.id}) }}" class="btn">Bearbeiten</a>
-                        {% include 'shot/_delete_form.html.twig' with {shot: shot} %}
-                    </td>
+                    <td>{{ form_widget(shotRow.ShotIndex) }}</td>
+                    <td>{{ form_widget(shotRow.value) }}</td>
+                    <td>{{ form_widget(shotRow.XPosition) }}</td>
+                    <td>{{ form_widget(shotRow.YPosition) }}</td>
+                    <td>{{ form_widget(shotRow.RecordTime) }}</td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
-    {% endif %}
+
+        <p>
+            <button type="submit" class="btn">Alle Schüsse speichern</button>
+            <a href="{{ path('shots_person_list', {round: series.round.id}) }}" class="btn">Zurück zur Übersicht</a>
+        </p>
+    {{ form_end(form) }}
 {% endblock %}
