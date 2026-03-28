@@ -28,7 +28,7 @@
             <tbody>
             {% for shotRow in form.shots %}
                 <tr>
-                    <td>{{ form_widget(shotRow.ShotIndex) }}</td>
+                    <td>{{ shotRow.ShotIndex.vars.value }}{{ form_widget(shotRow.ShotIndex) }}</td>
                     <td>{{ form_widget(shotRow.value) }}</td>
                     <td>{{ form_widget(shotRow.XPosition) }}</td>
                     <td>{{ form_widget(shotRow.YPosition) }}</td>
