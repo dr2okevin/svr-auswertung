@@ -3,67 +3,63 @@
 {% block title %}Schüsse{% endblock %}
 
 {% block body %}
-    <form>
-        <label> Runde:
-            <select name="round">
-                <option value="1">Runde 1</option>
-                <option value="2">Runde 2</option>
+    <h1>Schüsse für {{ competition.name }}</h1>
+
+    {% if rounds is empty %}
+        <p>Für den ausgewählten Wettkampf sind keine Runden vorhanden.</p>
+    {% else %}
+        <form method="get" action="{{ path('shots_person_list') }}">
+            <label for="round">Runde:</label>
+            <select name="round" id="round" onchange="this.form.submit()">
+                {% for round in rounds %}
+                    <option value="{{ round.id }}" {% if selectedRound and round.id == selectedRound.id %}selected{% endif %}>
+                        {{ round.name }}
+                    </option>
+                {% endfor %}
             </select>
-        </label>
-    </form>
+            <noscript><button type="submit" class="btn">Anzeigen</button></noscript>
+        </form>
 
-    <table>
-        <thead>
-        <tr>
-            <th colspan="5">Disziplin 1</th>
-        </tr>
-        <tr>
-            <td>Person</td>
-            <td>Disziplin</td>
-            <td>Team</td>
-            <td colspan="2">Schüsse</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Test Person 1</td>
-            <td>Test Disziplin 1</td>
-            <td>Test Team 1</td>
-            <td>0/20</td>
-            <td><a href="#" class="btn">bearbeiten</a></td>
-        </tr>
-        <tr>
-            <td>Test Person 2</td>
-            <td>Test Disziplin 1</td>
-            <td>Test Team 2</td>
-            <td>19/20</td>
-            <td><a href="#" class="btn">bearbeiten</a></td>
-        </tr>
-        </tbody>
-    </table>
-    <table>
-        <thead>
-        <tr>
-            <th colspan="5">Disziplin 2</th>
-        </tr>
-        <tr>
-            <td>Person</td>
-            <td>Disziplin</td>
-            <td>Team</td>
-            <td colspan="2">Schüsse</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Test Person 1</td>
-            <td>Test Disziplin 2</td>
-            <td>Test Team 1</td>
-            <td>10/10</td>
-            <td><a href="#" class="btn">bearbeiten</a></td>
-        </tr>
-        </tbody>
-    </table>
+        {% if selectedRound %}
+            <h2>{{ selectedRound.name }}</h2>
 
-
-
+            {% if seriesByDiscipline is empty %}
+                <p>Für diese Runde sind noch keine Serien vorhanden.</p>
+            {% else %}
+                {% for disciplineName, seriesEntries in seriesByDiscipline %}
+                    <table>
+                        <thead>
+                        <tr>
+                            <th colspan="5">{{ disciplineName }}</th>
+                        </tr>
+                        <tr>
+                            <th>Person</th>
+                            <th>Disziplin</th>
+                            <th>Team</th>
+                            <th>Schüsse</th>
+                            <th>Aktionen</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for entry in seriesEntries %}
+                            <tr>
+                                <td>{{ entry.personName }}</td>
+                                <td>{{ entry.disciplineName }}</td>
+                                <td>{{ entry.teamName }}</td>
+                                <td>{{ entry.shotCount }}/{{ entry.totalShots }}</td>
+                                <td>
+                                    {% if entry.series %}
+                                        <a href="{{ path('shots_series_edit', {id: entry.series.id}) }}" class="btn">Bearbeiten</a>
+                                    {% else %}
+                                        <a href="{{ path('shots_series_open', {round: selectedRound.id, teamMember: entry.teamMember.id}) }}" class="btn">Schüsse eintragen</a>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
 {% endblock %}
