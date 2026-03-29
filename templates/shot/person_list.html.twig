@@ -5,6 +5,8 @@
 {% block body %}
     <h1>Schüsse für {{ competition.name }}</h1>
 
+    <p><a href="{{ path('shots_disag_import') }}" class="btn">DISAG XML importieren</a></p>
+
     {% if rounds is empty %}
         <p>Für den ausgewählten Wettkampf sind keine Runden vorhanden.</p>
     {% else %}
