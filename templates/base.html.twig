@@ -108,7 +108,7 @@
                 <div class="app-nav__label">Auswertung</div>
 
                 {% if hasSelectedCompetition %}
-                    <a class="app-nav__link" href="#">
+                    <a class="app-nav__link{% if currentRoute starts with 'results_' %} app-nav__link--active{% endif %}" href="{{ path('results_index') }}">
                         <span class="app-nav__icon"><img src="{{ asset('icon/Results.svg') }}" alt="" /></span>
                         <span>Ergebnisse</span>
                     </a>

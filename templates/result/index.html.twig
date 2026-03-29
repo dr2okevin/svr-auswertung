@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ergebnisse{% endblock %}
+
+{% block body %}
+    <h1>Dynamische Auswertung – {{ competition.name }}</h1>
+
+    {% if not isFireOrCompanyCompetition %}
+        <p><strong>Hinweis:</strong> Diese Ansicht ist primär für Feuerwehr- und Betriebeschießen ausgelegt, funktioniert aber auch für andere Wettkampf-Typen.</p>
+    {% endif %}
+
+    <section class="panel" style="margin-bottom: 20px;">
+        <div class="panel__header">
+            <h2 class="panel__title">Gesamtliste Teams</h2>
+        </div>
+        <div class="panel__body">
+            {% if teamRanking is empty %}
+                <p>Keine Teamdaten vorhanden.</p>
+            {% else %}
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Platz</th>
+                        <th>Team</th>
+                        <th>Typ</th>
+                        <th>Punkte</th>
+                        <th>Wertungen</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for team in teamRanking %}
+                        <tr>
+                            <td>{{ team.rank }}</td>
+                            <td>{{ team.teamName }}</td>
+                            <td>{{ team.teamType }}</td>
+                            <td>{{ team.totalScore|number_format(1, ',', '.') }}</td>
+                            <td>{{ team.scoredAssignments }}/{{ team.expectedAssignments }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        </div>
+    </section>
+
+    {% if individualByDiscipline is empty %}
+        <p>Es liegen noch keine Einzelergebnisse vor.</p>
+    {% else %}
+        {% for discipline in individualByDiscipline %}
+            <section class="panel" style="margin-bottom: 20px;">
+                <div class="panel__header">
+                    <h2 class="panel__title">Bestenliste Einzelschützen – {{ discipline.disciplineName }}</h2>
+                </div>
+                <div class="panel__body">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Platz</th>
+                            <th>Schütze</th>
+                            <th>Team</th>
+                            <th>Status</th>
+                            <th>Punkte</th>
+                            <th>Schüsse</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for entry in discipline.entries %}
+                            <tr>
+                                <td>{{ entry.rank }}</td>
+                                <td>{{ entry.personName }}</td>
+                                <td>{{ entry.teamName }}</td>
+                                <td>{% if entry.isProfessional %}Profi{% else %}Amateur{% endif %}</td>
+                                <td>{{ entry.totalScore|number_format(1, ',', '.') }}</td>
+                                <td>{{ entry.shotCount }}/{{ entry.targetShotCount }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
