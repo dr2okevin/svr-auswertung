@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DISAG Import Vorschau{% endblock %}
+
+{% block body %}
+    <h1>DISAG Import Vorschau – {{ round.name }}</h1>
+
+    <form method="post" action="{{ path('shots_disag_import_confirm') }}">
+        <input type="hidden" name="import_token" value="{{ importToken }}">
+
+        <table>
+            <thead>
+            <tr>
+                <th>XML Schütze</th>
+                <th>Geburtsjahr</th>
+                <th>Disziplin-Hinweis</th>
+                <th>Schüsse</th>
+                <th>Ringe</th>
+                <th>Zuordnung</th>
+                <th>Trefferquote</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in previewRows %}
+                <tr>
+                    <td>{{ row.displayName }}</td>
+                    <td>{{ row.birthYear ?? '—' }}</td>
+                    <td>{{ row.disciplineHint ?: '—' }}</td>
+                    <td>{{ row.shotCount }}</td>
+                    <td>{{ row.totalScore|number_format(1, ',', '.') }}</td>
+                    <td>
+                        <select name="assignment[{{ row.key }}]">
+                            <option value="">Nicht importieren</option>
+                            {% for option in row.assignmentOptions %}
+                                <option value="{{ option.id }}" {% if row.suggestedAssignmentId and option.id == row.suggestedAssignmentId %}selected{% endif %}>
+                                    {{ option.label }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>{{ row.confidence|capitalize }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <div style="margin-top: 16px; display: flex; gap: 8px;">
+            <button class="btn" type="submit">Import starten</button>
+            <a class="btn" href="{{ path('shots_disag_import') }}">Zurück</a>
+        </div>
+    </form>
+{% endblock %}

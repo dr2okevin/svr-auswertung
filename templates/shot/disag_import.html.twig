@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DISAG Import{% endblock %}
+
+{% block body %}
+    <h1>DISAG XML Import</h1>
+
+    <section class="panel">
+        <div class="panel__header">
+            <h2 class="panel__title">Datei hochladen</h2>
+        </div>
+        <div class="panel__body">
+            {% if rounds is empty %}
+                <p>Für den ausgewählten Wettkampf sind keine Runden vorhanden.</p>
+            {% else %}
+                <form method="post" enctype="multipart/form-data">
+                    <label for="round_id">Runde</label>
+                    <select name="round_id" id="round_id" required>
+                        {% for round in rounds %}
+                            <option value="{{ round.id }}">{{ round.name }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <label for="xml_file">DISAG Export (.xml)</label>
+                    <input id="xml_file" type="file" name="xml_file" accept=".xml,text/xml,application/xml" required>
+
+                    <div style="margin-top: 12px; display: flex; gap: 8px;">
+                        <button class="btn" type="submit">Vorschau erstellen</button>
+                        <a class="btn" href="{{ path('shots_person_list') }}">Abbrechen</a>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
