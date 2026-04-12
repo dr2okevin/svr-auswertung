@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Person bearbeiten{% endblock %}
+{% block title %}Person bearbeiten: {{ person.fristName }} {{ person.lastName }}{% endblock %}
+{% block page_title %}Person bearbeiten: {{ person.fristName }} {{ person.lastName }}{% endblock %}
 
 {% block body %}
     <h1>Person bearbeiten</h1>
