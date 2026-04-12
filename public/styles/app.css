@@ -447,6 +447,51 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     padding: 18px;
 }
 
+
+.dashboard-stats-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.dashboard-stats-grid--compact {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.dashboard-stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--gradient-input);
+}
+
+.dashboard-stat-card strong {
+    font-size: 24px;
+    line-height: 1;
+    color: var(--color-accent-hover);
+}
+
+.dashboard-stat-card span {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.dashboard-lead {
+    margin-top: 0;
+}
+
+.dashboard-instructions {
+    margin: 0;
+    padding-left: 20px;
+    display: grid;
+    gap: 8px;
+}
+
 /* Buttons */
 .toolbar {
     display: flex;

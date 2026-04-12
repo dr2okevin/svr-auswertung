@@ -1,8 +1,96 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
 
 {% block body %}
-<h1>Hallo</h1>
+    <section class="panel">
+        <div class="panel__header">
+            <h2 class="panel__title">Datenstatistik</h2>
+        </div>
+        <div class="panel__body">
+            <div class="dashboard-stats-grid">
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.wettkaempfe }}</strong>
+                    <span>Wettkämpfe</span>
+                </article>
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.vereine }}</strong>
+                    <span>Vereine</span>
+                </article>
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.personen }}</strong>
+                    <span>Personen</span>
+                </article>
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.disziplinen }}</strong>
+                    <span>Disziplinen</span>
+                </article>
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.teams }}</strong>
+                    <span>Teams</span>
+                </article>
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.runden }}</strong>
+                    <span>Runden</span>
+                </article>
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.serien }}</strong>
+                    <span>Serien</span>
+                </article>
+                <article class="dashboard-stat-card">
+                    <strong>{{ globalStats.schuesse }}</strong>
+                    <span>Schüsse</span>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <section class="panel">
+        <div class="panel__header">
+            <h2 class="panel__title">Aktiver Wettkampf</h2>
+        </div>
+        <div class="panel__body">
+            {% if selectedCompetition %}
+                <p class="dashboard-lead">
+                    Aktuell ausgewählt: <strong>{{ selectedCompetition.name }}</strong>
+                </p>
+                <div class="dashboard-stats-grid dashboard-stats-grid--compact">
+                    <article class="dashboard-stat-card">
+                        <strong>{{ competitionStats.teams }}</strong>
+                        <span>Teams</span>
+                    </article>
+                    <article class="dashboard-stat-card">
+                        <strong>{{ competitionStats.runden }}</strong>
+                        <span>Runden</span>
+                    </article>
+                    <article class="dashboard-stat-card">
+                        <strong>{{ competitionStats.serien }}</strong>
+                        <span>Serien</span>
+                    </article>
+                    <article class="dashboard-stat-card">
+                        <strong>{{ competitionStats.schuesse }}</strong>
+                        <span>Schüsse</span>
+                    </article>
+                </div>
+            {% else %}
+                <p>Es ist noch kein Wettkampf aktiv. Bitte links oben im Auswahlfeld einen Wettkampf wählen.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="panel">
+        <div class="panel__header">
+            <h2 class="panel__title">Kurzanleitung</h2>
+        </div>
+        <div class="panel__body">
+            <ol class="dashboard-instructions">
+                <li>Stammdaten anlegen: Wettkampf, Vereine, Personen und Disziplinen.</li>
+                <li>Links oben den aktiven Wettkampf auswählen.</li>
+                <li>Im Bereich <em>Wettkampf</em> Teams und ggf. Runden pflegen.</li>
+                <li>Schüsse erfassen (manuell oder per DISAG-Import).</li>
+                <li>Unter <em>Ergebnisse</em> die Auswertung anzeigen oder drucken.</li>
+            </ol>
+        </div>
+    </section>
 {% endblock %}

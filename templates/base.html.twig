@@ -121,7 +121,7 @@
     <div class="app-main">
         <header class="app-header">
             <div class="app-header__left">
-                <h1 class="app-page-title">{% block page_title %}Dashboard{% endblock %}</h1>
+                <h1 class="app-page-title">{% block page_title %}{{ block('title') }}{% endblock %}</h1>
                 <div class="app-breadcrumbs">
                     {% block breadcrumbs %}
                         <span>SVR Auswertung</span>
