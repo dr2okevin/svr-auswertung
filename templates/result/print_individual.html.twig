@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Einzelwertung drucken – {{ competition.name }}</title>
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+</head>
+<body>
+<main class="app-content" style="max-width: 1200px; margin: 0 auto;">
+    <div class="toolbar print-toolbar" style="margin-bottom: 16px;">
+        <button type="button" class="btn btn--primary" onclick="window.print()">Jetzt drucken</button>
+        <a class="btn" href="{{ path('results_export_individual_csv', { disciplineId: discipline.disciplineId }) }}">CSV Einzelwertung</a>
+        <a class="btn" href="{{ path('results_index') }}">Zurück zur Auswertung</a>
+    </div>
+
+    <h1>Einzelwertung – {{ competition.name }}</h1>
+
+    <section class="panel" style="margin-bottom: 20px; page-break-inside: avoid;">
+        <div class="panel__header">
+            <h2 class="panel__title">Bestenliste Einzelschützen – {{ discipline.disciplineName }}</h2>
+        </div>
+        <div class="panel__body">
+            <table>
+                <thead>
+                <tr>
+                    <th>Platz</th>
+                    <th>Schütze</th>
+                    <th>Team</th>
+                    <th>Status</th>
+                    <th>Ringe</th>
+                    <th>Schüsse</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for entry in discipline.entries %}
+                    <tr>
+                        <td>{{ entry.rank }}</td>
+                        <td>{{ entry.personName }}</td>
+                        <td>{{ entry.teamName }}</td>
+                        <td>{% if entry.isProfessional %}Profi{% else %}Amateur{% endif %}</td>
+                        <td>{{ entry.totalScore|number_format(1, ',', '.') }}</td>
+                        <td>{{ entry.shotCount }}/{{ entry.targetShotCount }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+</body>
+</html>
