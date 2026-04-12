@@ -113,10 +113,6 @@
                         <span>Ergebnisse</span>
                     </a>
 
-                    <a class="app-nav__link" href="#">
-                        <span class="app-nav__icon"><img src="{{ asset('icon/Export.svg') }}" alt="" /></span>
-                        <span>Export</span>
-                    </a>
                 {% endif %}
             </div>
         </nav>
@@ -136,6 +132,7 @@
             <div class="app-header__right">
                 {% block page_actions %}{% endblock %}
 
+                <!-- // We don't need this at the moment
                 <details class="profile-menu">
                     <summary class="profile-menu__trigger">
                                 <span class="profile-menu__avatar">
@@ -154,6 +151,7 @@
                         <a href="#" class="profile-menu__item">Abmelden</a>
                     </div>
                 </details>
+                -->
             </div>
         </header>
 
