@@ -34,6 +34,213 @@ class ResultController extends AbstractController
             return $this->redirectToRoute('competitions_list');
         }
 
+        $viewData = $this->getResultViewData($competition);
+
+        return $this->render('result/index.html.twig', [
+            'competition' => $competition,
+            'isFireOrCompanyCompetition' => $viewData['isFireOrCompanyCompetition'],
+            'individualByDiscipline' => $viewData['individualByDiscipline'],
+            'teamRanking' => $viewData['teamRanking'],
+        ]);
+    }
+
+    #[Route('/results/print/team', name: 'results_print_team', methods: ['GET'])]
+    public function printTeam(): Response
+    {
+        $competition = $this->getSelectedCompetition();
+
+        if ($competition === null) {
+            $this->addFlash('error', 'Bitte zuerst einen Wettkampf auswählen.');
+
+            return $this->redirectToRoute('competitions_list');
+        }
+
+        $viewData = $this->getResultViewData($competition);
+
+        return $this->render('result/print_team.html.twig', [
+            'competition' => $competition,
+            'teamRanking' => $viewData['teamRanking'],
+        ]);
+    }
+
+    #[Route('/results/print/individual/{disciplineId}', name: 'results_print_individual', methods: ['GET'], requirements: ['disciplineId' => '\\d+'])]
+    public function printIndividual(int $disciplineId): Response
+    {
+        $competition = $this->getSelectedCompetition();
+
+        if ($competition === null) {
+            $this->addFlash('error', 'Bitte zuerst einen Wettkampf auswählen.');
+
+            return $this->redirectToRoute('competitions_list');
+        }
+
+        $viewData = $this->getResultViewData($competition);
+        $discipline = $this->findDisciplineResult($viewData['individualByDiscipline'], $disciplineId);
+
+        if ($discipline === null) {
+            throw $this->createNotFoundException('Die gewünschte Disziplin wurde in den Ergebnissen nicht gefunden.');
+        }
+
+        return $this->render('result/print_individual.html.twig', [
+            'competition' => $competition,
+            'discipline' => $discipline,
+        ]);
+    }
+
+    #[Route('/results/export/team.csv', name: 'results_export_team_csv', methods: ['GET'])]
+    public function exportTeamCsv(): Response
+    {
+        $competition = $this->getSelectedCompetition();
+
+        if ($competition === null) {
+            $this->addFlash('error', 'Bitte zuerst einen Wettkampf auswählen.');
+
+            return $this->redirectToRoute('competitions_list');
+        }
+
+        $viewData = $this->getResultViewData($competition);
+        $rows = [];
+
+        foreach ($viewData['teamRanking'] as $team) {
+            $rows[] = [
+                $team['rank'],
+                $team['teamName'],
+                $team['teamType'],
+                number_format((float) $team['totalScore'], 1, ',', ''),
+                sprintf('%d/%d', (int) $team['scoredAssignments'], (int) $team['expectedAssignments']),
+            ];
+        }
+
+        return $this->createCsvResponse(
+            $rows,
+            ['Platz', 'Team', 'Typ', 'Ringe', 'Wertungen'],
+            sprintf('teamwertung-%s.csv', $this->buildCsvSlug($competition->getName()))
+        );
+    }
+
+    #[Route('/results/export/individual/{disciplineId}.csv', name: 'results_export_individual_csv', methods: ['GET'], requirements: ['disciplineId' => '\\d+'])]
+    public function exportIndividualCsv(int $disciplineId): Response
+    {
+        $competition = $this->getSelectedCompetition();
+
+        if ($competition === null) {
+            $this->addFlash('error', 'Bitte zuerst einen Wettkampf auswählen.');
+
+            return $this->redirectToRoute('competitions_list');
+        }
+
+        $viewData = $this->getResultViewData($competition);
+        $discipline = $this->findDisciplineResult($viewData['individualByDiscipline'], $disciplineId);
+
+        if ($discipline === null) {
+            throw $this->createNotFoundException('Die gewünschte Disziplin wurde in den Ergebnissen nicht gefunden.');
+        }
+
+        $rows = [];
+
+        foreach ($discipline['entries'] as $entry) {
+            $rows[] = [
+                $entry['rank'],
+                $entry['personName'],
+                $entry['teamName'],
+                $entry['isProfessional'] ? 'Profi' : 'Amateur',
+                number_format((float) $entry['totalScore'], 1, ',', ''),
+                sprintf('%d/%d', (int) $entry['shotCount'], (int) $entry['targetShotCount']),
+            ];
+        }
+
+        return $this->createCsvResponse(
+            $rows,
+            ['Platz', 'Schütze', 'Team', 'Status', 'Ringe', 'Schüsse'],
+            sprintf(
+                'einzelwertung-%s-%s.csv',
+                $this->buildCsvSlug($competition->getName()),
+                $this->buildCsvSlug((string) $discipline['disciplineName'])
+            )
+        );
+    }
+
+    private function getSelectedCompetition(): ?Competition
+    {
+        $selectedCompetitionId = $this->competitionContextProvider->getSelectedCompetitionId();
+
+        if ($selectedCompetitionId === null) {
+            return null;
+        }
+
+        return $this->competitionRepository->find($selectedCompetitionId);
+    }
+
+    /**
+     * @param array<int, array<string, mixed>> $rows
+     * @param array<int, string> $header
+     */
+    private function createCsvResponse(array $rows, array $header, string $fileName): Response
+    {
+        $handle = fopen('php://temp', 'r+');
+
+        if ($handle === false) {
+            throw $this->createNotFoundException('CSV konnte nicht erstellt werden.');
+        }
+
+        fwrite($handle, "\xEF\xBB\xBF");
+        fputcsv($handle, $header, ';');
+
+        foreach ($rows as $row) {
+            fputcsv($handle, $row, ';');
+        }
+
+        rewind($handle);
+        $csvContent = stream_get_contents($handle);
+        fclose($handle);
+
+        if ($csvContent === false) {
+            throw $this->createNotFoundException('CSV konnte nicht erstellt werden.');
+        }
+
+        $response = new Response($csvContent);
+        $response->headers->set('Content-Type', 'text/csv; charset=UTF-8');
+        $response->headers->set('Content-Disposition', sprintf('attachment; filename="%s"', $fileName));
+
+        return $response;
+    }
+
+    private function buildCsvSlug(string $value): string
+    {
+        $slug = preg_replace('/[^a-z0-9\-]+/i', '-', mb_strtolower($value));
+
+        if ($slug === null || $slug === '') {
+            return 'wettkampf';
+        }
+
+        return trim($slug, '-');
+    }
+
+    /**
+     * @param array<int, array<string, mixed>> $individualByDiscipline
+     *
+     * @return array<string, mixed>|null
+     */
+    private function findDisciplineResult(array $individualByDiscipline, int $disciplineId): ?array
+    {
+        foreach ($individualByDiscipline as $discipline) {
+            if ((int) ($discipline['disciplineId'] ?? 0) === $disciplineId) {
+                return $discipline;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * @return array{
+     *     isFireOrCompanyCompetition: bool,
+     *     individualByDiscipline: array<int, array{disciplineId: int, disciplineName: string, entries: array<int, array<string, mixed>>}>,
+     *     teamRanking: array<int, array<string, mixed>>
+     * }
+     */
+    private function getResultViewData(Competition $competition): array
+    {
         $seriesResults = $this->seriesRepository->findSeriesTotalsForCompetition($competition);
         $teamAssignments = $this->teamMemberRepository->createQueryBuilder('tm')
             ->innerJoin('tm.Team', 't')
@@ -51,32 +258,17 @@ class ResultController extends AbstractController
             ->getQuery()
             ->getResult();
 
-        $individualByDiscipline = $this->buildIndividualRanking($seriesResults);
-        $teamRanking = $this->buildTeamRanking($seriesResults, $teamAssignments);
-
-        return $this->render('result/index.html.twig', [
-            'competition' => $competition,
+        return [
             'isFireOrCompanyCompetition' => in_array($competition->getType(), [CompetitionType::FIRE, CompetitionType::COMPANY], true),
-            'individualByDiscipline' => $individualByDiscipline,
-            'teamRanking' => $teamRanking,
-        ]);
-    }
-
-    private function getSelectedCompetition(): ?Competition
-    {
-        $selectedCompetitionId = $this->competitionContextProvider->getSelectedCompetitionId();
-
-        if ($selectedCompetitionId === null) {
-            return null;
-        }
-
-        return $this->competitionRepository->find($selectedCompetitionId);
+            'individualByDiscipline' => $this->buildIndividualRanking($seriesResults),
+            'teamRanking' => $this->buildTeamRanking($seriesResults, $teamAssignments),
+        ];
     }
 
     /**
      * @param array<int, array<string, mixed>> $seriesResults
      *
-     * @return array<int, array{disciplineName: string, entries: array<int, array<string, mixed>>}>
+     * @return array<int, array{disciplineId: int, disciplineName: string, entries: array<int, array<string, mixed>>}>
      */
     private function buildIndividualRanking(array $seriesResults): array
     {
@@ -111,6 +303,7 @@ class ResultController extends AbstractController
 
             if (!isset($grouped[$disciplineId])) {
                 $grouped[$disciplineId] = [
+                    'disciplineId' => $disciplineId,
                     'disciplineName' => (string) $result['disciplineName'],
                     'entries' => [],
                 ];
