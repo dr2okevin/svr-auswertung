@@ -381,9 +381,11 @@ class ResultController extends AbstractController
                 $teams[$teamId] = [
                     'teamName' => (string) $team->getName(),
                     'teamType' => $team->getType()?->getLabel() ?? '—',
+                    'teamMembers' => $team->getTeamMembers(),
                     'expectedAssignments' => 0,
                     'scoredAssignments' => 0,
                     'totalScore' => 0.0,
+                    'disciplineScores' => [],
                 ];
             }
 
@@ -392,8 +394,13 @@ class ResultController extends AbstractController
             $assignmentKey = sprintf('%d-%d-%d', $teamId, $personId, $disciplineId);
 
             if (isset($bestAssignmentScores[$assignmentKey])) {
+                $score = (float) $bestAssignmentScores[$assignmentKey];
                 $teams[$teamId]['scoredAssignments']++;
-                $teams[$teamId]['totalScore'] += $bestAssignmentScores[$assignmentKey];
+                $teams[$teamId]['totalScore'] += $score;
+                if (!isset($teams[$teamId]['disciplineScores'][$disciplineId])) {
+                    $teams[$teamId]['disciplineScores'][$disciplineId] = 0.0;
+                }
+                $teams[$teamId]['disciplineScores'][$disciplineId] += $score;
             }
         }
 

@@ -30,8 +30,11 @@
                     <tr>
                         <th>Platz</th>
                         <th>Team</th>
-                        <th>Typ</th>
-                        <th>Ringe</th>
+                        <th>Namen</th>
+                        {% for discipline in competition.disciplines %}
+                            <th>{{ discipline.name }}</th>
+                        {% endfor %}
+                        <th>Ergebnis</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -39,7 +42,22 @@
                         <tr>
                             <td>{{ team.rank }}</td>
                             <td>{{ team.teamName }}</td>
-                            <td>{{ team.teamType }}</td>
+                            <td>
+                                {% set shownIds = [] %}
+                                {% for teamMember in team.teamMembers %}
+                                    {# Prüfen, ob die Person bereits in diesem Team-Block angezeigt wurde #}
+                                    {% if teamMember.person.id not in shownIds %}
+                                        {# Formatierung: Erster Buchstabe . Nachname #}
+                                        <span class="name">{{ teamMember.person.FristName|slice(0, 1) }}. {{ teamMember.person.lastName }}</span>
+
+                                        {# ID zum Array hinzufügen, um Dopplungen zu vermeiden #}
+                                        {% set shownIds = shownIds|merge([teamMember.person.id]) %}
+                                    {% endif %}
+                                {% endfor %}
+                            </td>
+                            {% for discipline in competition.disciplines %}
+                                <td>{{ team.disciplineScores[discipline.id]|default(0)|number_format(1, ',', '.') }}</td>
+                            {% endfor %}
                             <td>{{ team.totalScore|number_format(1, ',', '.') }}</td>
                         </tr>
                     {% endfor %}

@@ -5,6 +5,7 @@
 :root {
     /* Brand & Accents */
     --color-accent: #23983d;
+    --color-accent-dark: #008000;
     --color-accent-hover: #1d8434;
     --color-accent-soft: #e7f5eb;
     --color-accent-border: #b9e0c3;
@@ -740,6 +741,7 @@ thead {
 tr {
     background-color: var(--color-bg);
 }
+
 tbody > tr:nth-of-type(2n+1) {
     background-color: var(--color-bg-alt);
 }
@@ -749,7 +751,7 @@ th, td {
 }
 
 .print-page {
-    max-width: 1260px;
+    max-width: 100%;
     margin: 0 auto;
     padding-top: 18px;
 }
@@ -811,13 +813,14 @@ th, td {
     border: 1px solid #252525;
     padding: 4px 7px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.1;
     color: #000;
 }
 
 .print-results-table th {
     color: #fff;
+    background-color: var(--color-accent-dark);
     font-weight: 700;
 }
 
@@ -829,39 +832,6 @@ th, td {
 .print-results-table td:last-child {
     font-weight: 700;
 }
-
-.print-sheet--individual .print-results-table th:nth-child(1) {
-    width: 8%;
-}
-
-.print-sheet--individual .print-results-table th:nth-child(2) {
-    width: 37%;
-}
-
-.print-sheet--individual .print-results-table th:nth-child(3) {
-    width: 40%;
-}
-
-.print-sheet--individual .print-results-table th:nth-child(4) {
-    width: 15%;
-}
-
-.print-sheet--team .print-results-table th:nth-child(1) {
-    width: 8%;
-}
-
-.print-sheet--team .print-results-table th:nth-child(2) {
-    width: 40%;
-}
-
-.print-sheet--team .print-results-table th:nth-child(3) {
-    width: 24%;
-}
-
-.print-sheet--team .print-results-table th:nth-child(4) {
-    width: 28%;
-}
-
 
 @media print {
     @page {
