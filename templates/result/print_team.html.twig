@@ -7,31 +7,31 @@
     <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
 </head>
 <body>
-<main class="app-content" style="max-width: 1200px; margin: 0 auto;">
-    <div class="toolbar print-toolbar" style="margin-bottom: 16px;">
+<main class="app-content print-page">
+    <div class="toolbar print-toolbar">
         <button type="button" class="btn btn--primary" onclick="window.print()">Jetzt drucken</button>
         <a class="btn" href="{{ path('results_export_team_csv') }}">CSV Teamwertung</a>
         <a class="btn" href="{{ path('results_index') }}">Zurück zur Auswertung</a>
     </div>
 
-    <h1>Teamwertung – {{ competition.name }}</h1>
+    <section class="print-sheet print-sheet--team">
+        <header class="print-heading">
+            <p class="print-heading__club">{{ print_header_club_name }}</p>
+            <h1 class="print-heading__title">{{ competition.name }}</h1>
+            <h2 class="print-heading__subtitle">Mannschaftswertung</h2>
+        </header>
 
-    <section class="panel" style="margin-bottom: 20px;">
-        <div class="panel__header">
-            <h2 class="panel__title">Gesamtliste Teams</h2>
-        </div>
-        <div class="panel__body">
+        <div class="print-table-wrap">
             {% if teamRanking is empty %}
                 <p>Keine Teamdaten vorhanden.</p>
             {% else %}
-                <table>
+                <table class="print-results-table">
                     <thead>
                     <tr>
                         <th>Platz</th>
                         <th>Team</th>
                         <th>Typ</th>
                         <th>Ringe</th>
-                        <th>Wertungen</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -41,7 +41,6 @@
                             <td>{{ team.teamName }}</td>
                             <td>{{ team.teamType }}</td>
                             <td>{{ team.totalScore|number_format(1, ',', '.') }}</td>
-                            <td>{{ team.scoredAssignments }}/{{ team.expectedAssignments }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>

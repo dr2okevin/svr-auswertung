@@ -1,6 +1,8 @@
 twig:
     file_name_pattern: '*.twig'
     form_themes: ['form/theme.html.twig']
+    globals:
+        print_header_club_name: '%app.print_header_club_name%'
 
 when@test:
     twig:
