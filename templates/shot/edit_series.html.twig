@@ -15,6 +15,10 @@
     <p>Erfasse die Serie gesammelt in einem Formular ({{ targetShotCount }} Schüsse).</p>
 
     {{ form_start(form) }}
+        <div style="margin-bottom: 15px; max-width: 300px;">
+            {{ form_row(form.finalScoreOverride) }}
+        </div>
+
         <table>
             <thead>
             <tr>

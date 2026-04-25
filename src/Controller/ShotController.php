@@ -297,13 +297,17 @@ class ShotController extends AbstractController
             ];
         }
 
-        $form = $this->createForm(ShotBatchType::class, ['shots' => $rows]);
+        $form = $this->createForm(ShotBatchType::class, [
+            'shots' => $rows,
+            'finalScoreOverride' => $series->getFinalScoreOverride(),
+        ]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            /** @var array{shots: array<int, array{ShotIndex: int|string, value: float|string|null, XPosition: float|string|null, YPosition: float|string|null, RecordTime: \DateTimeInterface|string|null}>} $data */
+            /** @var array{shots: array<int, array{ShotIndex: int|string, value: float|string|null, XPosition: float|string|null, YPosition: float|string|null, RecordTime: \DateTimeInterface|string|null}>, finalScoreOverride?: float|string|null} $data */
             $data = $form->getData();
             $submittedRows = $data['shots'] ?? [];
+            $series->setFinalScoreOverride($this->toNullableFloat($data['finalScoreOverride'] ?? null));
 
             foreach ($submittedRows as $row) {
                 $shotIndex = (int) ($row['ShotIndex'] ?? 0);

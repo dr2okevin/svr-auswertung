@@ -41,6 +41,9 @@ class Series
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $ImportFile = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?float $FinalScoreOverride = null;
+
     /**
      * @var Collection<int, Shot>
      */
@@ -125,6 +128,18 @@ class Series
     public function setImportFile(?string $ImportFile): static
     {
         $this->ImportFile = $ImportFile;
+
+        return $this;
+    }
+
+    public function getFinalScoreOverride(): ?float
+    {
+        return $this->FinalScoreOverride;
+    }
+
+    public function setFinalScoreOverride(?float $FinalScoreOverride): static
+    {
+        $this->FinalScoreOverride = $FinalScoreOverride;
 
         return $this;
     }
