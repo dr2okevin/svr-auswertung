@@ -19,6 +19,9 @@ class Discipline
     #[ORM\Column(length: 255)]
     private ?string $Name = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $ShortName = null;
+
     #[ORM\Column]
     private ?int $ShotsPerSeries = null;
 
@@ -204,6 +207,18 @@ class Discipline
                 $teamMember->setDiscipline(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getShortName(): ?string
+    {
+        return $this->ShortName;
+    }
+
+    public function setShortName(string $ShortName): static
+    {
+        $this->ShortName = $ShortName;
 
         return $this;
     }

@@ -287,6 +287,8 @@ class ResultController extends AbstractController
                     'disciplineId' => $disciplineId,
                     'disciplineName' => (string) $seriesResult['disciplineName'],
                     'personName' => trim(sprintf('%s %s', (string) $seriesResult['personFirstName'], (string) $seriesResult['personLastName'])),
+                    'personFirstName' => $seriesResult['personFirstName'],
+                    'personLastName' => $seriesResult['personLastName'],
                     'teamName' => (string) $seriesResult['teamName'],
                     'isProfessional' => (bool) $seriesResult['isProfessional'],
                     'totalScore' => $totalScore,

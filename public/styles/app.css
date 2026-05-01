@@ -839,6 +839,10 @@ th, td {
         margin: 8mm;
     }
 
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
     body {
         background: #fff;
     }
@@ -865,7 +869,7 @@ th, td {
 
     .print-results-table th,
     .print-results-table td {
-        font-size: 11pt;
+        font-size: 10pt;
     }
 
     .print-heading__club {
@@ -873,11 +877,11 @@ th, td {
     }
 
     .print-heading__title {
-        font-size: 19pt;
+        font-size: 18pt;
     }
 
     .print-heading__subtitle {
-        font-size: 15pt;
+        font-size: 14pt;
     }
 
     .print-heading__discipline {

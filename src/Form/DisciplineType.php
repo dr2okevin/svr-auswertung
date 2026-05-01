@@ -17,6 +17,9 @@ class DisciplineType extends AbstractType
             ->add('Name', null, [
                 'label' => 'Name',
             ])
+            ->add('ShortName', null, [
+                'label' => 'Kurzname',
+            ])
             ->add('ShotsPerSeries', null, [
                 'label' => 'Schüsse je Serie',
             ])

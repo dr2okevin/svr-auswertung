@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teamwertung drucken – {{ competition.name }}</title>
+    <title>{{ competition.name }} - Mannschaftswertung</title>
     <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
 </head>
 <body>
@@ -28,13 +28,13 @@
                 <table class="print-results-table">
                     <thead>
                     <tr>
-                        <th>Platz</th>
+                        <th style="width: 80px">Platz</th>
                         <th>Team</th>
                         <th>Namen</th>
                         {% for discipline in competition.disciplines %}
-                            <th>{{ discipline.name }}</th>
+                            <th style="width: 100px">{{ discipline.shortName }}</th>
                         {% endfor %}
-                        <th>Ergebnis</th>
+                        <th style="width: 100px">Ergebnis</th>
                     </tr>
                     </thead>
                     <tbody>

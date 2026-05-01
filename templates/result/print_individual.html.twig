@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Einzelwertung drucken – {{ competition.name }}</title>
+    <title>{{ competition.name }} - Einzelwertung – {{ discipline.disciplineName }}</title>
     <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
 </head>
 <body>
@@ -36,7 +36,7 @@
                 {% for entry in discipline.entries %}
                     <tr>
                         <td>{{ entry.rank }}</td>
-                        <td>{{ entry.personName }}</td>
+                        <td><span class="name">{{ entry.personFirstName|slice(0, 1) }}. {{ entry.personLastName }}</span></td>
                         <td>{{ entry.teamName }}</td>
                         <td>{{ entry.totalScore|number_format(1, ',', '.') }}</td>
                     </tr>

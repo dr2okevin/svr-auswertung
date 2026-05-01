@@ -3,7 +3,7 @@
 {% block title %}Ergebnisse{% endblock %}
 
 {% block body %}
-    <h1>Dynamische Auswertung – {{ competition.name }}</h1>
+    <h1>Auswertung – {{ competition.name }}</h1>
 
     {% include 'result/_result_tables.html.twig' with { showActions: true } %}
 {% endblock %}
